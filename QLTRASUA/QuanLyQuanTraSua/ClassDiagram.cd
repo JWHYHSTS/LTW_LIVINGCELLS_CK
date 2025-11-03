@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryCaLam">
+    <Position X="9.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAAAAAAAAAAQAAAAAAMAAAAJEAAAABAA=</HashCode>
+      <FileName>BS Layer\QueryCaLam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryChiPhi">
+    <Position X="7" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABgAAAAAAAEAAAAAAABAAAAQAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BS Layer\QueryChiPhi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.QueryDangNhap">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAA=</HashCode>
+      <FileName>BS Layer\QueryDangNhap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryDoanhThu">
+    <Position X="0.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAAAQAEAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\QueryDoanhThu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryHoaDon">
+    <Position X="6.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAABAAAAAAAAAAEAAACAAAgABAgAIBACAA=</HashCode>
+      <FileName>BS Layer\QueryHoaDon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryKhachHang">
+    <Position X="2.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\QueryKhachHang.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryLoiNhuan">
+    <Position X="3" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAIAAAAEAAAAAAAAAAAAACAEAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\QueryLoiNhuan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyQuanTraSua.BS_Layer.QueryNhanVien">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAQAAQAAAAAAAggAAAEAAAAAAAAEAhAAACAA=</HashCode>
+      <FileName>BS Layer\QueryNhanVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
