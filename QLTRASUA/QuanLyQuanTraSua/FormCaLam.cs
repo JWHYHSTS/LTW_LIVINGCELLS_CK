@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;               // OK nếu bị mờ: file này không dùng LINQ trực tiếp
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +17,7 @@ namespace QuanLyQuanTraSua
         DateTime today = DateTime.Now;
         DateTime monday = new DateTime();
         DateTime sunday = new DateTime();
-
+        
         List<string> shift_code = new List<string>();
         public string UserCode = "NV001";
         List<Control> bechecked = new List<Control>();
@@ -25,15 +25,15 @@ namespace QuanLyQuanTraSua
         string err;
         QueryCaLam dbCaLam = new QueryCaLam();
         Dictionary<string, int> list_max;
-        public TimeSpan start_time = new TimeSpan();
+        public TimeSpan start_time =new TimeSpan();
         Dictionary<string, List<TimeSpan>> list_ca_lam;
+
 
         public FormCaLam()
         {
             InitializeComponent();
-
-            year_num.Minimum = today.Year - 5;
-            year_num.Maximum = today.Year + 5;
+            year_num.Minimum = today.Year-5;
+            year_num.Maximum = today.Year+5;
             year_num.Value = today.Year;
 
             month_num.Minimum = 1;
@@ -43,23 +43,31 @@ namespace QuanLyQuanTraSua
             week_num.Minimum = 1;
             week_num.Maximum = GetWeekNumberOfMonth(new DateTime(today.Year, today.Month, DateTime.DaysInMonth(today.Year, today.Month)));
             week_num.Value = GetWeekNumberOfMonth(new DateTime(today.Year, today.Month, today.Day));
-
-            // Lấy khung giờ ca làm từ BLL
             list_ca_lam = dbCaLam.ThoiGianLam();
-
-            // Đảm bảo progress bar chuẩn 0..100
-            try { progressShift.Maximum = 100; } catch { /* ignore if already set */ }
         }
 
         private int check_Weekday_Index(string name)
         {
-            if (name == "mon") return 0;
-            else if (name == "tue") return 1;
-            else if (name == "wed") return 2;
-            else if (name == "thu") return 3;
-            else if (name == "fri") return 4;
-            else if (name == "sat") return 5;
-            else return 6;
+
+            if (name == "mon")
+                return 0;
+            else if (name == "tue")
+                return 1;
+
+            else if (name == "wed")
+                return 2;
+
+            else if (name == "thu")
+                return 3;
+
+            else if (name == "fri")
+                return 4;
+
+            else if (name == "sat")
+                return 5;
+
+            else
+                return 6;
         }
 
         private int GetWeekNumberOfMonth(DateTime date)
@@ -80,6 +88,7 @@ namespace QuanLyQuanTraSua
         private void Get_time_span(DateTime date)
         {
             DateTime temp;
+           
             for (int i = 0; i < 7; i++)
             {
                 temp = date.AddDays(-i);
@@ -98,21 +107,18 @@ namespace QuanLyQuanTraSua
             DateTime start_week1_date = dt;
             DayOfWeek firstDayOfWeekofMonth = dt.DayOfWeek;
             int myWeekNumInMonth = week;
-
-            if ((int)firstDayOfWeekofMonth == 0)
+            if ((int)firstDayOfWeekofMonth==0)
             {
                 start_week1_date = dt;
             }
             else
             {
                 for (int i = 1; i < 7; i++)
-                {
                     if ((int)dt.AddDays(i).DayOfWeek == 1)
                     {
                         start_week1_date = dt.AddDays(i);
                         break;
                     }
-                }
             }
 
             monday = start_week1_date.AddDays(7 * (myWeekNumInMonth - 1));
@@ -123,8 +129,8 @@ namespace QuanLyQuanTraSua
         {
             string maCa, tgian;
             analys_code(now_shift.Text, out maCa, out tgian);
-            bool check = dbCaLam.Finish_work(UserCode, tgian, maCa, progressShift.Value, ref err);
-            if (check)
+            bool check=dbCaLam.Finish_work(UserCode, tgian, maCa, progressShift.Value, ref err);
+            if (check == true)
                 MessageBox.Show("Đã xác nhận ca làm thành công", "Xác nhận ca làm");
             else
                 MessageBox.Show("Bạn chưa đăng ký ca làm này", "Xác nhận ca làm");
@@ -138,64 +144,40 @@ namespace QuanLyQuanTraSua
 
         private void Load_Timetable()
         {
-            // Bảo vệ: nếu chưa có list_max thì nạp
-            if (list_max == null) list_max = dbCaLam.Max_nv();
-
             string temp, maca;
-            var timetableData = dbCaLam.LoadTimeTable(monday, sunday);
-
+            List<List<string>> list_ca_lam = new List<List<string>>();
             Clear_Listbox();
-
-            foreach (var item in timetableData)
+            list_ca_lam =dbCaLam.LoadTimeTable(monday, sunday);
+            foreach (var item in list_ca_lam)
             {
                 foreach (Control h in Timetable.Controls)
-                {
-                    var tagH = h.Tag as string;
-                    if (tagH == "Shift")
+                    if ((string)h.Tag == "Shift")
                     {
                         temp = Get_Shift_code(h);
                         maca = temp.Split('-')[0];
                         if (temp == item[0])
-                        {
                             foreach (Control k in h.Controls)
-                            {
-                                var tagK = k.Tag as string;
-                                if (tagK == "List_nv")
+                                if ((string)k.Tag == "List_nv")
                                 {
-                                    var lb = k as ListBox;
-                                    if (lb == null) continue;
-
-                                    if (list_max.ContainsKey(maca) && lb.Items.Count < list_max[maca])
-                                        lb.Items.Add(item[2]);
-
-                                    if (list_max.ContainsKey(maca) && lb.Items.Count == list_max[maca])
+                                    if ((k as ListBox).Items.Count < list_max[maca])
+                                        (k as ListBox).Items.Add(item[2]);
+                                    if ((k as ListBox).Items.Count == list_max[maca])
                                         h.Enabled = false;
                                 }
-                            }
-                        }
                     }
-                }
             }
         }
 
         private void Clear_Listbox()
         {
+
             foreach (Control h in Timetable.Controls)
-            {
-                var tagH = h.Tag as string;
-                if (tagH == "Shift")
+                if ((string)h.Tag == "Shift")
                 {
                     foreach (Control x in h.Controls)
-                    {
-                        var tagX = x.Tag as string;
-                        if (tagX == "List_nv")
-                        {
-                            var lb = x as ListBox;
-                            if (lb != null) lb.Items.Clear();
-                        }
-                    }
+                        if ((string)x.Tag == "List_nv")
+                            (x as ListBox).Items.Clear();
                 }
-            }
         }
 
         private void regis_shift_btn_Click(object sender, EventArgs e)
@@ -217,7 +199,8 @@ namespace QuanLyQuanTraSua
 
         private void year_num_ValueChanged(object sender, EventArgs e)
         {
-            // intentionally left blank (giữ cấu trúc cũ)
+           
+
         }
 
         private void month_num_ValueChanged(object sender, EventArgs e)
@@ -228,112 +211,95 @@ namespace QuanLyQuanTraSua
 
         private void refresh_table()
         {
+
+           
             Get_time_span((int)week_num.Value, (int)month_num.Value, (int)year_num.Value);
-
+              
             day_span_lb.Text = monday.ToString("dd/MM/yyyy") + "-" + sunday.ToString("dd/MM/yyyy");
-
+            int i = 0;
             foreach (Control ctrl in Timetable.Controls)
-            {
-                var tagC = ctrl.Tag as string;
-                if (tagC == "Weekday")
-                {
-                    int i = check_Weekday_Index(ctrl.Name);
+                if ((string)ctrl.Tag == "Weekday")
+                {      
+                    i = check_Weekday_Index(ctrl.Name);
                     foreach (Control ctrlt in ctrl.Controls)
-                    {
-                        var tagT = ctrlt.Tag as string;
-                        if (tagT == "Time")
-                        {
-                            ctrlt.Text = monday.AddDays(i).ToString("dd/MM");
-                        }
+                    if ((string)ctrlt.Tag == "Time")
+                    { 
+                        ctrlt.Text = monday.AddDays(i).ToString("dd/MM");
                     }
                 }
-            }
 
-            // Vô hiệu hóa ô đã qua ngày
+            string code;
+            string[] code_time;
+            DateTime temp;
             foreach (Control h in Timetable.Controls)
-            {
-                var tagH = h.Tag as string;
-                if (tagH == "Shift")
+                if ((string)h.Tag == "Shift")
                 {
-                    string code = Get_Shift_code(h);
-                    string[] code_time = ((code.Split('-'))[1]).Split('/');
-                    DateTime temp = new DateTime((int)year_num.Value, Int32.Parse(code_time[1]), Int32.Parse(code_time[0]));
-                    h.Enabled = temp.Date >= today.Date;
+                    code = Get_Shift_code(h);
+                    code_time = ((code.Split('-'))[1]).Split('/');
+                    temp = new DateTime((int)year_num.Value, Int32.Parse(code_time[1]), Int32.Parse(code_time[0]));
+                    if (temp.Date < today.Date)
+                    {
+                        h.Enabled = false;
+                    }
+                    else
+                        h.Enabled = true;
                 }
-            }
+           
         }
 
         private string Get_Shift_code(Control h)
         {
-            string code = "";
-
+            string code="";
+           
             foreach (Control k in Timetable.Controls)
-            {
-                var tagK = k.Tag as string;
-                if (tagK == "ca")
-                {
+                if ((string)k.Tag == "ca")
                     if (h.Location.Y == k.Location.Y)
                         code = k.Name;
-                }
-            }
 
             foreach (Control l in Timetable.Controls)
-            {
-                var tagL = l.Tag as string;
-                if (tagL == "Weekday")
-                {
+                if ((string)l.Tag == "Weekday")
                     if (h.Location.X == l.Location.X)
-                    {
                         foreach (Control x in l.Controls)
-                        {
-                            var tagX = x.Tag as string;
-                            if (tagX == "Time")
+                            if ((string)x.Tag == "Time")
                                 code += "-" + x.Text;
-                        }
-                    }
-                }
-            }
             return code;
         }
+        
 
         private void progress_timer_Tick(object sender, EventArgs e)
         {
-            int total_time = 4 * 60; // phút
-            string ca = "";
+            int total_time = 4 * 60;
+            string ca="";
             int progress = 0;
-            TimeSpan min_dif = new TimeSpan(24, 0, 0);
-
+            TimeSpan min_dif= new TimeSpan(24, 0, 0);
             foreach (var item in list_ca_lam)
-            {
                 if (start_time > item.Value[0])
-                {
-                    var dif = start_time.Subtract(item.Value[0]);
-                    if (dif < min_dif)
+                    if (start_time.Subtract(item.Value[0]) < min_dif)
                     {
                         ca = item.Key.Trim();
-                        min_dif = dif;
+                        min_dif = start_time.Subtract(item.Value[0]);
                     }
-                }
-            }
-
-            if (ca != "" && start_time < list_ca_lam[ca][1])
+            if (ca != "" && start_time< list_ca_lam[ca][1])
             {
                 TimeSpan present = DateTime.Now.TimeOfDay;
-                if (present > list_ca_lam[ca][1]) present = list_ca_lam[ca][1];
+                if (present > list_ca_lam[ca][1])
+                    present = list_ca_lam[ca][1];
 
                 TimeSpan diff = present.Subtract(start_time);
-
+               
                 progress = (int)((diff.TotalMinutes / total_time) * 100);
-                progress = Math.Max(0, Math.Min(100, progress));
+                if (progress < 0)
+                    return;
+                if (progress > 100)
+                    progress = 100;
             }
             else
-            {
                 progress = 0;
-            }
 
             now_shift.Text = ca + "-" + DateTime.Now.ToString("dd/MM");
             percentShift.Text = progress.ToString() + "%";
-            try { progressShift.Value = progress; } catch { /* ignore set if out-of-range */ }
+            progressShift.Value = progress;
+            
         }
 
         private void send_signal(object sender, EventArgs e)
@@ -361,41 +327,34 @@ namespace QuanLyQuanTraSua
             signal = 0;
             foreach (Control h in bechecked)
             {
-                var cb = h as CheckBox;
-                if (cb != null)
-                {
-                    cb.Checked = false;
-                    cb.Enabled = false;
-                }
+                (h as CheckBox).Checked = false;
+                h.Enabled = false;
             }
             signal = 1;
         }
 
         private void analys_code(string code, out string maCa, out string tgian)
         {
-            string[] tach = code.Split('-');
+            string[] tach=code.Split('-');
             maCa = tach[0];
             string[] tach2 = tach[1].Split('/');
-            tgian = year_num.Value.ToString() + "-" + tach2[1] + "-" + tach2[0];
+            tgian = year_num.Value.ToString() +"-"+ tach2[1] + "-"+tach2[0];
         }
 
         private void regis_btn_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng ký ca?\n Khi đã đăng ký thì không thể hủy", "Notice", MessageBoxButtons.YesNo);
+            bool check;
+            DialogResult dialogResult=MessageBox.Show("Bạn có chắc chắn muốn đăng ký ca?\n Khi đã đăng ký thì không thể hủy", "Notice", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 string maCa, tgian;
                 foreach (string code in shift_code)
                 {
                     analys_code(code, out maCa, out tgian);
-                    bool check = dbCaLam.Regis_Shift(UserCode, maCa, tgian, ref err);
-                    // Không cần Load_Timetable() tại đây
+                    check=dbCaLam.Regis_Shift(UserCode, maCa, tgian, ref err);
+                    Load_Timetable();
+
                 }
-
-                // Cập nhật lại bảng 1 lần cho nhẹ
-                Load_Timetable();
-
-                // Clear chọn
                 clear_btn_Click(null, null);
 
                 MessageBox.Show("Đăng ký thành công");
@@ -404,7 +363,7 @@ namespace QuanLyQuanTraSua
 
         private void FormCaLam_Load(object sender, EventArgs e)
         {
-            // giữ nguyên (nếu cần có thể set progressShift.Maximum = 100 ở đây)
+           
         }
 
         private void show_report_btn_Click(object sender, EventArgs e)
@@ -412,7 +371,6 @@ namespace QuanLyQuanTraSua
             DateTime start_h = new DateTime();
             DateTime end_h = new DateTime();
             DateTime filter;
-
             if (show_all_rdb.Checked == true)
             {
                 start_h = new DateTime(2020, 1, 1);
@@ -432,7 +390,7 @@ namespace QuanLyQuanTraSua
 
         private void Timetable_Enter(object sender, EventArgs e)
         {
-            // giữ nguyên để không thay đổi luồng cũ
+
         }
     }
 }

@@ -47,10 +47,12 @@ namespace QuanLyQuanTraSua
             // 
             this.windows.Controls.Add(this.eye);
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(20, 12);
+            this.windows.Location = new System.Drawing.Point(22, 15);
+            this.windows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(1450, 660);
+            this.windows.Size = new System.Drawing.Size(1631, 825);
             this.windows.TabIndex = 0;
+            this.windows.Paint += new System.Windows.Forms.PaintEventHandler(this.windows_Paint);
             // 
             // eye
             // 
@@ -62,17 +64,19 @@ namespace QuanLyQuanTraSua
             this.eye.Controls.Add(this.label3);
             this.eye.Controls.Add(this.label2);
             this.eye.Controls.Add(this.label1);
-            this.eye.Location = new System.Drawing.Point(369, 147);
+            this.eye.Location = new System.Drawing.Point(459, 167);
+            this.eye.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eye.Name = "eye";
-            this.eye.Size = new System.Drawing.Size(726, 371);
+            this.eye.Size = new System.Drawing.Size(816, 463);
             this.eye.TabIndex = 0;
             // 
             // hide_pass
             // 
             this.hide_pass.Image = global::QuanLyQuanTraSua.Properties.Resources.hiden;
-            this.hide_pass.Location = new System.Drawing.Point(535, 195);
+            this.hide_pass.Location = new System.Drawing.Point(694, 252);
+            this.hide_pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hide_pass.Name = "hide_pass";
-            this.hide_pass.Size = new System.Drawing.Size(35, 30);
+            this.hide_pass.Size = new System.Drawing.Size(39, 38);
             this.hide_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hide_pass.TabIndex = 6;
             this.hide_pass.TabStop = false;
@@ -84,9 +88,10 @@ namespace QuanLyQuanTraSua
             this.sign_in_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sign_in_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sign_in_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sign_in_btn.Location = new System.Drawing.Point(505, 287);
+            this.sign_in_btn.Location = new System.Drawing.Point(355, 346);
+            this.sign_in_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sign_in_btn.Name = "sign_in_btn";
-            this.sign_in_btn.Size = new System.Drawing.Size(166, 55);
+            this.sign_in_btn.Size = new System.Drawing.Size(187, 69);
             this.sign_in_btn.TabIndex = 5;
             this.sign_in_btn.Text = "Đăng nhập";
             this.sign_in_btn.UseVisualStyleBackColor = false;
@@ -96,56 +101,62 @@ namespace QuanLyQuanTraSua
             // 
             this.password.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.Color.Black;
-            this.password.Location = new System.Drawing.Point(234, 195);
+            this.password.Location = new System.Drawing.Point(355, 252);
+            this.password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(336, 30);
+            this.password.Size = new System.Drawing.Size(378, 35);
             this.password.TabIndex = 4;
             this.password.UseSystemPasswordChar = true;
             // 
             // username
             // 
             this.username.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(234, 127);
+            this.username.Location = new System.Drawing.Point(355, 158);
+            this.username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(336, 30);
+            this.username.Size = new System.Drawing.Size(378, 35);
             this.username.TabIndex = 3;
+            this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 195);
+            this.label3.Location = new System.Drawing.Point(97, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 36);
+            this.label3.Size = new System.Drawing.Size(178, 42);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Password";
+            this.label3.Text = "Mật khẩu";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 121);
+            this.label2.Location = new System.Drawing.Point(50, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 36);
+            this.label2.Size = new System.Drawing.Size(278, 42);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Username";
+            this.label2.Text = "Tên đăng nhập";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(280, 24);
+            this.label1.Location = new System.Drawing.Point(237, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 36);
+            this.label1.Size = new System.Drawing.Size(378, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Đăng nhập";
+            this.label1.Text = "Trà sữa Quỳnh Như ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.ClientSize = new System.Drawing.Size(1667, 941);
             this.Controls.Add(this.windows);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SignIn";
             this.Text = "SignIn";
             this.Load += new System.EventHandler(this.SignIn_Load);
