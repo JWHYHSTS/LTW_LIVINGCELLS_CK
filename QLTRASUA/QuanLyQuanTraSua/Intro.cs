@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyQuanTraSua
 {
     public partial class Intro : Form
     {
-        int count = 0;
+        private int count = 0;
+
         public Intro()
         {
             InitializeComponent();
@@ -20,12 +14,25 @@ namespace QuanLyQuanTraSua
 
         private void pos_timer_Tick(object sender, EventArgs e)
         {
-            count++;
-            if (count % 265 == 0)
+            try
+            {
+                count++;
+
+                // Nếu Timer chạy khoảng 15–20ms, thì 265 tick ~ 4–5 giây
+                if (count >= 265)
+                {
+                    pos_timer.Stop();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
             {
                 pos_timer.Stop();
+                MessageBox.Show("Đã xảy ra lỗi trong màn hình giới thiệu:\n" + ex.Message,
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }
     }
 }
+

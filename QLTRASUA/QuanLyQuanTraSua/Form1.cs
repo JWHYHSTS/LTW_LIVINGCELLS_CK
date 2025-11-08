@@ -13,6 +13,7 @@ namespace QuanLyQuanTraSua
 {
     public partial class Form1 : Form
     {
+        // ====== State & UI references ======
         bool showTask = false;
         Panel my_work;
         TimeSpan sign_in_time;
@@ -21,28 +22,40 @@ namespace QuanLyQuanTraSua
         string userID = "";
         string userName = "";
         CheckBox cb = new CheckBox();
-        Control h= new Control();
+        Control h = new Control();
         int signal = 1;
+
+        // Slide panel bounds
+        private const int TaskHiddenX = -205;
+        private const int TaskShownX = 0;
+
+        DateTime today = DateTime.Now;
+
         public Form1()
         {
             InitializeComponent();
-            //Intro intro_form = new Intro();
-            //intro_form.ShowDialog();
-            task_panel.Location = new Point(-205, 105);
+
+            // Khởi tạo panel task trượt vào/ra
+            task_panel.Location = new Point(TaskHiddenX, 105);
+
+            // Hidden checkbox để bắt tín hiệu SignIn
             cb.Checked = false;
             cb.Visible = false;
             cb.CheckStateChanged += Cb_CheckStateChanged;
             this.Controls.Add(cb);
 
+            // Gán handler chung cho các task button (tag = "task_button")
             foreach (Control t in task_panel.Controls)
                 if ((string)t.Tag == "task_button")
                     t.Click += new System.EventHandler(this.task_button_Click);
 
+            // Danh sách nút của Nhân viên
             staff_task.Add(order_mana_btn);
             staff_task.Add(customer_mana_btn);
             staff_task.Add(shift_mana_btn);
             staff_task.Add(sign_out_btn);
 
+            // Danh sách nút của Quản lý
             manager_task.Add(staff_mana_btn);
             manager_task.Add(sale_mana_btn);
             manager_task.Add(expense_mana_btn);
@@ -54,26 +67,28 @@ namespace QuanLyQuanTraSua
         {
             if (signal == 1)
             {
-                SignIn k = h as SignIn;
-                userID = k.userID;
-                userName = k.userName;
-                if (userID.Contains("NV"))
+                var k = h as SignIn;
+                if (k == null) return;
+
+                userID = k.userID ?? "";
+                userName = k.userName ?? "";
+
+                if (userID.StartsWith("NV"))
                 {
                     role.Text = "Nhân viên";
-                    foreach (Control t in staff_task)
-                        t.Visible = true;
-
+                    foreach (Control t in staff_task) t.Visible = true;
                 }
                 else
                 {
                     role.Text = "Quản lý";
-                    foreach (Control t in manager_task)
-                        t.Visible = true;
+                    foreach (Control t in manager_task) t.Visible = true;
                 }
+
                 ten.Text = userName;
                 role.Visible = true;
                 ten.Visible = true;
                 sign_in_btn.Enabled = false;
+
                 clear_old();
                 signal = 0;
             }
@@ -83,33 +98,27 @@ namespace QuanLyQuanTraSua
         {
             DateTime datetime = DateTime.Now;
             date_label.Text = datetime.ToString();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (Control h in staff_task)
-                h.Visible = false;
-            foreach (Control k in manager_task)
-                k.Visible = false;
+            foreach (Control c in staff_task) c.Visible = false;
+            foreach (Control c in manager_task) c.Visible = false;
+            role.Visible = false;
+            ten.Visible = false;
         }
 
         private void task_timer_Tick(object sender, EventArgs e)
         {
-           
-            if (showTask == true)
-            {
+            int x = task_panel.Location.X;
 
-                if (task_panel.Location.X < 0)
-                {
-                    task_panel.Location = new Point(task_panel.Location.X + 10, task_panel.Location.Y);
-                }
-            }
+            if (showTask)
+                x = Math.Min(TaskShownX, x + 10);
             else
-            {
-                if (task_panel.Location.X > -205)
-                    task_panel.Location = new Point(task_panel.Location.X - 30, task_panel.Location.Y);
-            }
+                x = Math.Max(TaskHiddenX, x - 30);
+
+            if (x != task_panel.Location.X)
+                task_panel.Location = new Point(x, task_panel.Location.Y);
         }
 
         private void task_icon_Click(object sender, EventArgs e)
@@ -121,12 +130,17 @@ namespace QuanLyQuanTraSua
         {
             showTask = false;
             Button btn = sender as Button;
-            task_screen.Text = btn.Text;
+            task_screen.Text = btn.Text; // nếu muốn hiển thị tiêu đề, thay bằng label riêng
         }
 
         private void clear_old()
         {
-            task_screen.Controls.Remove(my_work);
+            if (my_work != null && task_screen.Controls.Contains(my_work))
+            {
+                task_screen.Controls.Remove(my_work);
+                my_work.Dispose();
+                my_work = null;
+            }
         }
 
         private void order_mana_btn_Click(object sender, EventArgs e)
@@ -136,7 +150,7 @@ namespace QuanLyQuanTraSua
             f.UserCode = userID;
             f.UserName = userName;
             my_work = f.windows;
-            
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
         }
@@ -146,6 +160,7 @@ namespace QuanLyQuanTraSua
             clear_old();
             FormKhachHang f = new FormKhachHang();
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
         }
@@ -157,9 +172,9 @@ namespace QuanLyQuanTraSua
             f.start_time = sign_in_time;
             f.UserCode = userID;
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
-           
         }
 
         private void staff_mana_btn_Click(object sender, EventArgs e)
@@ -167,6 +182,7 @@ namespace QuanLyQuanTraSua
             clear_old();
             FormNhanVien f = new FormNhanVien();
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
         }
@@ -176,6 +192,7 @@ namespace QuanLyQuanTraSua
             clear_old();
             FormDoanhThu f = new FormDoanhThu();
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
         }
@@ -185,6 +202,7 @@ namespace QuanLyQuanTraSua
             clear_old();
             FormChiPhi f = new FormChiPhi();
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
         }
@@ -194,18 +212,19 @@ namespace QuanLyQuanTraSua
             clear_old();
             FormLoiNhuan f = new FormLoiNhuan();
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
         }
 
         private void sign_in_btn_Click(object sender, EventArgs e)
         {
-            
             clear_old();
             h = new SignIn();
             SignIn f = h as SignIn;
-            f.cb = cb;
+            f.cb = cb;                      // checkbox để đẩy tín hiệu đăng nhập
             my_work = f.windows;
+            my_work.Dock = DockStyle.Fill;
             task_screen.Controls.Add(my_work);
             f.windows.Location = new Point(5, 5);
             sign_in_time = DateTime.Now.TimeOfDay;
@@ -217,22 +236,23 @@ namespace QuanLyQuanTraSua
             if (dia == DialogResult.Yes)
             {
                 clear_old();
-                foreach (Control k in staff_task)
-                    k.Visible = false;
-                foreach (Control k in manager_task)
-                    k.Visible = false;
+                foreach (Control k in staff_task) k.Visible = false;
+                foreach (Control k in manager_task) k.Visible = false;
                 sign_in_btn.Enabled = true;
                 userID = "";
                 userName = "";
-                cb.Checked = false;
                 signal = 1;
-                ten.Text = "";
-                role.Text = "";
+                cb.Checked = false;
+                ten.Text = string.Empty;
+                role.Text = string.Empty;
+                role.Visible = false;
+                ten.Visible = false;
             }
         }
+
         private void exit_btn_Click(object sender, EventArgs e)
         {
-            DialogResult dia=MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            DialogResult dia = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
             if (dia == DialogResult.Yes)
                 this.Close();
         }
