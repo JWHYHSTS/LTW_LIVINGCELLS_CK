@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|e:\\filetest\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\bs layer\\querychiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\bs layer\\querychiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|e:\\filetest\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,14 +71,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QueryChiPhi.cs",
-              "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
-              "ToolTip": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAwwJAAAAA9AAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
+              "ToolTip": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\Form1.cs",
+              "ViewState": "AgIAAOoAAAAAAAAAAADwvwQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T03:27:58.818Z",
+              "WhenOpened": "2025-11-08T06:16:57.716Z",
               "EditorCaption": ""
             }
           ]
