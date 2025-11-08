@@ -36,15 +36,6 @@ namespace QuanLyQuanTraSua
             this.windows = new System.Windows.Forms.Panel();
             this.history_btn = new System.Windows.Forms.Button();
             this.regis_shift_btn = new System.Windows.Forms.Button();
-            this.shift_history_panel = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.show_report_btn = new System.Windows.Forms.Button();
-            this.filter_rdb = new System.Windows.Forms.RadioButton();
-            this.show_all_rdb = new System.Windows.Forms.RadioButton();
-            this.filter_date = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.regis_shift_panel = new System.Windows.Forms.Panel();
             this.show_Table_btn = new System.Windows.Forms.Button();
             this.Shift_control = new System.Windows.Forms.GroupBox();
@@ -159,13 +150,20 @@ namespace QuanLyQuanTraSua
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.shift_history_panel = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.show_report_btn = new System.Windows.Forms.Button();
+            this.filter_rdb = new System.Windows.Forms.RadioButton();
+            this.show_all_rdb = new System.Windows.Forms.RadioButton();
+            this.filter_date = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.progress_timer = new System.Windows.Forms.Timer(this.components);
             this.QUANLYLUONGTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.QUANLYLUONGTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.QUANLYLUONGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).BeginInit();
             this.windows.SuspendLayout();
-            this.shift_history_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.regis_shift_panel.SuspendLayout();
             this.Shift_control.SuspendLayout();
             this.Timetable.SuspendLayout();
@@ -203,6 +201,8 @@ namespace QuanLyQuanTraSua
             ((System.ComponentModel.ISupportInitialize)(this.week_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.year_num)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.month_num)).BeginInit();
+            this.shift_history_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // QUANLYLUONGBindingSource
@@ -258,108 +258,6 @@ namespace QuanLyQuanTraSua
             this.regis_shift_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.regis_shift_btn.UseVisualStyleBackColor = true;
             this.regis_shift_btn.Click += new System.EventHandler(this.regis_shift_btn_Click);
-            // 
-            // shift_history_panel
-            // 
-            this.shift_history_panel.Controls.Add(this.reportViewer1);
-            this.shift_history_panel.Controls.Add(this.show_report_btn);
-            this.shift_history_panel.Controls.Add(this.filter_rdb);
-            this.shift_history_panel.Controls.Add(this.show_all_rdb);
-            this.shift_history_panel.Controls.Add(this.filter_date);
-            this.shift_history_panel.Controls.Add(this.pictureBox1);
-            this.shift_history_panel.Controls.Add(this.label28);
-            this.shift_history_panel.Controls.Add(this.label6);
-            this.shift_history_panel.Location = new System.Drawing.Point(13, 53);
-            this.shift_history_panel.Name = "shift_history_panel";
-            this.shift_history_panel.Size = new System.Drawing.Size(1424, 604);
-            this.shift_history_panel.TabIndex = 4;
-            this.shift_history_panel.Visible = false;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.QUANLYLUONGBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportCaLam.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(197, 98);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(999, 367);
-            this.reportViewer1.TabIndex = 21;
-            // 
-            // show_report_btn
-            // 
-            this.show_report_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.show_report_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.show_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_report_btn.Location = new System.Drawing.Point(982, 42);
-            this.show_report_btn.Name = "show_report_btn";
-            this.show_report_btn.Size = new System.Drawing.Size(161, 32);
-            this.show_report_btn.TabIndex = 20;
-            this.show_report_btn.Text = "Hiển thị";
-            this.show_report_btn.UseVisualStyleBackColor = true;
-            this.show_report_btn.Click += new System.EventHandler(this.show_report_btn_Click);
-            // 
-            // filter_rdb
-            // 
-            this.filter_rdb.AutoSize = true;
-            this.filter_rdb.Location = new System.Drawing.Point(617, 50);
-            this.filter_rdb.Name = "filter_rdb";
-            this.filter_rdb.Size = new System.Drawing.Size(17, 16);
-            this.filter_rdb.TabIndex = 19;
-            this.filter_rdb.UseVisualStyleBackColor = true;
-            // 
-            // show_all_rdb
-            // 
-            this.show_all_rdb.AutoSize = true;
-            this.show_all_rdb.Checked = true;
-            this.show_all_rdb.Location = new System.Drawing.Point(368, 50);
-            this.show_all_rdb.Name = "show_all_rdb";
-            this.show_all_rdb.Size = new System.Drawing.Size(17, 16);
-            this.show_all_rdb.TabIndex = 18;
-            this.show_all_rdb.TabStop = true;
-            this.show_all_rdb.UseVisualStyleBackColor = true;
-            // 
-            // filter_date
-            // 
-            this.filter_date.CustomFormat = "MM/yyyy";
-            this.filter_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.filter_date.Location = new System.Drawing.Point(680, 44);
-            this.filter_date.MaxDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
-            this.filter_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.filter_date.Name = "filter_date";
-            this.filter_date.ShowUpDown = true;
-            this.filter_date.Size = new System.Drawing.Size(148, 31);
-            this.filter_date.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.loc;
-            this.pictureBox1.Location = new System.Drawing.Point(640, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(382, 48);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(153, 23);
-            this.label28.TabIndex = 15;
-            this.label28.Text = "Tất cả ca làm";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 23);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Lịch sử ca làm";
             // 
             // regis_shift_panel
             // 
@@ -504,6 +402,7 @@ namespace QuanLyQuanTraSua
             this.Timetable.TabIndex = 9;
             this.Timetable.TabStop = false;
             this.Timetable.Text = "Bảng ca làm";
+            this.Timetable.Enter += new System.EventHandler(this.Timetable_Enter);
             // 
             // clear_btn
             // 
@@ -1772,6 +1671,109 @@ namespace QuanLyQuanTraSua
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng ký ca làm";
             // 
+            // shift_history_panel
+            // 
+            this.shift_history_panel.Controls.Add(this.reportViewer1);
+            this.shift_history_panel.Controls.Add(this.show_report_btn);
+            this.shift_history_panel.Controls.Add(this.filter_rdb);
+            this.shift_history_panel.Controls.Add(this.show_all_rdb);
+            this.shift_history_panel.Controls.Add(this.filter_date);
+            this.shift_history_panel.Controls.Add(this.pictureBox1);
+            this.shift_history_panel.Controls.Add(this.label28);
+            this.shift_history_panel.Controls.Add(this.label6);
+            this.shift_history_panel.Location = new System.Drawing.Point(13, 53);
+            this.shift_history_panel.Name = "shift_history_panel";
+            this.shift_history_panel.Size = new System.Drawing.Size(1424, 604);
+            this.shift_history_panel.TabIndex = 4;
+            this.shift_history_panel.Visible = false;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.QUANLYLUONGBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportCaLam.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(197, 98);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(999, 367);
+            this.reportViewer1.TabIndex = 21;
+            // 
+            // show_report_btn
+            // 
+            this.show_report_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.show_report_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.show_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_report_btn.Location = new System.Drawing.Point(982, 42);
+            this.show_report_btn.Name = "show_report_btn";
+            this.show_report_btn.Size = new System.Drawing.Size(161, 32);
+            this.show_report_btn.TabIndex = 20;
+            this.show_report_btn.Text = "Hiển thị";
+            this.show_report_btn.UseVisualStyleBackColor = true;
+            this.show_report_btn.Click += new System.EventHandler(this.show_report_btn_Click);
+            // 
+            // filter_rdb
+            // 
+            this.filter_rdb.AutoSize = true;
+            this.filter_rdb.Location = new System.Drawing.Point(617, 50);
+            this.filter_rdb.Name = "filter_rdb";
+            this.filter_rdb.Size = new System.Drawing.Size(17, 16);
+            this.filter_rdb.TabIndex = 19;
+            this.filter_rdb.UseVisualStyleBackColor = true;
+            // 
+            // show_all_rdb
+            // 
+            this.show_all_rdb.AutoSize = true;
+            this.show_all_rdb.Checked = true;
+            this.show_all_rdb.Location = new System.Drawing.Point(368, 50);
+            this.show_all_rdb.Name = "show_all_rdb";
+            this.show_all_rdb.Size = new System.Drawing.Size(17, 16);
+            this.show_all_rdb.TabIndex = 18;
+            this.show_all_rdb.TabStop = true;
+            this.show_all_rdb.UseVisualStyleBackColor = true;
+            // 
+            // filter_date
+            // 
+            this.filter_date.CustomFormat = "MM/yyyy";
+            this.filter_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.filter_date.Location = new System.Drawing.Point(680, 44);
+            this.filter_date.MaxDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
+            this.filter_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.filter_date.Name = "filter_date";
+            this.filter_date.ShowUpDown = true;
+            this.filter_date.Size = new System.Drawing.Size(148, 31);
+            this.filter_date.TabIndex = 17;
+            this.filter_date.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.loc;
+            this.pictureBox1.Location = new System.Drawing.Point(640, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(382, 48);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(153, 23);
+            this.label28.TabIndex = 15;
+            this.label28.Text = "Tất cả ca làm";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 23);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Lịch sử ca làm";
+            // 
             // progress_timer
             // 
             this.progress_timer.Enabled = true;
@@ -1793,9 +1795,6 @@ namespace QuanLyQuanTraSua
             ((System.ComponentModel.ISupportInitialize)(this.QUANLYLUONGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).EndInit();
             this.windows.ResumeLayout(false);
-            this.shift_history_panel.ResumeLayout(false);
-            this.shift_history_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.regis_shift_panel.ResumeLayout(false);
             this.regis_shift_panel.PerformLayout();
             this.Shift_control.ResumeLayout(false);
@@ -1866,6 +1865,9 @@ namespace QuanLyQuanTraSua
             ((System.ComponentModel.ISupportInitialize)(this.week_num)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.year_num)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.month_num)).EndInit();
+            this.shift_history_panel.ResumeLayout(false);
+            this.shift_history_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

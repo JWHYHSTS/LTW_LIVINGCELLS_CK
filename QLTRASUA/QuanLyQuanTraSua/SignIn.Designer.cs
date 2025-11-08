@@ -105,7 +105,7 @@ namespace QuanLyQuanTraSua
             // username
             // 
             this.username.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(234, 126);
+            this.username.Location = new System.Drawing.Point(234, 127);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(336, 30);
             this.username.TabIndex = 3;

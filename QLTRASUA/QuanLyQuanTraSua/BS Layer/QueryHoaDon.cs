@@ -9,112 +9,109 @@ using System.Windows.Forms;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-
 namespace QuanLyQuanTraSua.BS_Layer
 {
     class QueryHoaDon
     {
-
         public DataGridViewComboBoxColumn LoadComboBox(DataGridViewComboBoxColumn cbbMH)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tps = qlbhEntity.MENUs.Select(p => p);
 
-            var tps = from p in qlbhEntity.MENUs select p;
+                DataTable dt = new DataTable();
+                dt.Columns.Add("MaMH");
+                dt.Columns.Add("TenMH");
 
-            DataTable dt = new DataTable();
-            dt.Columns.Add("MaMH");
-            dt.Columns.Add("TenMH");
-            foreach (var p in tps)
-                dt.Rows.Add(p.MaMH, p.TenMH);
-            cbbMH.DataSource = dt;
-            cbbMH.DisplayMember = "TenMH";
-            cbbMH.ValueMember = "MaMH";
-            return cbbMH;
+                foreach (var p in tps)
+                    dt.Rows.Add(p.MaMH, p.TenMH);
+
+                cbbMH.DataSource = dt;
+                cbbMH.DisplayMember = "TenMH";
+                cbbMH.ValueMember = "MaMH";
+                return cbbMH;
+            }
         }
 
         public bool CheckKhachHang(string sdt, out string maKH)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tps = (from p in qlbhEntity.KHACHHANGs
-                      where p.SDT.Trim() == sdt
-                      select p).SingleOrDefault();
-
-            if (tps != null)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                maKH = tps.MaKH;
-                return true;
+                var tps = qlbhEntity.KHACHHANGs
+                    .Where(p => p.SDT.Trim() == sdt)
+                    .SingleOrDefault();
+
+                if (tps != null)
+                {
+                    maKH = tps.MaKH;
+                    return true;
+                }
+                maKH = "";
+                return false;
             }
-            maKH = "";
-            return false;
         }
 
         public List<string> GetKhachInfor(string maKH)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tps = qlbhEntity.KHACHHANGs
+                    .Where(p => p.MaKH.Trim() == maKH)
+                    .SingleOrDefault();
 
-            var tps = (from p in qlbhEntity.KHACHHANGs
-                       where p.MaKH.Trim() == maKH
-                       select p).SingleOrDefault();
-
-            List<string> infor = new List<string>();
-            infor.Add(tps.MaKH.Trim());
-            infor.Add(tps.DiemTichLuy.ToString());
-            return infor;
-
+                List<string> infor = new List<string>();
+                infor.Add(tps.MaKH.Trim());
+                infor.Add(tps.DiemTichLuy.ToString());
+                return infor;
+            }
         }
-
 
         public bool ThemKhach(string name, string sdt, string diachi, ref string err, out List<string> infor)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var all = qlbhEntity.KHACHHANGs.Select(p => p).ToList();
+                int count = all.Count;
 
-            var tps = from p in qlbhEntity.KHACHHANGs select p;
+                if (count == 0)
+                {
+                    infor = new List<string> { "KH0001", "0" };
+                    return true;
+                }
 
-            DataTable dt = new DataTable();
-            dt.Columns.Add("MaKH");
+                string id = all.Last().MaKH.Trim();
+                string[] listcode = id.Split('H');
+                int index = Int32.Parse(listcode[1]);
+                string next_id = "KH" + (index + 1).ToString().PadLeft(4, '0');
 
-            foreach (var p in tps)
-                dt.Rows.Add(p.MaKH);
+                KHACHHANG kh = new KHACHHANG
+                {
+                    MaKH = next_id,
+                    TenKH = name,
+                    SDT = sdt,
+                    DiaChi = diachi,
+                    DiemTichLuy = 0
+                };
 
-            int count = tps.Count();
-            DataRow lastrow = dt.Rows[count - 1];
-            string id = lastrow["MaKH"].ToString().Trim();
-            string[] listcode = id.Split('H');
-            int index = Int32.Parse(listcode[1]);
-            string next_id = "KH";
-            next_id = next_id + (index + 1).ToString().PadLeft(4, '0');
+                qlbhEntity.KHACHHANGs.InsertOnSubmit(kh);
+                qlbhEntity.KHACHHANGs.Context.SubmitChanges();
 
-            KHACHHANG kh = new KHACHHANG();
-            kh.MaKH = next_id;
-            kh.TenKH = name;
-            kh.SDT = sdt;
-            kh.DiaChi = diachi;
-            kh.DiemTichLuy = 0;
-
-            qlbhEntity.KHACHHANGs.InsertOnSubmit(kh);
-            qlbhEntity.KHACHHANGs.Context.SubmitChanges();
-            infor = new List<string>();
-            infor.Add(next_id);
-            infor.Add("0");
-            return true;
-
+                infor = new List<string> { next_id, "0" };
+                return true;
+            }
         }
 
         public void GetGia(string idMH, out int cost, out int plus)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tps = qlbhEntity.MENUs
+                    .Where(p => p.MaMH.Trim() == idMH)
+                    .SingleOrDefault();
 
-            var tps = (from p in qlbhEntity.MENUs
-                       where p.MaMH.Trim() == idMH
-                       select p).SingleOrDefault();
-
-            cost = (int)tps.GiaTien;
-            plus = tps.DiemTichLuy;
-
+                cost = (int)tps.GiaTien;
+                plus = tps.DiemTichLuy;
+            }
         }
 
         private string LocNgay(string datetime)
@@ -122,124 +119,117 @@ namespace QuanLyQuanTraSua.BS_Layer
             string[] list_time = datetime.Split(' ');
             string[] list_date = list_time[0].Split('/');
             DateTime date = new DateTime(Int32.Parse(list_date[2]), Int32.Parse(list_date[0]), Int32.Parse(list_date[1]));
-            string result = date.ToString("yyyy-MM-dd");
-            return result;
+            return date.ToString("yyyy-MM-dd");
         }
-
 
         public float CheckCoupon(int cost, int point, out List<string> coupon_infor)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            coupon_infor = new List<string>();
-            DateTime today = DateTime.Now;
-            var cp = from p in qlbhEntity.COUPONs select p;
-            
-            string start, end, now;
-            now = today.ToString("yyyy-MM-dd");
-            float discount = 0, rate, max = 0;
-            int point_rate = 0;
-            foreach (var p in cp)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                start = LocNgay(p.NgayBatDau.ToString());
-                end = LocNgay(p.NgayKetThuc.ToString());
-                rate = (float)p.MucGiam;
-                point_rate = (int)p.DiemApDung;
-                max = (float)p.GiamToiDa;
-                if (String.Compare(start, now) <= 0 && String.Compare(now, end) <= 0)
-                    if (point >= point_rate)
+                coupon_infor = new List<string>();
+                DateTime today = DateTime.Now;
+                var cp = qlbhEntity.COUPONs.Select(p => p);
+
+                string start, end, now = today.ToString("yyyy-MM-dd");
+                float discount = 0, rate, max;
+                int point_rate;
+
+                foreach (var p in cp)
+                {
+                    start = LocNgay(p.NgayBatDau.ToString());
+                    end = LocNgay(p.NgayKetThuc.ToString());
+                    rate = (float)p.MucGiam;
+                    point_rate = (int)p.DiemApDung;
+                    max = (float)p.GiamToiDa;
+
+                    if (String.Compare(start, now) <= 0 && String.Compare(now, end) <= 0)
                     {
-                        discount = cost * rate;
-                        if (discount > max)
-                            discount = max;
-                        coupon_infor.Add(p.MaCP);
-                        coupon_infor.Add(p.MoTa);
-                        break;
+                        if (point >= point_rate)
+                        {
+                            discount = cost * rate;
+                            if (discount > max)
+                                discount = max;
+
+                            coupon_infor.Add(p.MaCP);
+                            coupon_infor.Add(p.MoTa);
+                            break;
+                        }
                     }
+                }
+                return discount;
             }
-            
-            return discount;
         }
-
-
-
 
         public bool UpdateKhachHang(string maKH, int point, ref string err)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tps = (from p in qlbhEntity.KHACHHANGs
-                       where p.MaKH.Trim() == maKH
-                       select p).SingleOrDefault();
-            if (tps!=null)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                tps.DiemTichLuy = tps.DiemTichLuy + point;
-                qlbhEntity.SubmitChanges();
-                return true;
-            }
-            return false;
-        }
+                var tps = qlbhEntity.KHACHHANGs
+                    .Where(p => p.MaKH.Trim() == maKH)
+                    .SingleOrDefault();
 
+                if (tps != null)
+                {
+                    tps.DiemTichLuy += point;
+                    qlbhEntity.SubmitChanges();
+                    return true;
+                }
+                return false;
+            }
+        }
 
         public string LuuHoaDon(string maKH, string maNV, float total_cost, DateTime ngayXHD, string maCP, ref string err)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var all = qlbhEntity.HOADONs.Select(p => p).ToList();
+                int count = all.Count;
 
-            var cp = from p in qlbhEntity.HOADONs select p;
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaHD");
-          
-            foreach (var p in cp)
-                tb.Rows.Add(p.MaHD);
-            DataRow[] filter = tb.Select();
-            int count = filter.Length;
-            DataRow lastrow = filter[count - 1];
-            string id = lastrow["MaHD"].ToString().Trim();
-            string[] listcode = id.Split('D');
-            int index = Int32.Parse(listcode[1]);
-            string next_id = "HD";
-            next_id = next_id + (index + 1).ToString().PadLeft(4, '0');
+                if (count == 0)
+                    return "HD0001";
 
-            HOADON hd = new HOADON();
-            hd.MaHD = next_id;
-            hd.MaKH = maKH;
-            hd.MaNV = maNV;
-            hd.ThanhTien = total_cost;
-            hd.NgayXuatHD = ngayXHD;
-            if (maCP != "Null")
-                hd.MaCP = maCP;
-            else
-                hd.MaCP = null;
+                string id = all.Last().MaHD.Trim();
+                string[] listcode = id.Split('D');
+                int index = Int32.Parse(listcode[1]);
+                string next_id = "HD" + (index + 1).ToString().PadLeft(4, '0');
 
-            qlbhEntity.HOADONs.InsertOnSubmit(hd);
-            qlbhEntity.HOADONs.Context.SubmitChanges();
+                HOADON hd = new HOADON
+                {
+                    MaHD = next_id,
+                    MaKH = maKH,
+                    MaNV = maNV,
+                    ThanhTien = total_cost,
+                    NgayXuatHD = ngayXHD,
+                    MaCP = (maCP != "Null") ? maCP : null
+                };
 
-            return next_id;
+                qlbhEntity.HOADONs.InsertOnSubmit(hd);
+                qlbhEntity.HOADONs.Context.SubmitChanges();
+
+                return next_id;
+            }
         }
 
-     
         public void LuuChiTietHD(string maHD, DataGridView table_item, ref string err)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            CHITIETHOADON ct = new CHITIETHOADON();
-            foreach (DataGridViewRow row in table_item.Rows)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                if (row.Cells[0].Value != null)
+                foreach (DataGridViewRow row in table_item.Rows)
                 {
-                    ct = new CHITIETHOADON();
-                    ct.MaHD = maHD;
-                    ct.MaMH = row.Cells[0].Value.ToString().Trim();
-                    ct.SoLuong = (int)row.Cells[1].Value;
-                    ct.DiemTichLuy = (int)row.Cells[2].Value;
-                    ct.Tien = (int)row.Cells[3].Value;
+                    if (row.Cells[0].Value != null)
+                    {
+                        var ct = new CHITIETHOADON
+                        {
+                            MaHD = maHD,
+                            MaMH = row.Cells[0].Value.ToString().Trim(),
+                            SoLuong = (int)row.Cells[1].Value,
+                            DiemTichLuy = (int)row.Cells[2].Value,
+                            Tien = (int)row.Cells[3].Value
+                        };
 
-                    qlbhEntity.CHITIETHOADONs.InsertOnSubmit(ct);
-                    qlbhEntity.CHITIETHOADONs.Context.SubmitChanges();
+                        qlbhEntity.CHITIETHOADONs.InsertOnSubmit(ct);
+                        qlbhEntity.CHITIETHOADONs.Context.SubmitChanges();
+                    }
                 }
             }
         }

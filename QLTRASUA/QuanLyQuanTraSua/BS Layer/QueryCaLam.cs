@@ -16,141 +16,157 @@ namespace QuanLyQuanTraSua.BS_Layer
             string[] tg = tgian.Split('-');
             DateTime dt = new DateTime(Int32.Parse(tg[0]), Int32.Parse(tg[1]), Int32.Parse(tg[2]));
 
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tsb = (from p in qlbhEntity.QUANLYLUONGs where p.ThoiGian == dt && p.MaNV.Trim() == maNV && p.MaCa.Trim() == maCa select p).SingleOrDefault();
-            
-            if (tsb != null)
+            using (var ctx = new QUANLYQUANTRADataContext())
             {
-                return false;
-            }
+                var tsb = ctx.QUANLYLUONGs
+                             .SingleOrDefault(p => p.ThoiGian == dt
+                                                && p.MaNV.Trim() == maNV
+                                                && p.MaCa.Trim() == maCa);
+                if (tsb != null) return false;
 
-            QUANLYLUONG ql = new QUANLYLUONG();
-            ql.ThoiGian = dt;
-            ql.MaNV = maNV;
-            ql.MaCa = maCa;
-            ql.MucDoHoanThanh = 0;
-            ql.Luong = 0;
-            qlbhEntity.QUANLYLUONGs.InsertOnSubmit(ql);
-            qlbhEntity.QUANLYLUONGs.Context.SubmitChanges();
-            return true;
+                var ql = new QUANLYLUONG
+                {
+                    ThoiGian = dt,
+                    MaNV = maNV,
+                    MaCa = maCa,
+                    MucDoHoanThanh = 0,
+                    Luong = 0
+                };
+                ctx.QUANLYLUONGs.InsertOnSubmit(ql);
+                ctx.SubmitChanges();
+                return true;
+            }
         }
 
         private double TienLuongca(string maCa)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tsb = (from p in qlbhEntity.CALAMs where p.MaCa.Trim() == maCa select p).SingleOrDefault();
-            return tsb.LuongTheoGio;
+            using (var ctx = new QUANLYQUANTRADataContext())
+            {
+                var ca = ctx.CALAMs.SingleOrDefault(p => p.MaCa.Trim() == maCa);
+                return ca?.LuongTheoGio ?? 0.0;
+            }
         }
 
         public Dictionary<string, List<TimeSpan>> ThoiGianLam()
         {
-            Dictionary<string, List<TimeSpan>> list_time_ca= new Dictionary<string, List<TimeSpan>>();
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            var list_time_ca = new Dictionary<string, List<TimeSpan>>();
 
-            var tsb = from p in qlbhEntity.CALAMs select p;
-
-            string ca;
-            TimeSpan start, end;
-            List<TimeSpan> tempt= new List<TimeSpan>();
-
-            foreach(var r in tsb)
+            using (var ctx = new QUANLYQUANTRADataContext())
             {
-                tempt = new List<TimeSpan>();
+                var tsb = ctx.CALAMs.Select(p => new
+                {
+                    p.MaCa,
+                    p.ThoiGianBatDau,
+                    p.ThoiGianKetThuc
+                });
 
-                start = (TimeSpan)r.ThoiGianBatDau;
-                end = (TimeSpan)r.ThoiGianKetThuc;
+                foreach (var r in tsb)
+                {
+                    var start = (TimeSpan)r.ThoiGianBatDau;
+                    var end = (TimeSpan)r.ThoiGianKetThuc;
 
-                tempt.Add(start);
-                tempt.Add(end);
-                ca = r.MaCa.Trim();
-                list_time_ca[ca] = tempt;
+                    list_time_ca[r.MaCa.Trim()] = new List<TimeSpan> { start, end };
+                }
             }
             return list_time_ca;
         }
 
         public Dictionary<string, int> Max_nv()
         {
-            Dictionary<string, int> list_max_ca = new Dictionary<string, int>();
-            
+            var list_max_ca = new Dictionary<string, int>();
 
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tsb = from p in qlbhEntity.CALAMs select p;
-
-
-            foreach (var r in tsb)
-                list_max_ca.Add(r.MaCa.Trim(), (int)r.NhanVienToiDa);
+            using (var ctx = new QUANLYQUANTRADataContext())
+            {
+                var tsb = ctx.CALAMs.Select(p => new { p.MaCa, p.NhanVienToiDa });
+                foreach (var r in tsb)
+                {
+                    list_max_ca[r.MaCa.Trim()] = (int)r.NhanVienToiDa;
+                }
+            }
             return list_max_ca;
         }
 
         public bool Finish_work(string maNV, string tgian, string maCa, int rate, ref string err)
         {
             double luong = 4 * TienLuongca(maCa) * rate;
+
             string[] tg = tgian.Split('-');
             DateTime dt = new DateTime(Int32.Parse(tg[0]), Int32.Parse(tg[1]), Int32.Parse(tg[2]));
 
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tsb = (from p in qlbhEntity.QUANLYLUONGs where p.ThoiGian==dt && p.MaNV.Trim()==maNV && p.MaCa.Trim()==maCa select p).SingleOrDefault();
-            if (tsb!=null)
+            using (var ctx = new QUANLYQUANTRADataContext())
             {
-                tsb.MucDoHoanThanh = rate;
-                tsb.Luong = (float)luong;
-                return true;
+                var tsb = ctx.QUANLYLUONGs
+                             .SingleOrDefault(p => p.ThoiGian == dt
+                                                && p.MaNV.Trim() == maNV
+                                                && p.MaCa.Trim() == maCa);
+                if (tsb != null)
+                {
+                    tsb.MucDoHoanThanh = rate;
+                    tsb.Luong = (float)luong;
+                    ctx.SubmitChanges();               // BỔ SUNG: commit thay đổi
+                    return true;
+                }
+                return false;
             }
-            return false;
-
         }
+
         private DataTable GetRegisList(DateTime start, DateTime end)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var ctx = new QUANLYQUANTRADataContext())
+            {
+                var tsb = ctx.QUANLYLUONGs
+                             .Where(p => p.ThoiGian >= start && p.ThoiGian <= end)
+                             .Select(p => new
+                             {
+                                 p.ThoiGian,
+                                 p.MaNV,
+                                 p.MaCa,
+                                 p.MucDoHoanThanh,
+                                 p.Luong
+                             });
 
-            var tsb = from p in qlbhEntity.QUANLYLUONGs
-                      where p.ThoiGian >= start && p.ThoiGian <= end
-                      select p;
+                DataTable tb = new DataTable();
+                tb.Columns.Add("ThoiGian", typeof(DateTime));
+                tb.Columns.Add("MaNV", typeof(string));
+                tb.Columns.Add("MaCa", typeof(string));
+                tb.Columns.Add("MucDoHoanThanh", typeof(int));
+                tb.Columns.Add("Luong", typeof(float));
 
-            DataTable tb = new DataTable();
-            tb.Columns.Add("ThoiGian");
-            tb.Columns.Add("MaNV");
-            tb.Columns.Add("MaCa");
-            tb.Columns.Add("MucDoHoanThanh");
-            tb.Columns.Add("Luong");
+                foreach (var p in tsb)
+                    tb.Rows.Add(p.ThoiGian, p.MaNV, p.MaCa, p.MucDoHoanThanh, p.Luong);
 
-            foreach (var p in tsb)
-                tb.Rows.Add(p.ThoiGian, p.MaNV, p.MaCa, p.MucDoHoanThanh, p.Luong);
-            return tb;
+                return tb;
+            }
         }
 
         private string Get_shift_code(DataRow row)
         {
-            return ((string)row["MaCa"]).Trim() + "-" + (DateTime.Parse((string)row["ThoiGian"])).ToString("dd/MM");
+            // Cột ThoiGian đang là DateTime trong DataTable → ép kiểu trực tiếp
+            var maCa = ((string)row["MaCa"]).Trim();
+            DateTime dt = (DateTime)row["ThoiGian"];
+            return maCa + "-" + dt.ToString("dd/MM");
         }
 
         private string GetName(string MaNV)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tsb = (from p in qlbhEntity.NHANVIENs
-                      where p.MaNV==MaNV
-                      select p).SingleOrDefault();
-
-            string name = tsb.TenNV;
-            string[] list_name = name.Split(' ');
-            return list_name[list_name.Length - 1];
+            using (var ctx = new QUANLYQUANTRADataContext())
+            {
+                var nv = ctx.NHANVIENs.SingleOrDefault(p => p.MaNV == MaNV);
+                var name = nv?.TenNV ?? string.Empty;
+                var parts = name.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                return parts.Length > 0 ? parts[parts.Length - 1] : string.Empty;
+            }
         }
 
         public List<List<string>> LoadTimeTable(DateTime start, DateTime end)
         {
-            List<List<string>> list_ca=new List<List<string>>();
+            var list_ca = new List<List<string>>();
             DataTable tb = GetRegisList(start, end);
             DataRow[] list_row = tb.Select();
-            List<string> temp = new List<string>();
+
             foreach (DataRow row in list_row)
             {
-                temp = new List<string>();
+                var temp = new List<string>();
                 temp.Add(Get_shift_code(row));
                 temp.Add((string)row["MaNV"]);
                 temp.Add(GetName((string)row["MaNV"]));
@@ -158,6 +174,5 @@ namespace QuanLyQuanTraSua.BS_Layer
             }
             return list_ca;
         }
-
     }
 }

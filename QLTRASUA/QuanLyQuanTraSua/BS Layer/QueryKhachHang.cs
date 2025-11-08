@@ -7,85 +7,99 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-
 namespace QuanLyQuanTraSua.BS_Layer
 {
     class QueryKhachHang
     {
-
         public DataTable LayKhachHang()
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tsb = qlbhEntity.KHACHHANGs.Select(p => p);
 
-            
-            var tsb = from p in qlbhEntity.KHACHHANGs select p;
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaKH");
-            tb.Columns.Add("TenKH");
-            tb.Columns.Add("SDT");
-            tb.Columns.Add("DiaChi");
-            tb.Columns.Add("DiemTichLuy");
+                DataTable tb = new DataTable();
+                tb.Columns.Add("MaKH");
+                tb.Columns.Add("TenKH");
+                tb.Columns.Add("SDT");
+                tb.Columns.Add("DiaChi");
+                tb.Columns.Add("DiemTichLuy");
 
-            foreach (var p in tsb)
-                tb.Rows.Add(p.MaKH, p.TenKH, p.SDT, p.DiaChi, p.DiemTichLuy);
+                foreach (var p in tsb)
+                    tb.Rows.Add(p.MaKH, p.TenKH, p.SDT, p.DiaChi, p.DiemTichLuy);
 
-            return tb;
-           
+                return tb;
+            }
         }
 
         public bool CapNhatKhachHang(string MaKhachHang, string TenKH, string DiaChi, string DienThoai, ref string err)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            var tsb = (from p in qlbhEntity.KHACHHANGs where p.MaKH.Trim()==MaKhachHang select p).SingleOrDefault();
-            if (tsb!=null)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                tsb.TenKH = TenKH;
-                tsb.DiaChi = DiaChi;
-                tsb.SDT = DienThoai;
-                qlbhEntity.SubmitChanges();
-                
+                var tsb = qlbhEntity.KHACHHANGs
+                                    .Where(p => p.MaKH.Trim() == MaKhachHang)
+                                    .SingleOrDefault();
+
+                if (tsb != null)
+                {
+                    tsb.TenKH = TenKH;
+                    tsb.DiaChi = DiaChi;
+                    tsb.SDT = DienThoai;
+                    qlbhEntity.SubmitChanges();
+                }
+                return true;
             }
-            return true;
-            
         }
+
         public DataTable LayThongTin(string makh)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tsb = qlbhEntity.KHACHHANGs
+                                    .Where(p => p.MaKH.Trim() == makh)
+                                    .SingleOrDefault();
 
-            var tsb = (from p in qlbhEntity.KHACHHANGs where p.MaKH.Trim() == makh select p).SingleOrDefault();
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaKH");
-            tb.Columns.Add("TenKH");
-            tb.Columns.Add("SDT");
-            tb.Columns.Add("DiaChi");
-            tb.Columns.Add("DiemTichLuy");
-            
-            tb.Rows.Add(tsb.MaKH, tsb.TenKH, tsb.SDT, tsb.DiaChi, tsb.DiemTichLuy);
+                DataTable tb = new DataTable();
+                tb.Columns.Add("MaKH");
+                tb.Columns.Add("TenKH");
+                tb.Columns.Add("SDT");
+                tb.Columns.Add("DiaChi");
+                tb.Columns.Add("DiemTichLuy");
 
-            return tb;
+                if (tsb != null)
+                    tb.Rows.Add(tsb.MaKH, tsb.TenKH, tsb.SDT, tsb.DiaChi, tsb.DiemTichLuy);
 
+                return tb;
+            }
         }
 
         public DataTable LocKhachHang(string text)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = from p in qlbhEntity.KHACHHANGs where p.TenKH.Trim().Contains(text) || p.MaKH.Trim().Contains(text) || p.SDT.Trim().Contains(text) || p.DiaChi.Trim().Contains(text) || p.DiemTichLuy.ToString().Contains(text)
-                      select p;
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                // NOTE: Để giữ nguyên hành vi ".ToString().Contains(text)" trên DiemTichLuy (vốn khó dịch sang SQL),
+                // mình load về bộ nhớ rồi lọc (tránh NotSupportedException). Không đổi logic tìm kiếm.
+                var all = qlbhEntity.KHACHHANGs.Select(p => p).ToList();
 
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaKH");
-            tb.Columns.Add("TenKH");
-            tb.Columns.Add("SDT");
-            tb.Columns.Add("DiaChi");
-            tb.Columns.Add("DiemTichLuy");
-            foreach (var p in tsb)
-                tb.Rows.Add(p.MaKH, p.TenKH, p.SDT, p.DiaChi, p.DiemTichLuy);
-            return tb;
+                var filtered = all.Where(p =>
+                        (p.TenKH ?? string.Empty).Trim().Contains(text)
+                     || (p.MaKH ?? string.Empty).Trim().Contains(text)
+                     || (p.SDT ?? string.Empty).Trim().Contains(text)
+                     || (p.DiaChi ?? string.Empty).Trim().Contains(text)
+                     || p.DiemTichLuy.ToString().Contains(text)
+                );
 
+                DataTable tb = new DataTable();
+                tb.Columns.Add("MaKH");
+                tb.Columns.Add("TenKH");
+                tb.Columns.Add("SDT");
+                tb.Columns.Add("DiaChi");
+                tb.Columns.Add("DiemTichLuy");
+
+                foreach (var p in filtered)
+                    tb.Rows.Add(p.MaKH, p.TenKH, p.SDT, p.DiaChi, p.DiemTichLuy);
+
+                return tb;
+            }
         }
-
     }
-
 }
-

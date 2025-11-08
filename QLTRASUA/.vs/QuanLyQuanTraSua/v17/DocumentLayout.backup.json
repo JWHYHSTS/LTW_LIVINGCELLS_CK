@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Cuoi_ky\\TraSua\\QuanLyQuanTraSua_LinqtoSQL\\",
+  "WorkspaceRootPath": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|d:\\tailieudaihoc\\hk5\\ltwindow\\cuoi_ky\\trasua\\quanlyquantrasua_linqtosql\\quanlyquantrasua\\formdoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formdoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|d:\\tailieudaihoc\\hk5\\ltwindow\\cuoi_ky\\trasua\\quanlyquantrasua_linqtosql\\quanlyquantrasua\\formdoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formdoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|e:\\filetest\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\bs layer\\querychiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\bs layer\\querychiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,25 +13,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 168,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormDoanhThu.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Cuoi_ky\\TraSua\\QuanLyQuanTraSua_LinqtoSQL\\QuanLyQuanTraSua\\FormDoanhThu.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormDoanhThu.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Cuoi_ky\\TraSua\\QuanLyQuanTraSua_LinqtoSQL\\QuanLyQuanTraSua\\FormDoanhThu.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormDoanhThu.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwDwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T20:14:24.809Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
@@ -55,19 +38,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
@@ -75,7 +46,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -87,19 +62,24 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormDoanhThu.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Cuoi_ky\\TraSua\\QuanLyQuanTraSua_LinqtoSQL\\QuanLyQuanTraSua\\FormDoanhThu.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormDoanhThu.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Cuoi_ky\\TraSua\\QuanLyQuanTraSua_LinqtoSQL\\QuanLyQuanTraSua\\FormDoanhThu.cs [Design]",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormDoanhThu.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "QueryChiPhi.cs",
+              "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
+              "ToolTip": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAwwJAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T20:18:56.145Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-08T03:27:58.818Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -125,6 +105,14 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
@@ -134,14 +122,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
