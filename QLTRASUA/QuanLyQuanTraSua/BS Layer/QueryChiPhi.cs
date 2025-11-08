@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyQuanTraSua.BS_Layer
 {
@@ -84,7 +85,12 @@ namespace QuanLyQuanTraSua.BS_Layer
 
         public DataTable LayThongTin(string year)
         {
-            int Year = Int32.Parse(year);
+            int Year;
+            if (!Int32.TryParse(year, out Year))
+            {
+                MessageBox.Show($"Giá trị năm không hợp lệ: '{year}'", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return null; // hoặc return DataTable rỗng nếu bạn muốn
+            }
             using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
                 var tsb = qlbhEntity.CHIs

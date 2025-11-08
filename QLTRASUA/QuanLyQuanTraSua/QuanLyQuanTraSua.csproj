@@ -163,6 +163,9 @@
       <DependentUpon>QuanLiFilter.xsd</DependentUpon>
     </Compile>
     <Compile Include="BS Layer\QueryDangNhap.cs" />
+    <Compile Include="QUANLYQUANTRA.cs">
+      <DependentUpon>QUANLYQUANTRA.dbml</DependentUpon>
+    </Compile>
     <Compile Include="QUANLYQUANTRA.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -292,6 +295,8 @@
     <None Include="Resources\loc.png" />
     <None Include="Resources\hiden.png" />
     <None Include="Resources\open.png" />
+    <None Include="Resources\person.png" />
+    <None Include="Resources\person-removebg-preview %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

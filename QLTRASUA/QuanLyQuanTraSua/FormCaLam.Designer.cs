@@ -30,26 +30,21 @@ namespace QuanLyQuanTraSua
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.QUANLYLUONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.QuanLi = new QuanLyQuanTraSua.QuanLi();
             this.windows = new System.Windows.Forms.Panel();
-            this.history_btn = new System.Windows.Forms.Button();
-            this.regis_shift_btn = new System.Windows.Forms.Button();
             this.regis_shift_panel = new System.Windows.Forms.Panel();
             this.show_Table_btn = new System.Windows.Forms.Button();
             this.Shift_control = new System.Windows.Forms.GroupBox();
-            this.finish_btn = new System.Windows.Forms.Button();
             this.percentShift = new System.Windows.Forms.Label();
             this.progressShift = new System.Windows.Forms.ProgressBar();
             this.now_shift = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.Timetable = new System.Windows.Forms.GroupBox();
-            this.clear_btn = new System.Windows.Forms.Button();
             this.panel33 = new System.Windows.Forms.Panel();
             this.listBox21 = new System.Windows.Forms.ListBox();
             this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.regis_btn = new System.Windows.Forms.Button();
             this.panel32 = new System.Windows.Forms.Panel();
             this.listBox20 = new System.Windows.Forms.ListBox();
             this.checkBox20 = new System.Windows.Forms.CheckBox();
@@ -156,11 +151,16 @@ namespace QuanLyQuanTraSua
             this.filter_rdb = new System.Windows.Forms.RadioButton();
             this.show_all_rdb = new System.Windows.Forms.RadioButton();
             this.filter_date = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.progress_timer = new System.Windows.Forms.Timer(this.components);
             this.QUANLYLUONGTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.QUANLYLUONGTableAdapter();
+            this.history_btn = new System.Windows.Forms.Button();
+            this.regis_shift_btn = new System.Windows.Forms.Button();
+            this.finish_btn = new System.Windows.Forms.Button();
+            this.clear_btn = new System.Windows.Forms.Button();
+            this.regis_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.QUANLYLUONGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).BeginInit();
             this.windows.SuspendLayout();
@@ -222,42 +222,11 @@ namespace QuanLyQuanTraSua
             this.windows.Controls.Add(this.regis_shift_panel);
             this.windows.Controls.Add(this.shift_history_panel);
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(12, 12);
+            this.windows.Location = new System.Drawing.Point(14, 15);
+            this.windows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(1450, 660);
+            this.windows.Size = new System.Drawing.Size(1631, 825);
             this.windows.TabIndex = 0;
-            // 
-            // history_btn
-            // 
-            this.history_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.history_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.history_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
-            this.history_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.history_btn.Location = new System.Drawing.Point(684, 3);
-            this.history_btn.Name = "history_btn";
-            this.history_btn.Size = new System.Drawing.Size(269, 44);
-            this.history_btn.TabIndex = 2;
-            this.history_btn.Text = "Lịch sử ca làm";
-            this.history_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.history_btn.UseVisualStyleBackColor = true;
-            this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
-            // 
-            // regis_shift_btn
-            // 
-            this.regis_shift_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.regis_shift_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.regis_shift_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regis_shift_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.add;
-            this.regis_shift_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.regis_shift_btn.Location = new System.Drawing.Point(441, 3);
-            this.regis_shift_btn.Name = "regis_shift_btn";
-            this.regis_shift_btn.Size = new System.Drawing.Size(237, 44);
-            this.regis_shift_btn.TabIndex = 1;
-            this.regis_shift_btn.Text = "Đăng ký ca làm";
-            this.regis_shift_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.regis_shift_btn.UseVisualStyleBackColor = true;
-            this.regis_shift_btn.Click += new System.EventHandler(this.regis_shift_btn_Click);
             // 
             // regis_shift_panel
             // 
@@ -273,9 +242,10 @@ namespace QuanLyQuanTraSua
             this.regis_shift_panel.Controls.Add(this.label3);
             this.regis_shift_panel.Controls.Add(this.label2);
             this.regis_shift_panel.Controls.Add(this.label1);
-            this.regis_shift_panel.Location = new System.Drawing.Point(13, 53);
+            this.regis_shift_panel.Location = new System.Drawing.Point(15, 66);
+            this.regis_shift_panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.regis_shift_panel.Name = "regis_shift_panel";
-            this.regis_shift_panel.Size = new System.Drawing.Size(1424, 604);
+            this.regis_shift_panel.Size = new System.Drawing.Size(1602, 755);
             this.regis_shift_panel.TabIndex = 3;
             this.regis_shift_panel.Visible = false;
             // 
@@ -286,9 +256,10 @@ namespace QuanLyQuanTraSua
             this.show_Table_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.show_Table_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_Table_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.show_Table_btn.Location = new System.Drawing.Point(232, 101);
+            this.show_Table_btn.Location = new System.Drawing.Point(330, 180);
+            this.show_Table_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.show_Table_btn.Name = "show_Table_btn";
-            this.show_Table_btn.Size = new System.Drawing.Size(265, 47);
+            this.show_Table_btn.Size = new System.Drawing.Size(298, 59);
             this.show_Table_btn.TabIndex = 23;
             this.show_Table_btn.Text = "Hiện bảng thời gian";
             this.show_Table_btn.UseVisualStyleBackColor = false;
@@ -301,44 +272,30 @@ namespace QuanLyQuanTraSua
             this.Shift_control.Controls.Add(this.progressShift);
             this.Shift_control.Controls.Add(this.now_shift);
             this.Shift_control.Controls.Add(this.label26);
-            this.Shift_control.Location = new System.Drawing.Point(666, 56);
+            this.Shift_control.Location = new System.Drawing.Point(749, 70);
+            this.Shift_control.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Shift_control.Name = "Shift_control";
-            this.Shift_control.Size = new System.Drawing.Size(702, 153);
+            this.Shift_control.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Shift_control.Size = new System.Drawing.Size(790, 191);
             this.Shift_control.TabIndex = 17;
             this.Shift_control.TabStop = false;
             this.Shift_control.Text = "Theo dõi ca làm";
             // 
-            // finish_btn
-            // 
-            this.finish_btn.BackColor = System.Drawing.Color.PeachPuff;
-            this.finish_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.finish_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.finish_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.finish_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.check;
-            this.finish_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.finish_btn.Location = new System.Drawing.Point(39, 79);
-            this.finish_btn.Name = "finish_btn";
-            this.finish_btn.Size = new System.Drawing.Size(150, 47);
-            this.finish_btn.TabIndex = 22;
-            this.finish_btn.Text = "Xác nhận";
-            this.finish_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.finish_btn.UseVisualStyleBackColor = false;
-            this.finish_btn.Click += new System.EventHandler(this.finish_btn_Click);
-            // 
             // percentShift
             // 
             this.percentShift.AutoSize = true;
-            this.percentShift.Location = new System.Drawing.Point(476, 42);
+            this.percentShift.Location = new System.Drawing.Point(536, 52);
             this.percentShift.Name = "percentShift";
-            this.percentShift.Size = new System.Drawing.Size(43, 23);
+            this.percentShift.Size = new System.Drawing.Size(51, 28);
             this.percentShift.TabIndex = 20;
             this.percentShift.Text = "50%";
             // 
             // progressShift
             // 
-            this.progressShift.Location = new System.Drawing.Point(316, 42);
+            this.progressShift.Location = new System.Drawing.Point(356, 52);
+            this.progressShift.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.progressShift.Name = "progressShift";
-            this.progressShift.Size = new System.Drawing.Size(150, 23);
+            this.progressShift.Size = new System.Drawing.Size(169, 29);
             this.progressShift.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressShift.TabIndex = 19;
             this.progressShift.Value = 50;
@@ -346,18 +303,18 @@ namespace QuanLyQuanTraSua
             // now_shift
             // 
             this.now_shift.AutoSize = true;
-            this.now_shift.Location = new System.Drawing.Point(181, 44);
+            this.now_shift.Location = new System.Drawing.Point(204, 55);
             this.now_shift.Name = "now_shift";
-            this.now_shift.Size = new System.Drawing.Size(87, 23);
+            this.now_shift.Size = new System.Drawing.Size(103, 28);
             this.now_shift.TabIndex = 18;
             this.now_shift.Text = "CS-14/6";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(36, 44);
+            this.label26.Location = new System.Drawing.Point(40, 55);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(153, 23);
+            this.label26.Size = new System.Drawing.Size(181, 28);
             this.label26.TabIndex = 17;
             this.label26.Text = "Ca hiện tại: ";
             // 
@@ -396,39 +353,25 @@ namespace QuanLyQuanTraSua
             this.Timetable.Controls.Add(this.wed);
             this.Timetable.Controls.Add(this.tue);
             this.Timetable.Controls.Add(this.mon);
-            this.Timetable.Location = new System.Drawing.Point(65, 215);
+            this.Timetable.Location = new System.Drawing.Point(43, 269);
+            this.Timetable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Timetable.Name = "Timetable";
-            this.Timetable.Size = new System.Drawing.Size(1303, 375);
+            this.Timetable.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Timetable.Size = new System.Drawing.Size(1466, 469);
             this.Timetable.TabIndex = 9;
             this.Timetable.TabStop = false;
             this.Timetable.Text = "Bảng ca làm";
             this.Timetable.Enter += new System.EventHandler(this.Timetable_Enter);
-            // 
-            // clear_btn
-            // 
-            this.clear_btn.BackColor = System.Drawing.Color.DarkSalmon;
-            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.x_icon_15;
-            this.clear_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clear_btn.Location = new System.Drawing.Point(1009, 245);
-            this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(272, 58);
-            this.clear_btn.TabIndex = 36;
-            this.clear_btn.Text = "Xóa hết lựa chọn";
-            this.clear_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.clear_btn.UseVisualStyleBackColor = false;
-            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
             // 
             // panel33
             // 
             this.panel33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel33.Controls.Add(this.listBox21);
             this.panel33.Controls.Add(this.checkBox21);
-            this.panel33.Location = new System.Drawing.Point(854, 287);
+            this.panel33.Location = new System.Drawing.Point(961, 359);
+            this.panel33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(115, 82);
+            this.panel33.Size = new System.Drawing.Size(129, 102);
             this.panel33.TabIndex = 35;
             this.panel33.Tag = "Shift";
             // 
@@ -436,53 +379,39 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox21.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox21.FormattingEnabled = true;
-            this.listBox21.ItemHeight = 20;
+            this.listBox21.ItemHeight = 23;
             this.listBox21.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox21.Location = new System.Drawing.Point(3, 3);
+            this.listBox21.Location = new System.Drawing.Point(3, 4);
+            this.listBox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox21.Name = "listBox21";
-            this.listBox21.Size = new System.Drawing.Size(85, 84);
+            this.listBox21.Size = new System.Drawing.Size(95, 96);
             this.listBox21.TabIndex = 25;
             this.listBox21.Tag = "List_nv";
             // 
             // checkBox21
             // 
             this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(94, 62);
+            this.checkBox21.Location = new System.Drawing.Point(106, 78);
+            this.checkBox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(18, 17);
+            this.checkBox21.Size = new System.Drawing.Size(22, 21);
             this.checkBox21.TabIndex = 16;
             this.checkBox21.Tag = "checked";
             this.checkBox21.UseVisualStyleBackColor = true;
             this.checkBox21.CheckStateChanged += new System.EventHandler(this.send_signal);
-            // 
-            // regis_btn
-            // 
-            this.regis_btn.BackColor = System.Drawing.Color.Wheat;
-            this.regis_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.regis_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.regis_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regis_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.check;
-            this.regis_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.regis_btn.Location = new System.Drawing.Point(1009, 309);
-            this.regis_btn.Name = "regis_btn";
-            this.regis_btn.Size = new System.Drawing.Size(272, 58);
-            this.regis_btn.TabIndex = 10;
-            this.regis_btn.Text = "Đăng ký";
-            this.regis_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.regis_btn.UseVisualStyleBackColor = false;
-            this.regis_btn.Click += new System.EventHandler(this.regis_btn_Click);
             // 
             // panel32
             // 
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel32.Controls.Add(this.listBox20);
             this.panel32.Controls.Add(this.checkBox20);
-            this.panel32.Location = new System.Drawing.Point(733, 287);
+            this.panel32.Location = new System.Drawing.Point(825, 359);
+            this.panel32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(115, 82);
+            this.panel32.Size = new System.Drawing.Size(129, 102);
             this.panel32.TabIndex = 34;
             this.panel32.Tag = "Shift";
             // 
@@ -490,23 +419,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox20.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox20.FormattingEnabled = true;
-            this.listBox20.ItemHeight = 20;
+            this.listBox20.ItemHeight = 23;
             this.listBox20.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox20.Location = new System.Drawing.Point(3, 3);
+            this.listBox20.Location = new System.Drawing.Point(3, 4);
+            this.listBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(85, 84);
+            this.listBox20.Size = new System.Drawing.Size(95, 96);
             this.listBox20.TabIndex = 25;
             this.listBox20.Tag = "List_nv";
             // 
             // checkBox20
             // 
             this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(94, 62);
+            this.checkBox20.Location = new System.Drawing.Point(106, 78);
+            this.checkBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(18, 17);
+            this.checkBox20.Size = new System.Drawing.Size(22, 21);
             this.checkBox20.TabIndex = 16;
             this.checkBox20.Tag = "checked";
             this.checkBox20.UseVisualStyleBackColor = true;
@@ -517,9 +448,10 @@ namespace QuanLyQuanTraSua
             this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel31.Controls.Add(this.listBox19);
             this.panel31.Controls.Add(this.checkBox19);
-            this.panel31.Location = new System.Drawing.Point(612, 287);
+            this.panel31.Location = new System.Drawing.Point(688, 359);
+            this.panel31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(115, 82);
+            this.panel31.Size = new System.Drawing.Size(129, 102);
             this.panel31.TabIndex = 33;
             this.panel31.Tag = "Shift";
             // 
@@ -527,23 +459,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox19.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox19.FormattingEnabled = true;
-            this.listBox19.ItemHeight = 20;
+            this.listBox19.ItemHeight = 23;
             this.listBox19.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox19.Location = new System.Drawing.Point(3, 3);
+            this.listBox19.Location = new System.Drawing.Point(3, 4);
+            this.listBox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(85, 84);
+            this.listBox19.Size = new System.Drawing.Size(95, 96);
             this.listBox19.TabIndex = 25;
             this.listBox19.Tag = "List_nv";
             // 
             // checkBox19
             // 
             this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(94, 62);
+            this.checkBox19.Location = new System.Drawing.Point(106, 78);
+            this.checkBox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(18, 17);
+            this.checkBox19.Size = new System.Drawing.Size(22, 21);
             this.checkBox19.TabIndex = 16;
             this.checkBox19.Tag = "checked";
             this.checkBox19.UseVisualStyleBackColor = true;
@@ -554,9 +488,10 @@ namespace QuanLyQuanTraSua
             this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel30.Controls.Add(this.listBox18);
             this.panel30.Controls.Add(this.checkBox18);
-            this.panel30.Location = new System.Drawing.Point(491, 287);
+            this.panel30.Location = new System.Drawing.Point(552, 359);
+            this.panel30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(115, 82);
+            this.panel30.Size = new System.Drawing.Size(129, 102);
             this.panel30.TabIndex = 32;
             this.panel30.Tag = "Shift";
             // 
@@ -564,23 +499,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox18.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox18.FormattingEnabled = true;
-            this.listBox18.ItemHeight = 20;
+            this.listBox18.ItemHeight = 23;
             this.listBox18.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox18.Location = new System.Drawing.Point(3, 3);
+            this.listBox18.Location = new System.Drawing.Point(3, 4);
+            this.listBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox18.Name = "listBox18";
-            this.listBox18.Size = new System.Drawing.Size(85, 84);
+            this.listBox18.Size = new System.Drawing.Size(95, 96);
             this.listBox18.TabIndex = 25;
             this.listBox18.Tag = "List_nv";
             // 
             // checkBox18
             // 
             this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(94, 62);
+            this.checkBox18.Location = new System.Drawing.Point(106, 78);
+            this.checkBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(18, 17);
+            this.checkBox18.Size = new System.Drawing.Size(22, 21);
             this.checkBox18.TabIndex = 16;
             this.checkBox18.Tag = "checked";
             this.checkBox18.UseVisualStyleBackColor = true;
@@ -591,9 +528,10 @@ namespace QuanLyQuanTraSua
             this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel29.Controls.Add(this.listBox17);
             this.panel29.Controls.Add(this.checkBox17);
-            this.panel29.Location = new System.Drawing.Point(370, 287);
+            this.panel29.Location = new System.Drawing.Point(416, 359);
+            this.panel29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(115, 82);
+            this.panel29.Size = new System.Drawing.Size(129, 102);
             this.panel29.TabIndex = 31;
             this.panel29.Tag = "Shift";
             // 
@@ -601,23 +539,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox17.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox17.FormattingEnabled = true;
-            this.listBox17.ItemHeight = 20;
+            this.listBox17.ItemHeight = 23;
             this.listBox17.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox17.Location = new System.Drawing.Point(3, 3);
+            this.listBox17.Location = new System.Drawing.Point(3, 4);
+            this.listBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox17.Name = "listBox17";
-            this.listBox17.Size = new System.Drawing.Size(85, 84);
+            this.listBox17.Size = new System.Drawing.Size(95, 96);
             this.listBox17.TabIndex = 25;
             this.listBox17.Tag = "List_nv";
             // 
             // checkBox17
             // 
             this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(94, 62);
+            this.checkBox17.Location = new System.Drawing.Point(106, 78);
+            this.checkBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(18, 17);
+            this.checkBox17.Size = new System.Drawing.Size(22, 21);
             this.checkBox17.TabIndex = 16;
             this.checkBox17.Tag = "checked";
             this.checkBox17.UseVisualStyleBackColor = true;
@@ -628,9 +568,10 @@ namespace QuanLyQuanTraSua
             this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel28.Controls.Add(this.listBox16);
             this.panel28.Controls.Add(this.checkBox16);
-            this.panel28.Location = new System.Drawing.Point(249, 287);
+            this.panel28.Location = new System.Drawing.Point(280, 359);
+            this.panel28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(115, 82);
+            this.panel28.Size = new System.Drawing.Size(129, 102);
             this.panel28.TabIndex = 30;
             this.panel28.Tag = "Shift";
             // 
@@ -638,23 +579,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox16.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox16.FormattingEnabled = true;
-            this.listBox16.ItemHeight = 20;
+            this.listBox16.ItemHeight = 23;
             this.listBox16.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox16.Location = new System.Drawing.Point(3, 3);
+            this.listBox16.Location = new System.Drawing.Point(3, 4);
+            this.listBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(85, 84);
+            this.listBox16.Size = new System.Drawing.Size(95, 96);
             this.listBox16.TabIndex = 25;
             this.listBox16.Tag = "List_nv";
             // 
             // checkBox16
             // 
             this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(94, 62);
+            this.checkBox16.Location = new System.Drawing.Point(106, 78);
+            this.checkBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(18, 17);
+            this.checkBox16.Size = new System.Drawing.Size(22, 21);
             this.checkBox16.TabIndex = 16;
             this.checkBox16.Tag = "checked";
             this.checkBox16.UseVisualStyleBackColor = true;
@@ -665,9 +608,10 @@ namespace QuanLyQuanTraSua
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel27.Controls.Add(this.listBox14);
             this.panel27.Controls.Add(this.checkBox15);
-            this.panel27.Location = new System.Drawing.Point(854, 199);
+            this.panel27.Location = new System.Drawing.Point(961, 249);
+            this.panel27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(115, 82);
+            this.panel27.Size = new System.Drawing.Size(129, 102);
             this.panel27.TabIndex = 29;
             this.panel27.Tag = "Shift";
             // 
@@ -675,23 +619,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox14.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox14.FormattingEnabled = true;
-            this.listBox14.ItemHeight = 20;
+            this.listBox14.ItemHeight = 23;
             this.listBox14.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox14.Location = new System.Drawing.Point(3, 3);
+            this.listBox14.Location = new System.Drawing.Point(3, 4);
+            this.listBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox14.Name = "listBox14";
-            this.listBox14.Size = new System.Drawing.Size(85, 84);
+            this.listBox14.Size = new System.Drawing.Size(95, 96);
             this.listBox14.TabIndex = 25;
             this.listBox14.Tag = "List_nv";
             // 
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(94, 62);
+            this.checkBox15.Location = new System.Drawing.Point(106, 78);
+            this.checkBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(18, 17);
+            this.checkBox15.Size = new System.Drawing.Size(22, 21);
             this.checkBox15.TabIndex = 16;
             this.checkBox15.Tag = "checked";
             this.checkBox15.UseVisualStyleBackColor = true;
@@ -702,9 +648,10 @@ namespace QuanLyQuanTraSua
             this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel26.Controls.Add(this.listBox13);
             this.panel26.Controls.Add(this.checkBox14);
-            this.panel26.Location = new System.Drawing.Point(733, 199);
+            this.panel26.Location = new System.Drawing.Point(825, 249);
+            this.panel26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(115, 82);
+            this.panel26.Size = new System.Drawing.Size(129, 102);
             this.panel26.TabIndex = 28;
             this.panel26.Tag = "Shift";
             // 
@@ -712,23 +659,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox13.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox13.FormattingEnabled = true;
-            this.listBox13.ItemHeight = 20;
+            this.listBox13.ItemHeight = 23;
             this.listBox13.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox13.Location = new System.Drawing.Point(3, 3);
+            this.listBox13.Location = new System.Drawing.Point(3, 4);
+            this.listBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox13.Name = "listBox13";
-            this.listBox13.Size = new System.Drawing.Size(85, 84);
+            this.listBox13.Size = new System.Drawing.Size(95, 96);
             this.listBox13.TabIndex = 25;
             this.listBox13.Tag = "List_nv";
             // 
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(94, 62);
+            this.checkBox14.Location = new System.Drawing.Point(106, 78);
+            this.checkBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(18, 17);
+            this.checkBox14.Size = new System.Drawing.Size(22, 21);
             this.checkBox14.TabIndex = 16;
             this.checkBox14.Tag = "checked";
             this.checkBox14.UseVisualStyleBackColor = true;
@@ -739,9 +688,10 @@ namespace QuanLyQuanTraSua
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel25.Controls.Add(this.listBox12);
             this.panel25.Controls.Add(this.checkBox13);
-            this.panel25.Location = new System.Drawing.Point(612, 199);
+            this.panel25.Location = new System.Drawing.Point(688, 249);
+            this.panel25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(115, 82);
+            this.panel25.Size = new System.Drawing.Size(129, 102);
             this.panel25.TabIndex = 27;
             this.panel25.Tag = "Shift";
             // 
@@ -749,23 +699,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox12.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox12.FormattingEnabled = true;
-            this.listBox12.ItemHeight = 20;
+            this.listBox12.ItemHeight = 23;
             this.listBox12.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox12.Location = new System.Drawing.Point(3, 3);
+            this.listBox12.Location = new System.Drawing.Point(3, 4);
+            this.listBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(85, 84);
+            this.listBox12.Size = new System.Drawing.Size(95, 96);
             this.listBox12.TabIndex = 25;
             this.listBox12.Tag = "List_nv";
             // 
             // checkBox13
             // 
             this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(94, 62);
+            this.checkBox13.Location = new System.Drawing.Point(106, 78);
+            this.checkBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(18, 17);
+            this.checkBox13.Size = new System.Drawing.Size(22, 21);
             this.checkBox13.TabIndex = 16;
             this.checkBox13.Tag = "checked";
             this.checkBox13.UseVisualStyleBackColor = true;
@@ -776,9 +728,10 @@ namespace QuanLyQuanTraSua
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel24.Controls.Add(this.listBox11);
             this.panel24.Controls.Add(this.checkBox12);
-            this.panel24.Location = new System.Drawing.Point(491, 199);
+            this.panel24.Location = new System.Drawing.Point(552, 249);
+            this.panel24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(115, 82);
+            this.panel24.Size = new System.Drawing.Size(129, 102);
             this.panel24.TabIndex = 26;
             this.panel24.Tag = "Shift";
             // 
@@ -786,23 +739,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox11.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox11.FormattingEnabled = true;
-            this.listBox11.ItemHeight = 20;
+            this.listBox11.ItemHeight = 23;
             this.listBox11.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox11.Location = new System.Drawing.Point(3, 3);
+            this.listBox11.Location = new System.Drawing.Point(3, 4);
+            this.listBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox11.Name = "listBox11";
-            this.listBox11.Size = new System.Drawing.Size(85, 84);
+            this.listBox11.Size = new System.Drawing.Size(95, 96);
             this.listBox11.TabIndex = 25;
             this.listBox11.Tag = "List_nv";
             // 
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(94, 62);
+            this.checkBox12.Location = new System.Drawing.Point(106, 78);
+            this.checkBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(18, 17);
+            this.checkBox12.Size = new System.Drawing.Size(22, 21);
             this.checkBox12.TabIndex = 16;
             this.checkBox12.Tag = "checked";
             this.checkBox12.UseVisualStyleBackColor = true;
@@ -814,9 +769,10 @@ namespace QuanLyQuanTraSua
             this.panel23.Controls.Add(this.listBox10);
             this.panel23.Controls.Add(this.checkBox11);
             this.panel23.Controls.Add(this.richTextBox22);
-            this.panel23.Location = new System.Drawing.Point(370, 199);
+            this.panel23.Location = new System.Drawing.Point(416, 249);
+            this.panel23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(115, 82);
+            this.panel23.Size = new System.Drawing.Size(129, 102);
             this.panel23.TabIndex = 25;
             this.panel23.Tag = "Shift";
             // 
@@ -824,23 +780,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox10.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox10.FormattingEnabled = true;
-            this.listBox10.ItemHeight = 20;
+            this.listBox10.ItemHeight = 23;
             this.listBox10.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox10.Location = new System.Drawing.Point(3, 3);
+            this.listBox10.Location = new System.Drawing.Point(3, 4);
+            this.listBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(85, 84);
+            this.listBox10.Size = new System.Drawing.Size(95, 96);
             this.listBox10.TabIndex = 25;
             this.listBox10.Tag = "List_nv";
             // 
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(94, 62);
+            this.checkBox11.Location = new System.Drawing.Point(106, 78);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(18, 17);
+            this.checkBox11.Size = new System.Drawing.Size(22, 21);
             this.checkBox11.TabIndex = 16;
             this.checkBox11.Tag = "checked";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -849,9 +807,10 @@ namespace QuanLyQuanTraSua
             // richTextBox22
             // 
             this.richTextBox22.Font = new System.Drawing.Font("Consolas", 10.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox22.Location = new System.Drawing.Point(-259, -77);
+            this.richTextBox22.Location = new System.Drawing.Point(-291, -96);
+            this.richTextBox22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox22.Name = "richTextBox22";
-            this.richTextBox22.Size = new System.Drawing.Size(83, 76);
+            this.richTextBox22.Size = new System.Drawing.Size(93, 94);
             this.richTextBox22.TabIndex = 14;
             this.richTextBox22.Text = "Vân\nTiên\nNga";
             // 
@@ -860,9 +819,10 @@ namespace QuanLyQuanTraSua
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel22.Controls.Add(this.listBox9);
             this.panel22.Controls.Add(this.checkBox10);
-            this.panel22.Location = new System.Drawing.Point(249, 199);
+            this.panel22.Location = new System.Drawing.Point(280, 249);
+            this.panel22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(115, 82);
+            this.panel22.Size = new System.Drawing.Size(129, 102);
             this.panel22.TabIndex = 24;
             this.panel22.Tag = "Shift";
             // 
@@ -870,23 +830,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox9.FormattingEnabled = true;
-            this.listBox9.ItemHeight = 20;
+            this.listBox9.ItemHeight = 23;
             this.listBox9.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox9.Location = new System.Drawing.Point(3, 4);
+            this.listBox9.Location = new System.Drawing.Point(3, 5);
+            this.listBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(85, 84);
+            this.listBox9.Size = new System.Drawing.Size(95, 96);
             this.listBox9.TabIndex = 25;
             this.listBox9.Tag = "List_nv";
             // 
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(94, 62);
+            this.checkBox10.Location = new System.Drawing.Point(106, 78);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(18, 17);
+            this.checkBox10.Size = new System.Drawing.Size(22, 21);
             this.checkBox10.TabIndex = 16;
             this.checkBox10.Tag = "checked";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -897,9 +859,10 @@ namespace QuanLyQuanTraSua
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel21.Controls.Add(this.listBox15);
             this.panel21.Controls.Add(this.checkBox9);
-            this.panel21.Location = new System.Drawing.Point(128, 287);
+            this.panel21.Location = new System.Drawing.Point(144, 359);
+            this.panel21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(115, 82);
+            this.panel21.Size = new System.Drawing.Size(129, 102);
             this.panel21.TabIndex = 23;
             this.panel21.Tag = "Shift";
             // 
@@ -907,23 +870,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox15.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox15.FormattingEnabled = true;
-            this.listBox15.ItemHeight = 20;
+            this.listBox15.ItemHeight = 23;
             this.listBox15.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox15.Location = new System.Drawing.Point(3, 3);
+            this.listBox15.Location = new System.Drawing.Point(3, 4);
+            this.listBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(85, 84);
+            this.listBox15.Size = new System.Drawing.Size(95, 96);
             this.listBox15.TabIndex = 25;
             this.listBox15.Tag = "List_nv";
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(94, 62);
+            this.checkBox9.Location = new System.Drawing.Point(106, 78);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(18, 17);
+            this.checkBox9.Size = new System.Drawing.Size(22, 21);
             this.checkBox9.TabIndex = 16;
             this.checkBox9.Tag = "checked";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -934,9 +899,10 @@ namespace QuanLyQuanTraSua
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.listBox8);
             this.panel20.Controls.Add(this.checkBox8);
-            this.panel20.Location = new System.Drawing.Point(128, 199);
+            this.panel20.Location = new System.Drawing.Point(144, 249);
+            this.panel20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(115, 82);
+            this.panel20.Size = new System.Drawing.Size(129, 102);
             this.panel20.TabIndex = 22;
             this.panel20.Tag = "Shift";
             // 
@@ -944,23 +910,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox8.FormattingEnabled = true;
-            this.listBox8.ItemHeight = 20;
+            this.listBox8.ItemHeight = 23;
             this.listBox8.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
-            this.listBox8.Location = new System.Drawing.Point(3, 3);
+            this.listBox8.Location = new System.Drawing.Point(3, 4);
+            this.listBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(85, 84);
+            this.listBox8.Size = new System.Drawing.Size(95, 96);
             this.listBox8.TabIndex = 25;
             this.listBox8.Tag = "List_nv";
             // 
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(94, 62);
+            this.checkBox8.Location = new System.Drawing.Point(106, 78);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(18, 17);
+            this.checkBox8.Size = new System.Drawing.Size(22, 21);
             this.checkBox8.TabIndex = 16;
             this.checkBox8.Tag = "checked";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -971,9 +939,10 @@ namespace QuanLyQuanTraSua
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.listBox7);
             this.panel19.Controls.Add(this.checkBox7);
-            this.panel19.Location = new System.Drawing.Point(854, 111);
+            this.panel19.Location = new System.Drawing.Point(961, 139);
+            this.panel19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(115, 82);
+            this.panel19.Size = new System.Drawing.Size(129, 102);
             this.panel19.TabIndex = 21;
             this.panel19.Tag = "Shift";
             // 
@@ -981,23 +950,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox7.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox7.FormattingEnabled = true;
-            this.listBox7.ItemHeight = 20;
+            this.listBox7.ItemHeight = 23;
             this.listBox7.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox7.Location = new System.Drawing.Point(3, 2);
+            this.listBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(85, 84);
+            this.listBox7.Size = new System.Drawing.Size(95, 96);
             this.listBox7.TabIndex = 25;
             this.listBox7.Tag = "List_nv";
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(94, 62);
+            this.checkBox7.Location = new System.Drawing.Point(106, 78);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(18, 17);
+            this.checkBox7.Size = new System.Drawing.Size(22, 21);
             this.checkBox7.TabIndex = 16;
             this.checkBox7.Tag = "checked";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -1008,9 +979,10 @@ namespace QuanLyQuanTraSua
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.listBox6);
             this.panel18.Controls.Add(this.checkBox6);
-            this.panel18.Location = new System.Drawing.Point(733, 111);
+            this.panel18.Location = new System.Drawing.Point(825, 139);
+            this.panel18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(115, 82);
+            this.panel18.Size = new System.Drawing.Size(129, 102);
             this.panel18.TabIndex = 20;
             this.panel18.Tag = "Shift";
             // 
@@ -1018,23 +990,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 20;
+            this.listBox6.ItemHeight = 23;
             this.listBox6.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox6.Location = new System.Drawing.Point(3, 2);
+            this.listBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(85, 84);
+            this.listBox6.Size = new System.Drawing.Size(95, 96);
             this.listBox6.TabIndex = 25;
             this.listBox6.Tag = "List_nv";
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(94, 62);
+            this.checkBox6.Location = new System.Drawing.Point(106, 78);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(18, 17);
+            this.checkBox6.Size = new System.Drawing.Size(22, 21);
             this.checkBox6.TabIndex = 16;
             this.checkBox6.Tag = "checked";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -1045,9 +1019,10 @@ namespace QuanLyQuanTraSua
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.listBox5);
             this.panel17.Controls.Add(this.checkBox5);
-            this.panel17.Location = new System.Drawing.Point(612, 111);
+            this.panel17.Location = new System.Drawing.Point(688, 139);
+            this.panel17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(115, 82);
+            this.panel17.Size = new System.Drawing.Size(129, 102);
             this.panel17.TabIndex = 19;
             this.panel17.Tag = "Shift";
             // 
@@ -1055,23 +1030,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox5.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 20;
+            this.listBox5.ItemHeight = 23;
             this.listBox5.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox5.Location = new System.Drawing.Point(3, 2);
+            this.listBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(85, 84);
+            this.listBox5.Size = new System.Drawing.Size(95, 96);
             this.listBox5.TabIndex = 25;
             this.listBox5.Tag = "List_nv";
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(94, 62);
+            this.checkBox5.Location = new System.Drawing.Point(106, 78);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(18, 17);
+            this.checkBox5.Size = new System.Drawing.Size(22, 21);
             this.checkBox5.TabIndex = 16;
             this.checkBox5.Tag = "checked";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -1082,9 +1059,10 @@ namespace QuanLyQuanTraSua
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Controls.Add(this.listBox4);
             this.panel16.Controls.Add(this.checkBox4);
-            this.panel16.Location = new System.Drawing.Point(491, 111);
+            this.panel16.Location = new System.Drawing.Point(552, 139);
+            this.panel16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(115, 82);
+            this.panel16.Size = new System.Drawing.Size(129, 102);
             this.panel16.TabIndex = 18;
             this.panel16.Tag = "Shift";
             // 
@@ -1092,23 +1070,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox4.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 20;
+            this.listBox4.ItemHeight = 23;
             this.listBox4.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox4.Location = new System.Drawing.Point(3, 2);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(85, 84);
+            this.listBox4.Size = new System.Drawing.Size(95, 96);
             this.listBox4.TabIndex = 25;
             this.listBox4.Tag = "List_nv";
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(94, 62);
+            this.checkBox4.Location = new System.Drawing.Point(106, 78);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(18, 17);
+            this.checkBox4.Size = new System.Drawing.Size(22, 21);
             this.checkBox4.TabIndex = 16;
             this.checkBox4.Tag = "checked";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -1119,9 +1099,10 @@ namespace QuanLyQuanTraSua
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.listBox3);
             this.panel15.Controls.Add(this.checkBox3);
-            this.panel15.Location = new System.Drawing.Point(370, 111);
+            this.panel15.Location = new System.Drawing.Point(416, 139);
+            this.panel15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(115, 82);
+            this.panel15.Size = new System.Drawing.Size(129, 102);
             this.panel15.TabIndex = 17;
             this.panel15.Tag = "Shift";
             // 
@@ -1129,23 +1110,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
+            this.listBox3.ItemHeight = 23;
             this.listBox3.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox3.Location = new System.Drawing.Point(3, 2);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(85, 84);
+            this.listBox3.Size = new System.Drawing.Size(95, 96);
             this.listBox3.TabIndex = 25;
             this.listBox3.Tag = "List_nv";
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(94, 62);
+            this.checkBox3.Location = new System.Drawing.Point(106, 78);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(18, 17);
+            this.checkBox3.Size = new System.Drawing.Size(22, 21);
             this.checkBox3.TabIndex = 16;
             this.checkBox3.Tag = "checked";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -1156,9 +1139,10 @@ namespace QuanLyQuanTraSua
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.listBox2);
             this.panel14.Controls.Add(this.checkBox2);
-            this.panel14.Location = new System.Drawing.Point(249, 111);
+            this.panel14.Location = new System.Drawing.Point(280, 139);
+            this.panel14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(115, 82);
+            this.panel14.Size = new System.Drawing.Size(129, 102);
             this.panel14.TabIndex = 16;
             this.panel14.Tag = "Shift";
             // 
@@ -1166,23 +1150,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
+            this.listBox2.ItemHeight = 23;
             this.listBox2.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox2.Location = new System.Drawing.Point(3, 2);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(85, 84);
+            this.listBox2.Size = new System.Drawing.Size(95, 96);
             this.listBox2.TabIndex = 25;
             this.listBox2.Tag = "List_nv";
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(94, 62);
+            this.checkBox2.Location = new System.Drawing.Point(106, 78);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(18, 17);
+            this.checkBox2.Size = new System.Drawing.Size(22, 21);
             this.checkBox2.TabIndex = 16;
             this.checkBox2.Tag = "checked";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -1193,9 +1179,10 @@ namespace QuanLyQuanTraSua
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.listBox1);
             this.panel13.Controls.Add(this.checkBox1);
-            this.panel13.Location = new System.Drawing.Point(128, 111);
+            this.panel13.Location = new System.Drawing.Point(144, 139);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(115, 82);
+            this.panel13.Size = new System.Drawing.Size(129, 102);
             this.panel13.TabIndex = 15;
             this.panel13.Tag = "Shift";
             // 
@@ -1203,23 +1190,25 @@ namespace QuanLyQuanTraSua
             // 
             this.listBox1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 23;
             this.listBox1.Items.AddRange(new object[] {
             "Vân",
             "Tiên",
             "Trang"});
             this.listBox1.Location = new System.Drawing.Point(3, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(85, 84);
+            this.listBox1.Size = new System.Drawing.Size(95, 96);
             this.listBox1.TabIndex = 24;
             this.listBox1.Tag = "List_nv";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(94, 62);
+            this.checkBox1.Location = new System.Drawing.Point(106, 78);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.Size = new System.Drawing.Size(22, 21);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Tag = "checked";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -1231,9 +1220,10 @@ namespace QuanLyQuanTraSua
             this.CT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CT.Controls.Add(this.label24);
             this.CT.Controls.Add(this.label25);
-            this.CT.Location = new System.Drawing.Point(6, 287);
+            this.CT.Location = new System.Drawing.Point(7, 359);
+            this.CT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CT.Name = "CT";
-            this.CT.Size = new System.Drawing.Size(115, 82);
+            this.CT.Size = new System.Drawing.Size(129, 102);
             this.CT.TabIndex = 13;
             this.CT.Tag = "ca";
             // 
@@ -1241,18 +1231,18 @@ namespace QuanLyQuanTraSua
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(21, 34);
+            this.label24.Location = new System.Drawing.Point(12, 42);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 20);
+            this.label24.Size = new System.Drawing.Size(94, 24);
             this.label24.TabIndex = 1;
             this.label24.Text = "17h-21h";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 11);
+            this.label25.Location = new System.Drawing.Point(14, 14);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 23);
+            this.label25.Size = new System.Drawing.Size(90, 28);
             this.label25.TabIndex = 10;
             this.label25.Text = "Ca tối";
             // 
@@ -1262,9 +1252,10 @@ namespace QuanLyQuanTraSua
             this.CC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CC.Controls.Add(this.label22);
             this.CC.Controls.Add(this.label23);
-            this.CC.Location = new System.Drawing.Point(6, 199);
+            this.CC.Location = new System.Drawing.Point(7, 249);
+            this.CC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CC.Name = "CC";
-            this.CC.Size = new System.Drawing.Size(115, 82);
+            this.CC.Size = new System.Drawing.Size(129, 102);
             this.CC.TabIndex = 12;
             this.CC.Tag = "ca";
             // 
@@ -1272,18 +1263,18 @@ namespace QuanLyQuanTraSua
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(21, 34);
+            this.label22.Location = new System.Drawing.Point(24, 42);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(72, 20);
+            this.label22.Size = new System.Drawing.Size(94, 24);
             this.label22.TabIndex = 1;
             this.label22.Text = "12h-16h";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 11);
+            this.label23.Location = new System.Drawing.Point(14, 14);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(98, 23);
+            this.label23.Size = new System.Drawing.Size(116, 28);
             this.label23.TabIndex = 10;
             this.label23.Text = "Ca chiều";
             // 
@@ -1293,9 +1284,10 @@ namespace QuanLyQuanTraSua
             this.CS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CS.Controls.Add(this.label20);
             this.CS.Controls.Add(this.label21);
-            this.CS.Location = new System.Drawing.Point(6, 111);
+            this.CS.Location = new System.Drawing.Point(7, 139);
+            this.CS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CS.Name = "CS";
-            this.CS.Size = new System.Drawing.Size(115, 82);
+            this.CS.Size = new System.Drawing.Size(129, 102);
             this.CS.TabIndex = 11;
             this.CS.Tag = "ca";
             // 
@@ -1303,18 +1295,18 @@ namespace QuanLyQuanTraSua
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(21, 34);
+            this.label20.Location = new System.Drawing.Point(24, 42);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(63, 20);
+            this.label20.Size = new System.Drawing.Size(82, 24);
             this.label20.TabIndex = 1;
             this.label20.Text = "7h-11h";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 11);
+            this.label21.Location = new System.Drawing.Point(14, 14);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(87, 23);
+            this.label21.Size = new System.Drawing.Size(103, 28);
             this.label21.TabIndex = 10;
             this.label21.Text = "Ca sáng";
             // 
@@ -1324,9 +1316,10 @@ namespace QuanLyQuanTraSua
             this.sun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sun.Controls.Add(this.label18);
             this.sun.Controls.Add(this.label19);
-            this.sun.Location = new System.Drawing.Point(854, 47);
+            this.sun.Location = new System.Drawing.Point(961, 59);
+            this.sun.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sun.Name = "sun";
-            this.sun.Size = new System.Drawing.Size(115, 61);
+            this.sun.Size = new System.Drawing.Size(129, 76);
             this.sun.TabIndex = 10;
             this.sun.Tag = "Weekday";
             // 
@@ -1334,9 +1327,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(30, 34);
+            this.label18.Location = new System.Drawing.Point(34, 42);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 20);
+            this.label18.Size = new System.Drawing.Size(58, 24);
             this.label18.TabIndex = 1;
             this.label18.Tag = "Time";
             this.label18.Text = "14/6";
@@ -1344,9 +1337,9 @@ namespace QuanLyQuanTraSua
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 11);
+            this.label19.Location = new System.Drawing.Point(14, 14);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(98, 23);
+            this.label19.Size = new System.Drawing.Size(116, 28);
             this.label19.TabIndex = 10;
             this.label19.Tag = "name";
             this.label19.Text = "Chủ nhật";
@@ -1357,9 +1350,10 @@ namespace QuanLyQuanTraSua
             this.sat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sat.Controls.Add(this.label16);
             this.sat.Controls.Add(this.label17);
-            this.sat.Location = new System.Drawing.Point(733, 47);
+            this.sat.Location = new System.Drawing.Point(825, 59);
+            this.sat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sat.Name = "sat";
-            this.sat.Size = new System.Drawing.Size(115, 61);
+            this.sat.Size = new System.Drawing.Size(129, 76);
             this.sat.TabIndex = 10;
             this.sat.Tag = "Weekday";
             // 
@@ -1367,9 +1361,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(30, 34);
+            this.label16.Location = new System.Drawing.Point(34, 42);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 20);
+            this.label16.Size = new System.Drawing.Size(58, 24);
             this.label16.TabIndex = 1;
             this.label16.Tag = "Time";
             this.label16.Text = "14/6";
@@ -1377,9 +1371,9 @@ namespace QuanLyQuanTraSua
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 11);
+            this.label17.Location = new System.Drawing.Point(14, 14);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 23);
+            this.label17.Size = new System.Drawing.Size(103, 28);
             this.label17.TabIndex = 10;
             this.label17.Tag = "name";
             this.label17.Text = "Thứ bảy";
@@ -1390,9 +1384,10 @@ namespace QuanLyQuanTraSua
             this.fri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fri.Controls.Add(this.label14);
             this.fri.Controls.Add(this.label15);
-            this.fri.Location = new System.Drawing.Point(612, 47);
+            this.fri.Location = new System.Drawing.Point(688, 59);
+            this.fri.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fri.Name = "fri";
-            this.fri.Size = new System.Drawing.Size(115, 61);
+            this.fri.Size = new System.Drawing.Size(129, 76);
             this.fri.TabIndex = 10;
             this.fri.Tag = "Weekday";
             // 
@@ -1400,9 +1395,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(30, 34);
+            this.label14.Location = new System.Drawing.Point(34, 42);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 20);
+            this.label14.Size = new System.Drawing.Size(58, 24);
             this.label14.TabIndex = 1;
             this.label14.Tag = "Time";
             this.label14.Text = "14/6";
@@ -1410,9 +1405,9 @@ namespace QuanLyQuanTraSua
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 11);
+            this.label15.Location = new System.Drawing.Point(14, 14);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 23);
+            this.label15.Size = new System.Drawing.Size(103, 28);
             this.label15.TabIndex = 10;
             this.label15.Tag = "name";
             this.label15.Text = "Thứ sau";
@@ -1423,9 +1418,10 @@ namespace QuanLyQuanTraSua
             this.thu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thu.Controls.Add(this.label12);
             this.thu.Controls.Add(this.label13);
-            this.thu.Location = new System.Drawing.Point(491, 47);
+            this.thu.Location = new System.Drawing.Point(552, 59);
+            this.thu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.thu.Name = "thu";
-            this.thu.Size = new System.Drawing.Size(115, 61);
+            this.thu.Size = new System.Drawing.Size(129, 76);
             this.thu.TabIndex = 10;
             this.thu.Tag = "Weekday";
             // 
@@ -1433,9 +1429,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(34, 34);
+            this.label12.Location = new System.Drawing.Point(38, 42);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 20);
+            this.label12.Size = new System.Drawing.Size(58, 24);
             this.label12.TabIndex = 1;
             this.label12.Tag = "Time";
             this.label12.Text = "14/6";
@@ -1443,9 +1439,9 @@ namespace QuanLyQuanTraSua
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 11);
+            this.label13.Location = new System.Drawing.Point(14, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 23);
+            this.label13.Size = new System.Drawing.Size(103, 28);
             this.label13.TabIndex = 10;
             this.label13.Tag = "name";
             this.label13.Text = "Thứ năm";
@@ -1456,9 +1452,10 @@ namespace QuanLyQuanTraSua
             this.wed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wed.Controls.Add(this.label10);
             this.wed.Controls.Add(this.label11);
-            this.wed.Location = new System.Drawing.Point(370, 47);
+            this.wed.Location = new System.Drawing.Point(416, 59);
+            this.wed.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.wed.Name = "wed";
-            this.wed.Size = new System.Drawing.Size(115, 61);
+            this.wed.Size = new System.Drawing.Size(129, 76);
             this.wed.TabIndex = 10;
             this.wed.Tag = "Weekday";
             // 
@@ -1466,9 +1463,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 34);
+            this.label10.Location = new System.Drawing.Point(34, 42);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 20);
+            this.label10.Size = new System.Drawing.Size(58, 24);
             this.label10.TabIndex = 1;
             this.label10.Tag = "Time";
             this.label10.Text = "14/6";
@@ -1476,9 +1473,9 @@ namespace QuanLyQuanTraSua
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 11);
+            this.label11.Location = new System.Drawing.Point(14, 14);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 23);
+            this.label11.Size = new System.Drawing.Size(90, 28);
             this.label11.TabIndex = 10;
             this.label11.Tag = "name";
             this.label11.Text = "Thứ tư";
@@ -1489,9 +1486,10 @@ namespace QuanLyQuanTraSua
             this.tue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tue.Controls.Add(this.label8);
             this.tue.Controls.Add(this.label9);
-            this.tue.Location = new System.Drawing.Point(249, 47);
+            this.tue.Location = new System.Drawing.Point(280, 59);
+            this.tue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tue.Name = "tue";
-            this.tue.Size = new System.Drawing.Size(115, 61);
+            this.tue.Size = new System.Drawing.Size(129, 76);
             this.tue.TabIndex = 10;
             this.tue.Tag = "Weekday";
             // 
@@ -1499,9 +1497,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 34);
+            this.label8.Location = new System.Drawing.Point(34, 42);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 20);
+            this.label8.Size = new System.Drawing.Size(58, 24);
             this.label8.TabIndex = 1;
             this.label8.Tag = "Time";
             this.label8.Text = "14/6";
@@ -1509,9 +1507,9 @@ namespace QuanLyQuanTraSua
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 11);
+            this.label9.Location = new System.Drawing.Point(14, 14);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 23);
+            this.label9.Size = new System.Drawing.Size(90, 28);
             this.label9.TabIndex = 10;
             this.label9.Tag = "name";
             this.label9.Text = "Thứ ba";
@@ -1522,9 +1520,10 @@ namespace QuanLyQuanTraSua
             this.mon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mon.Controls.Add(this.label7);
             this.mon.Controls.Add(this.m);
-            this.mon.Location = new System.Drawing.Point(128, 47);
+            this.mon.Location = new System.Drawing.Point(144, 59);
+            this.mon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mon.Name = "mon";
-            this.mon.Size = new System.Drawing.Size(115, 61);
+            this.mon.Size = new System.Drawing.Size(129, 76);
             this.mon.TabIndex = 0;
             this.mon.Tag = "Weekday";
             // 
@@ -1532,9 +1531,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 34);
+            this.label7.Location = new System.Drawing.Point(38, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 20);
+            this.label7.Size = new System.Drawing.Size(58, 24);
             this.label7.TabIndex = 1;
             this.label7.Tag = "Time";
             this.label7.Text = "14/6";
@@ -1542,9 +1541,9 @@ namespace QuanLyQuanTraSua
             // m
             // 
             this.m.AutoSize = true;
-            this.m.Location = new System.Drawing.Point(12, 11);
+            this.m.Location = new System.Drawing.Point(14, 14);
             this.m.Name = "m";
-            this.m.Size = new System.Drawing.Size(87, 23);
+            this.m.Size = new System.Drawing.Size(103, 28);
             this.m.TabIndex = 10;
             this.m.Tag = "name";
             this.m.Text = "Thứ hai";
@@ -1552,24 +1551,25 @@ namespace QuanLyQuanTraSua
             // day_span_lb
             // 
             this.day_span_lb.AutoSize = true;
-            this.day_span_lb.Location = new System.Drawing.Point(103, 169);
+            this.day_span_lb.Location = new System.Drawing.Point(117, 122);
             this.day_span_lb.Name = "day_span_lb";
-            this.day_span_lb.Size = new System.Drawing.Size(98, 23);
+            this.day_span_lb.Size = new System.Drawing.Size(116, 28);
             this.day_span_lb.TabIndex = 8;
             this.day_span_lb.Text = "Day_span";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 169);
+            this.label5.Location = new System.Drawing.Point(18, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 23);
+            this.label5.Size = new System.Drawing.Size(90, 28);
             this.label5.TabIndex = 7;
             this.label5.Text = "Ngày: ";
             // 
             // week_num
             // 
-            this.week_num.Location = new System.Drawing.Point(86, 117);
+            this.week_num.Location = new System.Drawing.Point(578, 47);
+            this.week_num.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.week_num.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1581,7 +1581,7 @@ namespace QuanLyQuanTraSua
             0,
             0});
             this.week_num.Name = "week_num";
-            this.week_num.Size = new System.Drawing.Size(120, 31);
+            this.week_num.Size = new System.Drawing.Size(135, 36);
             this.week_num.TabIndex = 6;
             this.week_num.Value = new decimal(new int[] {
             1,
@@ -1592,15 +1592,16 @@ namespace QuanLyQuanTraSua
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 119);
+            this.label4.Location = new System.Drawing.Point(498, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
+            this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "Tuần: ";
             // 
             // year_num
             // 
-            this.year_num.Location = new System.Drawing.Point(65, 64);
+            this.year_num.Location = new System.Drawing.Point(74, 51);
+            this.year_num.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.year_num.Maximum = new decimal(new int[] {
             2025,
             0,
@@ -1612,7 +1613,7 @@ namespace QuanLyQuanTraSua
             0,
             0});
             this.year_num.Name = "year_num";
-            this.year_num.Size = new System.Drawing.Size(120, 31);
+            this.year_num.Size = new System.Drawing.Size(135, 36);
             this.year_num.TabIndex = 4;
             this.year_num.Value = new decimal(new int[] {
             2022,
@@ -1623,7 +1624,8 @@ namespace QuanLyQuanTraSua
             // 
             // month_num
             // 
-            this.month_num.Location = new System.Drawing.Point(295, 64);
+            this.month_num.Location = new System.Drawing.Point(330, 49);
+            this.month_num.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.month_num.Maximum = new decimal(new int[] {
             12,
             0,
@@ -1635,7 +1637,7 @@ namespace QuanLyQuanTraSua
             0,
             0});
             this.month_num.Name = "month_num";
-            this.month_num.Size = new System.Drawing.Size(120, 31);
+            this.month_num.Size = new System.Drawing.Size(135, 36);
             this.month_num.TabIndex = 3;
             this.month_num.Value = new decimal(new int[] {
             1,
@@ -1647,27 +1649,27 @@ namespace QuanLyQuanTraSua
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(213, 66);
+            this.label3.Location = new System.Drawing.Point(238, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 23);
+            this.label3.Size = new System.Drawing.Size(116, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tháng:  ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 66);
+            this.label2.Location = new System.Drawing.Point(18, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 23);
+            this.label2.Size = new System.Drawing.Size(77, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Năm: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 14);
+            this.label1.Location = new System.Drawing.Point(17, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 23);
+            this.label1.Size = new System.Drawing.Size(194, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng ký ca làm";
             // 
@@ -1681,22 +1683,24 @@ namespace QuanLyQuanTraSua
             this.shift_history_panel.Controls.Add(this.pictureBox1);
             this.shift_history_panel.Controls.Add(this.label28);
             this.shift_history_panel.Controls.Add(this.label6);
-            this.shift_history_panel.Location = new System.Drawing.Point(13, 53);
+            this.shift_history_panel.Location = new System.Drawing.Point(15, 66);
+            this.shift_history_panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.shift_history_panel.Name = "shift_history_panel";
-            this.shift_history_panel.Size = new System.Drawing.Size(1424, 604);
+            this.shift_history_panel.Size = new System.Drawing.Size(1602, 755);
             this.shift_history_panel.TabIndex = 4;
             this.shift_history_panel.Visible = false;
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.QUANLYLUONGBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.QUANLYLUONGBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportCaLam.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(197, 98);
+            this.reportViewer1.Location = new System.Drawing.Point(222, 122);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(999, 367);
+            this.reportViewer1.Size = new System.Drawing.Size(1124, 458);
             this.reportViewer1.TabIndex = 21;
             // 
             // show_report_btn
@@ -1704,9 +1708,10 @@ namespace QuanLyQuanTraSua
             this.show_report_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.show_report_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.show_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_report_btn.Location = new System.Drawing.Point(982, 42);
+            this.show_report_btn.Location = new System.Drawing.Point(1105, 52);
+            this.show_report_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.show_report_btn.Name = "show_report_btn";
-            this.show_report_btn.Size = new System.Drawing.Size(161, 32);
+            this.show_report_btn.Size = new System.Drawing.Size(181, 40);
             this.show_report_btn.TabIndex = 20;
             this.show_report_btn.Text = "Hiển thị";
             this.show_report_btn.UseVisualStyleBackColor = true;
@@ -1715,9 +1720,10 @@ namespace QuanLyQuanTraSua
             // filter_rdb
             // 
             this.filter_rdb.AutoSize = true;
-            this.filter_rdb.Location = new System.Drawing.Point(617, 50);
+            this.filter_rdb.Location = new System.Drawing.Point(694, 62);
+            this.filter_rdb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.filter_rdb.Name = "filter_rdb";
-            this.filter_rdb.Size = new System.Drawing.Size(17, 16);
+            this.filter_rdb.Size = new System.Drawing.Size(21, 20);
             this.filter_rdb.TabIndex = 19;
             this.filter_rdb.UseVisualStyleBackColor = true;
             // 
@@ -1725,9 +1731,10 @@ namespace QuanLyQuanTraSua
             // 
             this.show_all_rdb.AutoSize = true;
             this.show_all_rdb.Checked = true;
-            this.show_all_rdb.Location = new System.Drawing.Point(368, 50);
+            this.show_all_rdb.Location = new System.Drawing.Point(414, 62);
+            this.show_all_rdb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.show_all_rdb.Name = "show_all_rdb";
-            this.show_all_rdb.Size = new System.Drawing.Size(17, 16);
+            this.show_all_rdb.Size = new System.Drawing.Size(21, 20);
             this.show_all_rdb.TabIndex = 18;
             this.show_all_rdb.TabStop = true;
             this.show_all_rdb.UseVisualStyleBackColor = true;
@@ -1736,41 +1743,32 @@ namespace QuanLyQuanTraSua
             // 
             this.filter_date.CustomFormat = "MM/yyyy";
             this.filter_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.filter_date.Location = new System.Drawing.Point(680, 44);
+            this.filter_date.Location = new System.Drawing.Point(765, 55);
+            this.filter_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.filter_date.MaxDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.filter_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.filter_date.Name = "filter_date";
             this.filter_date.ShowUpDown = true;
-            this.filter_date.Size = new System.Drawing.Size(148, 31);
+            this.filter_date.Size = new System.Drawing.Size(166, 36);
             this.filter_date.TabIndex = 17;
             this.filter_date.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.loc;
-            this.pictureBox1.Location = new System.Drawing.Point(640, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(382, 48);
+            this.label28.Location = new System.Drawing.Point(430, 60);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(153, 23);
+            this.label28.Size = new System.Drawing.Size(181, 28);
             this.label28.TabIndex = 15;
             this.label28.Text = "Tất cả ca làm";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 14);
+            this.label6.Location = new System.Drawing.Point(20, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 23);
+            this.label6.Size = new System.Drawing.Size(194, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "Lịch sử ca làm";
             // 
@@ -1783,12 +1781,112 @@ namespace QuanLyQuanTraSua
             // 
             this.QUANLYLUONGTableAdapter.ClearBeforeFill = true;
             // 
+            // history_btn
+            // 
+            this.history_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.history_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.history_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
+            this.history_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.history_btn.Location = new System.Drawing.Point(717, 4);
+            this.history_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.history_btn.Name = "history_btn";
+            this.history_btn.Size = new System.Drawing.Size(303, 55);
+            this.history_btn.TabIndex = 2;
+            this.history_btn.Text = "Lịch sử ca làm";
+            this.history_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.history_btn.UseVisualStyleBackColor = true;
+            this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
+            // 
+            // regis_shift_btn
+            // 
+            this.regis_shift_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.regis_shift_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.regis_shift_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regis_shift_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.add;
+            this.regis_shift_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.regis_shift_btn.Location = new System.Drawing.Point(444, 4);
+            this.regis_shift_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.regis_shift_btn.Name = "regis_shift_btn";
+            this.regis_shift_btn.Size = new System.Drawing.Size(267, 55);
+            this.regis_shift_btn.TabIndex = 1;
+            this.regis_shift_btn.Text = "Đăng ký ca làm";
+            this.regis_shift_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.regis_shift_btn.UseVisualStyleBackColor = true;
+            this.regis_shift_btn.Click += new System.EventHandler(this.regis_shift_btn_Click);
+            // 
+            // finish_btn
+            // 
+            this.finish_btn.BackColor = System.Drawing.Color.PeachPuff;
+            this.finish_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.finish_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.finish_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.finish_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.check;
+            this.finish_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.finish_btn.Location = new System.Drawing.Point(256, 110);
+            this.finish_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.finish_btn.Name = "finish_btn";
+            this.finish_btn.Size = new System.Drawing.Size(169, 59);
+            this.finish_btn.TabIndex = 22;
+            this.finish_btn.Text = "Xác nhận";
+            this.finish_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.finish_btn.UseVisualStyleBackColor = false;
+            this.finish_btn.Click += new System.EventHandler(this.finish_btn_Click);
+            // 
+            // clear_btn
+            // 
+            this.clear_btn.BackColor = System.Drawing.Color.DarkSalmon;
+            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.x_icon_15;
+            this.clear_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clear_btn.Location = new System.Drawing.Point(1135, 306);
+            this.clear_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.Size = new System.Drawing.Size(306, 72);
+            this.clear_btn.TabIndex = 36;
+            this.clear_btn.Text = "Xóa hết lựa chọn";
+            this.clear_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.clear_btn.UseVisualStyleBackColor = false;
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
+            // 
+            // regis_btn
+            // 
+            this.regis_btn.BackColor = System.Drawing.Color.Wheat;
+            this.regis_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.regis_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.regis_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regis_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.check;
+            this.regis_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.regis_btn.Location = new System.Drawing.Point(1135, 386);
+            this.regis_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.regis_btn.Name = "regis_btn";
+            this.regis_btn.Size = new System.Drawing.Size(306, 72);
+            this.regis_btn.TabIndex = 10;
+            this.regis_btn.Text = "Đăng ký";
+            this.regis_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.regis_btn.UseVisualStyleBackColor = false;
+            this.regis_btn.Click += new System.EventHandler(this.regis_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.loc;
+            this.pictureBox1.Location = new System.Drawing.Point(720, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormCaLam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.ClientSize = new System.Drawing.Size(1667, 941);
             this.Controls.Add(this.windows);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCaLam";
             this.Text = "FormCaLam";
             this.Load += new System.EventHandler(this.FormCaLam_Load);
