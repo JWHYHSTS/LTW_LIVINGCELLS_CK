@@ -8,15 +8,14 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-
 namespace QuanLyQuanTraSua.BS_Layer
 {
     class QueryNhanVien
-    { 
+    {
         DateTime today = DateTime.Now;
+
         public void CapNhatBangLuong()
         {
-        
             int last_month, year;
             if (today.Month > 1)
             {
@@ -28,202 +27,233 @@ namespace QuanLyQuanTraSua.BS_Layer
                 last_month = 12;
                 year = today.Year - 1;
             }
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = from p in qlbhEntity.BANGLUONGs
-                      where p.Nam == year && p.Thang == last_month
-                      select p;
-            
-            if (tsb==null)
+
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                CapNhatLuong(last_month, year);
+                var tsb = qlbhEntity.BANGLUONGs
+                    .Where(p => p.Nam == year && p.Thang == last_month)
+                    .Select(p => p)
+                    .ToList();
+
+                if (tsb == null || tsb.Count == 0)
+                {
+                    CapNhatLuong(last_month, year);
+                }
             }
         }
 
         private void CapNhatLuong(int month, int year)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            DateTime start = new DateTime(year, month, 1);
-            DateTime end = new DateTime(year, month, DateTime.DaysInMonth(year, month));
-
-            var tsb1 = from p in qlbhEntity.QUANLYLUONGs where p.ThoiGian >= start && p.ThoiGian <= end select p;
-
-            var tsb2 = tsb1.GroupBy(x => x.MaNV).Select(g => new { MaNV = g.Key, LuongThang = g.Sum(x => x.Luong) });
-            BANGLUONG bl = new BANGLUONG();
-            foreach (var p in tsb2)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                bl = new BANGLUONG();
-                bl.Nam = year;
-                bl.Thang = month;
-                bl.MaNV = p.MaNV;
-                bl.TienLuong = p.LuongThang;
+                DateTime start = new DateTime(year, month, 1);
+                DateTime end = new DateTime(year, month, DateTime.DaysInMonth(year, month));
 
-                qlbhEntity.BANGLUONGs.InsertOnSubmit(bl);
-                qlbhEntity.BANGLUONGs.Context.SubmitChanges();
+                var tsb2 = qlbhEntity.QUANLYLUONGs
+                    .Where(p => p.ThoiGian >= start && p.ThoiGian <= end)
+                    .GroupBy(x => x.MaNV)
+                    .Select(g => new
+                    {
+                        MaNV = g.Key,
+                        LuongThang = g.Sum(x => x.Luong)
+                    })
+                    .ToList();
+
+                foreach (var p in tsb2)
+                {
+                    var bl = new BANGLUONG
+                    {
+                        Nam = year,
+                        Thang = month,
+                        MaNV = p.MaNV,
+                        TienLuong = p.LuongThang
+                    };
+                    qlbhEntity.BANGLUONGs.InsertOnSubmit(bl);
+                    qlbhEntity.BANGLUONGs.Context.SubmitChanges();
+                }
             }
         }
 
         public DataTable TinhLuongTam(int year, int month, int day)
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-
-            DateTime start = new DateTime(year, month, 1);
-            DateTime end = new DateTime(year, month, day);
-            var tsb1 = from p in qlbhEntity.QUANLYLUONGs where p.ThoiGian >= start && p.ThoiGian <= end select p;
-
-            var tsb2 = from p in tsb1
-                       join sa in qlbhEntity.NHANVIENs on p.MaNV equals sa.MaNV
-                       select new
-                       {
-                           MaNV = p.MaNV,
-                           TenNV = sa.TenNV,
-                           MaCa = p.MaCa,
-                           Luong = p.Luong
-                       };
-
-            var tsb3=tsb2.GroupBy(c => new
-             {
-                 c.MaNV,
-                 c.TenNV,
-                
-             })
-            .Select(gcs => new 
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                MaNV = gcs.Key.MaNV,
-                TenNV = gcs.Key.TenNV,
-                LuongThang = gcs.Sum(x=>x.Luong)
-                
-            });
+                DateTime start = new DateTime(year, month, 1);
+                DateTime end = new DateTime(year, month, day);
 
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaNV");
-            tb.Columns.Add("TenNV");
-            tb.Columns.Add("LuongThang");
+                var tsb3 = qlbhEntity.QUANLYLUONGs
+                    .Where(p => p.ThoiGian >= start && p.ThoiGian <= end)
+                    .Join(qlbhEntity.NHANVIENs,
+                          p => p.MaNV,
+                          nv => nv.MaNV,
+                          (p, nv) => new { p.MaNV, nv.TenNV, p.MaCa, p.Luong })
+                    .GroupBy(c => new { c.MaNV, c.TenNV })
+                    .Select(g => new
+                    {
+                        MaNV = g.Key.MaNV,
+                        TenNV = g.Key.TenNV,
+                        LuongThang = g.Sum(x => x.Luong)
+                    })
+                    .ToList();
 
-            foreach (var p in tsb3)
-                tb.Rows.Add(p.MaNV, p.TenNV, p.LuongThang);
+                DataTable tb = new DataTable();
+                tb.Columns.Add("MaNV");
+                tb.Columns.Add("TenNV");
+                tb.Columns.Add("LuongThang");
 
-            return tb;
+                foreach (var p in tsb3)
+                    tb.Rows.Add(p.MaNV, p.TenNV, p.LuongThang);
+
+                return tb;
+            }
         }
 
         public DataTable LayNhanVien()
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = from p in qlbhEntity.NHANVIENs
-                      where p.ConLam == true
-                      select new
-                      {
-                          MaNV = p.MaNV,
-                          TenNV = p.TenNV,
-                          SDT = p.SDT,
-                          DiaChi = p.DiaChi,
-                          NgayNV = p.NgayNV,
-                          CMND = p.CMND
-                      };
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tsb = qlbhEntity.NHANVIENs
+                    .Where(p => p.ConLam == true)
+                    .Select(p => new
+                    {
+                        p.MaNV,
+                        p.TenNV,
+                        p.SDT,
+                        p.DiaChi,
+                        p.NgayNV,
+                        p.CMND
+                    })
+                    .ToList();
 
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaNV");
-            tb.Columns.Add("TenNV");
-            tb.Columns.Add("SDT");
-            tb.Columns.Add("DiaChi");
-            tb.Columns.Add("NgayNV");
-            tb.Columns.Add("CMND");
-            foreach (var p in tsb)
-                tb.Rows.Add(p.MaNV, p.TenNV, p.SDT, p.DiaChi, p.NgayNV, p.CMND);
-            return tb;
+                DataTable tb = new DataTable();
+                tb.Columns.Add("MaNV");
+                tb.Columns.Add("TenNV");
+                tb.Columns.Add("SDT");
+                tb.Columns.Add("DiaChi");
+                tb.Columns.Add("NgayNV");
+                tb.Columns.Add("CMND");
+
+                foreach (var p in tsb)
+                    tb.Rows.Add(p.MaNV, p.TenNV, p.SDT, p.DiaChi, p.NgayNV, p.CMND);
+
+                return tb;
+            }
         }
 
         public bool ThemNhanVien(string MaNhanVien, string TenNhanVien, string sdt, string diaChi, string ngayNV, string cmnd, ref string err)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            NHANVIEN nv = new NHANVIEN();
-            nv.MaNV = MaNhanVien;
-            nv.TenNV = TenNhanVien;
-            nv.SDT = sdt;
-            nv.DiaChi = diaChi;
-            nv.NgayNV = DateTime.Parse(ngayNV);
-            nv.CMND = cmnd;
-            nv.ConLam = true;
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var nv = new NHANVIEN
+                {
+                    MaNV = MaNhanVien,
+                    TenNV = TenNhanVien,
+                    SDT = sdt,
+                    DiaChi = diaChi,
+                    NgayNV = DateTime.Parse(ngayNV),
+                    CMND = cmnd,
+                    ConLam = true
+                };
 
-            qlbhEntity.NHANVIENs.InsertOnSubmit(nv);
-            qlbhEntity.NHANVIENs.Context.SubmitChanges();
-            return true;
+                qlbhEntity.NHANVIENs.InsertOnSubmit(nv);
+                qlbhEntity.NHANVIENs.Context.SubmitChanges();
+                return true;
+            }
         }
+
         public bool XoaNhanVien(ref string err, string MaNhanVien)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = from p in qlbhEntity.NHANVIENs where p.MaNV.Trim() == MaNhanVien select p;
-            XoaDangNhap(MaNhanVien, ref err);
-            return true;
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tsb = qlbhEntity.NHANVIENs
+                    .Where(p => p.MaNV.Trim() == MaNhanVien)
+                    .ToList();
+
+                XoaDangNhap(MaNhanVien, ref err);
+                return true;
+            }
         }
+
         private bool XoaDangNhap(string MaNhanVien, ref string err)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = from p in qlbhEntity.NHANVIENs where p.MaNV.Trim() == MaNhanVien select p;
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var tsb = qlbhEntity.NHANVIENs
+                    .Where(p => p.MaNV.Trim() == MaNhanVien);
 
-            qlbhEntity.NHANVIENs.DeleteAllOnSubmit(tsb);
-            qlbhEntity.SubmitChanges();
-
-            return true;
+                qlbhEntity.NHANVIENs.DeleteAllOnSubmit(tsb);
+                qlbhEntity.SubmitChanges();
+                return true;
+            }
         }
+
         public bool CapNhatNhanVien(string MaNhanVien, string TenNhanVien, string sdt, string diaChi, string ngayNV, string cmnd, ref string err)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = (from p in qlbhEntity.NHANVIENs where p.MaNV.Trim() == MaNhanVien select p).SingleOrDefault();
-            if (tsb != null)
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
             {
-                tsb.TenNV = TenNhanVien;
-                tsb.SDT = sdt;
-                tsb.DiaChi = diaChi;
-                tsb.NgayNV = DateTime.Parse(ngayNV);
-                tsb.CMND = cmnd;
-                qlbhEntity.SubmitChanges();
-            }
+                var tsb = qlbhEntity.NHANVIENs
+                    .Where(p => p.MaNV.Trim() == MaNhanVien)
+                    .SingleOrDefault();
 
-            return true;
+                if (tsb != null)
+                {
+                    tsb.TenNV = TenNhanVien;
+                    tsb.SDT = sdt;
+                    tsb.DiaChi = diaChi;
+                    tsb.NgayNV = DateTime.Parse(ngayNV);
+                    tsb.CMND = cmnd;
+                    qlbhEntity.SubmitChanges();
+                }
+                return true;
+            }
         }
 
         public DataTable LocNhanVien(string text)
         {
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
-            var tsb = from p in qlbhEntity.NHANVIENs where p.TenNV.Trim().Contains(text) || p.MaNV.Trim().Contains(text) || p.SDT.Trim().Contains(text) || p.DiaChi.Trim().Contains(text) || p.CMND.Trim().Contains(text) || p.NgayNV.ToString().Contains(text)
-                      select p;
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var all = qlbhEntity.NHANVIENs.ToList();
+                var tsb = all.Where(p =>
+                    (p.TenNV ?? "").Trim().Contains(text) ||
+                    (p.MaNV ?? "").Trim().Contains(text) ||
+                    (p.SDT ?? "").Trim().Contains(text) ||
+                    (p.DiaChi ?? "").Trim().Contains(text) ||
+                    (p.CMND ?? "").Trim().Contains(text) ||
+                    p.NgayNV.ToString().Contains(text)
+                );
 
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaNV");
-            tb.Columns.Add("TenNV");
-            tb.Columns.Add("SDT");
-            tb.Columns.Add("DiaChi");
-            tb.Columns.Add("NgayNV");
-            tb.Columns.Add("CMND");
-            foreach (var p in tsb)
-                tb.Rows.Add(p.MaNV, p.TenNV, p.SDT, p.DiaChi, p.NgayNV, p.CMND);
-            return tb;
+                DataTable tb = new DataTable();
+                tb.Columns.Add("MaNV");
+                tb.Columns.Add("TenNV");
+                tb.Columns.Add("SDT");
+                tb.Columns.Add("DiaChi");
+                tb.Columns.Add("NgayNV");
+                tb.Columns.Add("CMND");
 
+                foreach (var p in tsb)
+                    tb.Rows.Add(p.MaNV, p.TenNV, p.SDT, p.DiaChi, p.NgayNV, p.CMND);
+
+                return tb;
+            }
         }
 
         public string GetLastIndex()
         {
-            
-            QUANLYQUANTRADataContext qlbhEntity = new QUANLYQUANTRADataContext();
+            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            {
+                var all = qlbhEntity.NHANVIENs
+                    .Select(p => p.MaNV)
+                    .ToList();
 
-            var cp = from p in qlbhEntity.NHANVIENs select p;
-            DataTable tb = new DataTable();
-            tb.Columns.Add("MaNV");
+                if (all.Count == 0)
+                    return "NV001";
 
-            foreach (var p in cp)
-                tb.Rows.Add(p.MaNV);
-            DataRow[] filter = tb.Select();
-            int count = filter.Length;
-            DataRow lastrow = filter[count - 1];
-            string id = lastrow["MaNV"].ToString().Trim();
-            string[] listcode = id.Split('V');
-            int index = Int32.Parse(listcode[1]);
-            string next_id = "NV";
-            next_id = next_id + (index + 1).ToString().PadLeft(3, '0');
-            return next_id;
+                string id = all.Last().Trim();
+                string[] listcode = id.Split('V');
+                int index = Int32.Parse(listcode[1]);
+                string next_id = "NV" + (index + 1).ToString().PadLeft(3, '0');
+                return next_id;
+            }
         }
-
     }
 }

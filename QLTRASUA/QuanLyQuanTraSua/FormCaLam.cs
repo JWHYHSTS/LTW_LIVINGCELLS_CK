@@ -387,5 +387,10 @@ namespace QuanLyQuanTraSua
             this.QUANLYLUONGTableAdapter.FillBy(this.QuanLi.QUANLYLUONG, UserCode, start_h.ToString("yyyy-MM-dd"), end_h.ToString("yyyy-MM-dd"));
             this.reportViewer1.RefreshReport();
         }
+
+        private void Timetable_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
