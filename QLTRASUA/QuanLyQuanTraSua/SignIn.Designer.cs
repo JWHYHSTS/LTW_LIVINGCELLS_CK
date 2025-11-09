@@ -48,10 +48,9 @@ namespace QuanLyQuanTraSua
             // 
             this.windows.Controls.Add(this.eye);
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(29, 19);
-            this.windows.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.windows.Location = new System.Drawing.Point(19, 12);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(2175, 1031);
+            this.windows.Size = new System.Drawing.Size(1450, 660);
             this.windows.TabIndex = 0;
             this.windows.Paint += new System.Windows.Forms.PaintEventHandler(this.windows_Paint);
             // 
@@ -65,19 +64,17 @@ namespace QuanLyQuanTraSua
             this.eye.Controls.Add(this.label3);
             this.eye.Controls.Add(this.label2);
             this.eye.Controls.Add(this.label1);
-            this.eye.Location = new System.Drawing.Point(612, 209);
-            this.eye.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.eye.Location = new System.Drawing.Point(408, 134);
             this.eye.Name = "eye";
-            this.eye.Size = new System.Drawing.Size(1087, 578);
+            this.eye.Size = new System.Drawing.Size(725, 371);
             this.eye.TabIndex = 0;
             // 
             // hide_pass
             // 
             this.hide_pass.Image = global::QuanLyQuanTraSua.Properties.Resources.hiden;
-            this.hide_pass.Location = new System.Drawing.Point(925, 315);
-            this.hide_pass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.hide_pass.Location = new System.Drawing.Point(617, 202);
             this.hide_pass.Name = "hide_pass";
-            this.hide_pass.Size = new System.Drawing.Size(52, 48);
+            this.hide_pass.Size = new System.Drawing.Size(35, 31);
             this.hide_pass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hide_pass.TabIndex = 6;
             this.hide_pass.TabStop = false;
@@ -89,10 +86,9 @@ namespace QuanLyQuanTraSua
             this.sign_in_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sign_in_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.sign_in_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sign_in_btn.Location = new System.Drawing.Point(473, 432);
-            this.sign_in_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sign_in_btn.Location = new System.Drawing.Point(315, 276);
             this.sign_in_btn.Name = "sign_in_btn";
-            this.sign_in_btn.Size = new System.Drawing.Size(249, 86);
+            this.sign_in_btn.Size = new System.Drawing.Size(166, 55);
             this.sign_in_btn.TabIndex = 5;
             this.sign_in_btn.Text = "Đăng nhập";
             this.sign_in_btn.UseVisualStyleBackColor = false;
@@ -102,20 +98,18 @@ namespace QuanLyQuanTraSua
             // 
             this.password.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.Color.Black;
-            this.password.Location = new System.Drawing.Point(473, 315);
-            this.password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.password.Location = new System.Drawing.Point(315, 202);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(503, 44);
+            this.password.Size = new System.Drawing.Size(337, 30);
             this.password.TabIndex = 4;
             this.password.UseSystemPasswordChar = true;
             // 
             // username
             // 
             this.username.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(473, 198);
-            this.username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.username.Location = new System.Drawing.Point(315, 127);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(503, 44);
+            this.username.Size = new System.Drawing.Size(337, 30);
             this.username.TabIndex = 3;
             this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
             // 
@@ -123,10 +117,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(129, 315);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(86, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 56);
+            this.label3.Size = new System.Drawing.Size(143, 36);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -135,10 +128,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 189);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(45, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(362, 56);
+            this.label2.Size = new System.Drawing.Size(223, 36);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên đăng nhập";
             // 
@@ -146,24 +138,22 @@ namespace QuanLyQuanTraSua
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(316, 52);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(211, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(492, 56);
+            this.label1.Size = new System.Drawing.Size(303, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Trà sữa Quỳnh Như ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2223, 1176);
+            this.ClientSize = new System.Drawing.Size(1283, 675);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SignIn";
-            this.Text = "SignIn";
+            this.Text = "git";
             this.Load += new System.EventHandler(this.SignIn_Load);
             this.windows.ResumeLayout(false);
             this.eye.ResumeLayout(false);
