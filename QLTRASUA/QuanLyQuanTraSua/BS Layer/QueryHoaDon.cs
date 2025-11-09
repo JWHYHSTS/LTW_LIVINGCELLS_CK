@@ -13,18 +13,40 @@ namespace QuanLyQuanTraSua.BS_Layer
 {
     class QueryHoaDon
     {
+        // ==================== Helpers ====================
+        private static string Normalize(string s) => (s ?? string.Empty).Trim();
+
+        // Lấy phần số ở cuối mã có prefix 2 ký tự (VD: KH0001 -> 1)
+        private static int ExtractNumberSuffix(string code, int prefixLength)
+        {
+            if (string.IsNullOrWhiteSpace(code) || code.Length <= prefixLength) return 0;
+            var num = code.Substring(prefixLength);
+            return int.TryParse(num, out var n) ? n : 0;
+        }
+
+        private static string NextCode(IEnumerable<string> allCodes, string prefix, int digits)
+        {
+            var max = allCodes
+                .Select(c => ExtractNumberSuffix(Normalize(c), prefix.Length))
+                .DefaultIfEmpty(0)
+                .Max();
+            return prefix + (max + 1).ToString("D" + digits);
+        }
+
+        // ==================== UI datasource ====================
         public DataGridViewComboBoxColumn LoadComboBox(DataGridViewComboBoxColumn cbbMH)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tps = qlbhEntity.MENUs.Select(p => p);
+                // Lấy tất cả món từ MENU
+                var data = db.MENUs
+                             .Select(m => new { m.MaMH, m.TenMH })
+                             .ToList();
 
-                DataTable dt = new DataTable();
+                var dt = new DataTable();
                 dt.Columns.Add("MaMH");
                 dt.Columns.Add("TenMH");
-
-                foreach (var p in tps)
-                    dt.Rows.Add(p.MaMH, p.TenMH);
+                data.ForEach(x => dt.Rows.Add(x.MaMH, x.TenMH));
 
                 cbbMH.DataSource = dt;
                 cbbMH.DisplayMember = "TenMH";
@@ -33,203 +55,215 @@ namespace QuanLyQuanTraSua.BS_Layer
             }
         }
 
+        // ==================== Khách hàng ====================
         public bool CheckKhachHang(string sdt, out string maKH)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            var phone = Normalize(sdt);
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tps = qlbhEntity.KHACHHANGs
-                    .Where(p => p.SDT.Trim() == sdt)
-                    .SingleOrDefault();
+                var kh = db.KHACHHANGs
+                           .FirstOrDefault(k => k.SDT.Trim() == phone);
 
-                if (tps != null)
+                if (kh != null)
                 {
-                    maKH = tps.MaKH;
+                    maKH = Normalize(kh.MaKH);
                     return true;
                 }
-                maKH = "";
+                maKH = string.Empty;
                 return false;
             }
         }
 
         public List<string> GetKhachInfor(string maKH)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tps = qlbhEntity.KHACHHANGs
-                    .Where(p => p.MaKH.Trim() == maKH)
-                    .SingleOrDefault();
+                var kh = db.KHACHHANGs
+                           .FirstOrDefault(k => k.MaKH.Trim() == Normalize(maKH));
 
-                List<string> infor = new List<string>();
-                infor.Add(tps.MaKH.Trim());
-                infor.Add(tps.DiemTichLuy.ToString());
-                return infor;
+                // Trả về an toàn khi null
+                if (kh == null) return new List<string> { string.Empty, "0" };
+
+                return new List<string>
+                {
+                    Normalize(kh.MaKH),
+                    (kh.DiemTichLuy ?? 0).ToString()
+                };
             }
         }
 
         public bool ThemKhach(string name, string sdt, string diachi, ref string err, out List<string> infor)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var all = qlbhEntity.KHACHHANGs.Select(p => p).ToList();
-                int count = all.Count;
+                // Tạo mã KH mới dựa trên Max phần số
+                var allCodes = db.KHACHHANGs.Select(k => k.MaKH).ToList();
+                var nextId = allCodes.Any()
+                    ? NextCode(allCodes, "KH", 4)
+                    : "KH0001";
 
-                if (count == 0)
+                var kh = new KHACHHANG
                 {
-                    infor = new List<string> { "KH0001", "0" };
-                    return true;
-                }
-
-                string id = all.Last().MaKH.Trim();
-                string[] listcode = id.Split('H');
-                int index = Int32.Parse(listcode[1]);
-                string next_id = "KH" + (index + 1).ToString().PadLeft(4, '0');
-
-                KHACHHANG kh = new KHACHHANG
-                {
-                    MaKH = next_id,
-                    TenKH = name,
-                    SDT = sdt,
-                    DiaChi = diachi,
+                    MaKH = nextId,
+                    TenKH = Normalize(name),
+                    SDT = Normalize(sdt),
+                    DiaChi = Normalize(diachi),
                     DiemTichLuy = 0
                 };
 
-                qlbhEntity.KHACHHANGs.InsertOnSubmit(kh);
-                qlbhEntity.KHACHHANGs.Context.SubmitChanges();
+                db.KHACHHANGs.InsertOnSubmit(kh);
+                db.SubmitChanges();
 
-                infor = new List<string> { next_id, "0" };
+                infor = new List<string> { nextId, "0" };
                 return true;
             }
         }
 
         public void GetGia(string idMH, out int cost, out int plus)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tps = qlbhEntity.MENUs
-                    .Where(p => p.MaMH.Trim() == idMH)
-                    .SingleOrDefault();
+                var mh = db.MENUs
+                           .FirstOrDefault(m => m.MaMH.Trim() == Normalize(idMH));
 
-                cost = (int)tps.GiaTien;
-                plus = tps.DiemTichLuy;
+                if (mh == null)
+                {
+                    cost = 0;
+                    plus = 0;
+                    return;
+                }
+
+                cost = (int)mh.GiaTien;   // GiaTien là float → ép kiểu sang int
+                plus = mh.DiemTichLuy;    // DiemTichLuy là int
             }
         }
 
-        private string LocNgay(string datetime)
-        {
-            string[] list_time = datetime.Split(' ');
-            string[] list_date = list_time[0].Split('/');
-            DateTime date = new DateTime(Int32.Parse(list_date[2]), Int32.Parse(list_date[0]), Int32.Parse(list_date[1]));
-            return date.ToString("yyyy-MM-dd");
-        }
 
+
+        // ==================== Coupon ====================
+        // So sánh DateTime trực tiếp (không parse chuỗi)
         public float CheckCoupon(int cost, int point, out List<string> coupon_infor)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
                 coupon_infor = new List<string>();
-                DateTime today = DateTime.Now;
-                var cp = qlbhEntity.COUPONs.Select(p => p);
+                var today = DateTime.Today;
 
-                string start, end, now = today.ToString("yyyy-MM-dd");
-                float discount = 0, rate, max;
-                int point_rate;
-
-                foreach (var p in cp)
-                {
-                    start = LocNgay(p.NgayBatDau.ToString());
-                    end = LocNgay(p.NgayKetThuc.ToString());
-                    rate = (float)p.MucGiam;
-                    point_rate = (int)p.DiemApDung;
-                    max = (float)p.GiamToiDa;
-
-                    if (String.Compare(start, now) <= 0 && String.Compare(now, end) <= 0)
+                // Lọc các coupon đang hiệu lực & đủ điểm, chọn ưu đãi tốt nhất
+                var candidates = db.COUPONs
+                    .Where(c => c.NgayBatDau.Date <= today && today <= c.NgayKetThuc.Date
+                                && point >= (c.DiemApDung ?? 0))
+                    .Select(c => new
                     {
-                        if (point >= point_rate)
-                        {
-                            discount = cost * rate;
-                            if (discount > max)
-                                discount = max;
+                        c.MaCP,
+                        c.MoTa,
+                        Rate = (float)(c.MucGiam ?? 0),
+                        Max = (float)(c.GiamToiDa ?? 0)
+                    })
+                    .ToList();
 
-                            coupon_infor.Add(p.MaCP);
-                            coupon_infor.Add(p.MoTa);
-                            break;
-                        }
-                    }
+                if (!candidates.Any()) return 0f;
+
+                // Tính mức giảm và chọn cái giảm nhiều nhất (sau khi áp dụng trần Max)
+                var best = candidates
+                    .Select(c =>
+                    {
+                        var d = cost * c.Rate;
+                        if (d > c.Max) d = c.Max;
+                        return new { Coupon = c, Discount = d };
+                    })
+                    .OrderByDescending(x => x.Discount)
+                    .First();
+
+                if (best.Discount > 0)
+                {
+                    coupon_infor.Add(Normalize(best.Coupon.MaCP));
+                    coupon_infor.Add(Normalize(best.Coupon.MoTa));
                 }
-                return discount;
+
+                return (float)best.Discount;
             }
         }
 
+        // ==================== Update điểm KH ====================
         public bool UpdateKhachHang(string maKH, int point, ref string err)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tps = qlbhEntity.KHACHHANGs
-                    .Where(p => p.MaKH.Trim() == maKH)
-                    .SingleOrDefault();
+                var kh = db.KHACHHANGs
+                           .FirstOrDefault(k => k.MaKH.Trim() == Normalize(maKH));
 
-                if (tps != null)
-                {
-                    tps.DiemTichLuy += point;
-                    qlbhEntity.SubmitChanges();
-                    return true;
-                }
-                return false;
+                if (kh == null) return false;
+
+                kh.DiemTichLuy = (kh.DiemTichLuy ?? 0) + point;
+                db.SubmitChanges();
+                return true;
             }
         }
 
+        // ==================== Lưu hoá đơn ====================
         public string LuuHoaDon(string maKH, string maNV, float total_cost, DateTime ngayXHD, string maCP, ref string err)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var all = qlbhEntity.HOADONs.Select(p => p).ToList();
-                int count = all.Count;
+                // Sinh mã HD mới theo Max phần số
+                var allCodes = db.HOADONs.Select(h => h.MaHD).ToList();
+                var nextId = allCodes.Any()
+                    ? NextCode(allCodes, "HD", 4)
+                    : "HD0001";
 
-                if (count == 0)
-                    return "HD0001";
-
-                string id = all.Last().MaHD.Trim();
-                string[] listcode = id.Split('D');
-                int index = Int32.Parse(listcode[1]);
-                string next_id = "HD" + (index + 1).ToString().PadLeft(4, '0');
-
-                HOADON hd = new HOADON
+                var hd = new HOADON
                 {
-                    MaHD = next_id,
-                    MaKH = maKH,
-                    MaNV = maNV,
+                    MaHD = nextId,
+                    MaKH = Normalize(maKH),
+                    MaNV = Normalize(maNV),
                     ThanhTien = total_cost,
                     NgayXuatHD = ngayXHD,
-                    MaCP = (maCP != "Null") ? maCP : null
+                    MaCP = Normalize(maCP) != "Null" ? Normalize(maCP) : null
                 };
 
-                qlbhEntity.HOADONs.InsertOnSubmit(hd);
-                qlbhEntity.HOADONs.Context.SubmitChanges();
-
-                return next_id;
+                db.HOADONs.InsertOnSubmit(hd);
+                db.SubmitChanges(); // tạo HD trước để còn lưu chi tiết
+                return nextId;
             }
         }
 
+        // ==================== Lưu chi tiết hoá đơn ====================
         public void LuuChiTietHD(string maHD, DataGridView table_item, ref string err)
         {
-            using (var qlbhEntity = new QUANLYQUANTRADataContext())
+            using (var db = new QUANLYQUANTRADataContext())
             {
+                var details = new List<CHITIETHOADON>();
+
                 foreach (DataGridViewRow row in table_item.Rows)
                 {
-                    if (row.Cells[0].Value != null)
-                    {
-                        var ct = new CHITIETHOADON
-                        {
-                            MaHD = maHD,
-                            MaMH = row.Cells[0].Value.ToString().Trim(),
-                            SoLuong = (int)row.Cells[1].Value,
-                            DiemTichLuy = (int)row.Cells[2].Value,
-                            Tien = (int)row.Cells[3].Value
-                        };
+                    if (row.IsNewRow) continue;
+                    if (row.Cells[0].Value == null) continue;
 
-                        qlbhEntity.CHITIETHOADONs.InsertOnSubmit(ct);
-                        qlbhEntity.CHITIETHOADONs.Context.SubmitChanges();
-                    }
+                    var maMH = Normalize(row.Cells[0].Value?.ToString());
+
+                    int soLuong = 0, diem = 0, tien = 0;
+                    int.TryParse(Normalize(row.Cells[1].Value?.ToString()), out soLuong);
+                    int.TryParse(Normalize(row.Cells[2].Value?.ToString()), out diem);
+                    int.TryParse(Normalize(row.Cells[3].Value?.ToString()), out tien);
+
+                    // Bỏ những dòng rỗng
+                    if (string.IsNullOrEmpty(maMH) || soLuong <= 0) continue;
+
+                    details.Add(new CHITIETHOADON
+                    {
+                        MaHD = Normalize(maHD),
+                        MaMH = maMH,
+                        SoLuong = soLuong,
+                        DiemTichLuy = diem,
+                        Tien = tien
+                    });
+                }
+
+                if (details.Any())
+                {
+                    db.CHITIETHOADONs.InsertAllOnSubmit(details);
+                    db.SubmitChanges(); // submit 1 lần cho toàn bộ chi tiết
                 }
             }
         }

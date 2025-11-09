@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|e:\\filetest\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\bs layer\\queryhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\bs layer\\queryhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|e:\\filetest\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -90,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,7 +150,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "QueryHoaDon.cs",
+              "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryHoaDon.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\BS Layer\\QueryHoaDon.cs",
+              "ToolTip": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryHoaDon.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\BS Layer\\QueryHoaDon.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T06:00:55.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Intro.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Intro.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Intro.cs",
@@ -156,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormShowHoaDon.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormShowHoaDon.cs",
@@ -166,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SignIn.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\SignIn.cs",
@@ -178,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormNhanVien.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormNhanVien.cs",
@@ -188,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FormLoiNhuan.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormLoiNhuan.cs",
@@ -198,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FormKhachHang.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormKhachHang.cs",
@@ -208,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FormDoanhThu.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormDoanhThu.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormDoanhThu.cs",
@@ -218,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FormChiPhi.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormChiPhi.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormChiPhi.cs",
@@ -228,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FormHoaDon.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormHoaDon.cs",
@@ -238,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FormCaLam.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormCaLam.cs",
@@ -248,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FormChiPhi.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormChiPhi.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormChiPhi.cs",
@@ -260,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
@@ -270,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
@@ -282,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "FormCaLam.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormCaLam.cs",
@@ -294,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SignIn.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\SignIn.cs",
@@ -306,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "QueryChiPhi.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\BS Layer\\QueryChiPhi.cs",
@@ -318,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "FormHoaDon.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormHoaDon.cs",
@@ -330,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "QUANLYQUANTRA.cs",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\QUANLYQUANTRA.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\QUANLYQUANTRA.cs",
@@ -341,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "QUANLYQUANTRA.dbml",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\QUANLYQUANTRA.dbml",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\QUANLYQUANTRA.dbml",
@@ -352,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "App.config",
               "DocumentMoniker": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\App.config",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\App.config",
