@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\bs layer\\queryhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|e:\\filetest\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -190,8 +190,7 @@
               "ToolTip": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs [Design]",
               "RelativeToolTip": "QuanLyQuanTraSua\\SignIn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T06:51:10.722Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-08T06:51:10.722Z"
             },
             {
               "$type": "Document",
@@ -377,8 +376,7 @@
               "RelativeToolTip": "QuanLyQuanTraSua\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAADKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-08T06:33:05.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-08T06:33:05.062Z"
             }
           ]
         },
