@@ -118,48 +118,48 @@ namespace QuanLyQuanTraSua
             this.windows.Controls.Add(this.modify_infor_panel);
             this.windows.Controls.Add(this.report_panel);
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(18, 19);
-            this.windows.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.windows.Location = new System.Drawing.Point(12, 12);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(2175, 1031);
+            this.windows.Size = new System.Drawing.Size(1450, 660);
             this.windows.TabIndex = 0;
             // 
             // modify_btn
             // 
+            this.modify_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.modify_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.modify_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.modify_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modify_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.modify_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.modify_btn.Location = new System.Drawing.Point(1107, 9);
-            this.modify_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.modify_btn.Location = new System.Drawing.Point(738, 6);
             this.modify_btn.Name = "modify_btn";
-            this.modify_btn.Size = new System.Drawing.Size(549, 69);
+            this.modify_btn.Size = new System.Drawing.Size(366, 44);
             this.modify_btn.TabIndex = 5;
             this.modify_btn.Text = "Sửa thông tin khách hàng";
             this.modify_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.modify_btn.UseVisualStyleBackColor = true;
+            this.modify_btn.UseVisualStyleBackColor = false;
             this.modify_btn.Click += new System.EventHandler(this.modify_btn_Click);
             // 
             // view_btn
             // 
+            this.view_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.view_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.view_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.view_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.view_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.view_btn.Location = new System.Drawing.Point(537, 9);
-            this.view_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.view_btn.Location = new System.Drawing.Point(358, 6);
             this.view_btn.Name = "view_btn";
-            this.view_btn.Size = new System.Drawing.Size(561, 69);
+            this.view_btn.Size = new System.Drawing.Size(374, 44);
             this.view_btn.TabIndex = 2;
             this.view_btn.Text = "Xem danh sách khách hàng";
             this.view_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.view_btn.UseVisualStyleBackColor = true;
+            this.view_btn.UseVisualStyleBackColor = false;
             this.view_btn.Click += new System.EventHandler(this.view_btn_Click);
             // 
             // modify_infor_panel
             // 
+            this.modify_infor_panel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.modify_infor_panel.Controls.Add(this.save_btn);
             this.modify_infor_panel.Controls.Add(this.search_tb);
             this.modify_infor_panel.Controls.Add(this.search_btn);
@@ -167,25 +167,24 @@ namespace QuanLyQuanTraSua
             this.modify_infor_panel.Controls.Add(this.panel3);
             this.modify_infor_panel.Controls.Add(this.label2);
             this.modify_infor_panel.Controls.Add(this.KhachHang_dtg);
-            this.modify_infor_panel.Location = new System.Drawing.Point(18, 88);
-            this.modify_infor_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.modify_infor_panel.Location = new System.Drawing.Point(12, 56);
             this.modify_infor_panel.Name = "modify_infor_panel";
-            this.modify_infor_panel.Size = new System.Drawing.Size(2136, 944);
+            this.modify_infor_panel.Size = new System.Drawing.Size(1424, 604);
             this.modify_infor_panel.TabIndex = 7;
             this.modify_infor_panel.Visible = false;
             // 
             // save_btn
             // 
-            this.save_btn.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.save_btn.BackColor = System.Drawing.Color.Orange;
             this.save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.check;
             this.save_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_btn.Location = new System.Drawing.Point(368, 819);
-            this.save_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.save_btn.Location = new System.Drawing.Point(245, 524);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(364, 91);
+            this.save_btn.Size = new System.Drawing.Size(243, 58);
             this.save_btn.TabIndex = 28;
             this.save_btn.Text = "Lưu thông tin";
             this.save_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,25 +193,24 @@ namespace QuanLyQuanTraSua
             // 
             // search_tb
             // 
-            this.search_tb.Location = new System.Drawing.Point(1436, 59);
-            this.search_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.search_tb.Location = new System.Drawing.Point(957, 38);
             this.search_tb.Name = "search_tb";
-            this.search_tb.Size = new System.Drawing.Size(457, 45);
+            this.search_tb.Size = new System.Drawing.Size(306, 31);
             this.search_tb.TabIndex = 27;
             this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
             // 
             // search_btn
             // 
-            this.search_btn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.search_btn.BackColor = System.Drawing.Color.DarkOrange;
             this.search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.search_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.search_flat;
             this.search_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.search_btn.Location = new System.Drawing.Point(1155, 47);
-            this.search_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.search_btn.Location = new System.Drawing.Point(770, 30);
             this.search_btn.Name = "search_btn";
-            this.search_btn.Size = new System.Drawing.Size(248, 69);
+            this.search_btn.Size = new System.Drawing.Size(165, 44);
             this.search_btn.TabIndex = 26;
             this.search_btn.Text = "Tìm kiếm";
             this.search_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,15 +219,16 @@ namespace QuanLyQuanTraSua
             // 
             // fix_btn
             // 
-            this.fix_btn.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.fix_btn.BackColor = System.Drawing.Color.Bisque;
             this.fix_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.fix_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.fix_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fix_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fix_btn.ForeColor = System.Drawing.SystemColors.InfoText;
             this.fix_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fix_btn.Location = new System.Drawing.Point(66, 819);
-            this.fix_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fix_btn.Location = new System.Drawing.Point(44, 524);
             this.fix_btn.Name = "fix_btn";
-            this.fix_btn.Size = new System.Drawing.Size(290, 91);
+            this.fix_btn.Size = new System.Drawing.Size(193, 58);
             this.fix_btn.TabIndex = 25;
             this.fix_btn.Text = "Sửa thông tin";
             this.fix_btn.UseVisualStyleBackColor = false;
@@ -237,6 +236,7 @@ namespace QuanLyQuanTraSua
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.diemtichluyKH_lb);
@@ -249,19 +249,18 @@ namespace QuanLyQuanTraSua
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(66, 170);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(44, 109);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(978, 610);
+            this.panel3.Size = new System.Drawing.Size(653, 391);
             this.panel3.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(290, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(193, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(377, 37);
+            this.label4.Size = new System.Drawing.Size(335, 36);
             this.label4.TabIndex = 34;
             this.label4.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
@@ -269,20 +268,18 @@ namespace QuanLyQuanTraSua
             // 
             this.diemtichluyKH_lb.AutoSize = true;
             this.diemtichluyKH_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diemtichluyKH_lb.Location = new System.Drawing.Point(530, 433);
-            this.diemtichluyKH_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.diemtichluyKH_lb.Location = new System.Drawing.Point(353, 277);
             this.diemtichluyKH_lb.Name = "diemtichluyKH_lb";
-            this.diemtichluyKH_lb.Size = new System.Drawing.Size(179, 37);
+            this.diemtichluyKH_lb.Size = new System.Drawing.Size(109, 23);
             this.diemtichluyKH_lb.TabIndex = 33;
             this.diemtichluyKH_lb.Text = "Not check";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(75, 433);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(50, 277);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(449, 37);
+            this.label7.Size = new System.Drawing.Size(274, 23);
             this.label7.TabIndex = 32;
             this.label7.Text = "Điểm tích lũy hiện tại: ";
             // 
@@ -290,90 +287,83 @@ namespace QuanLyQuanTraSua
             // 
             this.maKH_lb.AutoSize = true;
             this.maKH_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maKH_lb.Location = new System.Drawing.Point(530, 388);
-            this.maKH_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.maKH_lb.Location = new System.Drawing.Point(353, 248);
             this.maKH_lb.Name = "maKH_lb";
-            this.maKH_lb.Size = new System.Drawing.Size(179, 37);
+            this.maKH_lb.Size = new System.Drawing.Size(109, 23);
             this.maKH_lb.TabIndex = 31;
             this.maKH_lb.Text = "Not check";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(75, 388);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(50, 248);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(305, 37);
+            this.label6.Size = new System.Drawing.Size(186, 23);
             this.label6.TabIndex = 30;
             this.label6.Text = "Mã Khách Hàng : ";
             // 
             // diachiKH_tb
             // 
-            this.diachiKH_tb.Location = new System.Drawing.Point(246, 238);
-            this.diachiKH_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.diachiKH_tb.Location = new System.Drawing.Point(164, 152);
             this.diachiKH_tb.Name = "diachiKH_tb";
-            this.diachiKH_tb.Size = new System.Drawing.Size(598, 45);
+            this.diachiKH_tb.Size = new System.Drawing.Size(400, 31);
             this.diachiKH_tb.TabIndex = 29;
             // 
             // sdtKH_tb
             // 
-            this.sdtKH_tb.Location = new System.Drawing.Point(358, 180);
-            this.sdtKH_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sdtKH_tb.Location = new System.Drawing.Point(239, 115);
             this.sdtKH_tb.Name = "sdtKH_tb";
-            this.sdtKH_tb.Size = new System.Drawing.Size(304, 45);
+            this.sdtKH_tb.Size = new System.Drawing.Size(204, 31);
             this.sdtKH_tb.TabIndex = 28;
             // 
             // tenKH_tb
             // 
-            this.tenKH_tb.Location = new System.Drawing.Point(358, 122);
-            this.tenKH_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tenKH_tb.Location = new System.Drawing.Point(239, 78);
             this.tenKH_tb.Name = "tenKH_tb";
-            this.tenKH_tb.Size = new System.Drawing.Size(472, 45);
+            this.tenKH_tb.Size = new System.Drawing.Size(316, 31);
             this.tenKH_tb.TabIndex = 27;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 242);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(49, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 37);
+            this.label3.Size = new System.Drawing.Size(109, 23);
             this.label3.TabIndex = 26;
             this.label3.Text = "Địa chỉ: ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(70, 184);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(47, 118);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(305, 37);
+            this.label11.Size = new System.Drawing.Size(186, 23);
             this.label11.TabIndex = 25;
             this.label11.Text = "Số điện thoại : ";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(70, 127);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(47, 81);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(305, 37);
+            this.label12.Size = new System.Drawing.Size(186, 23);
             this.label12.TabIndex = 24;
             this.label12.Text = "Tên Khách Hàng: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(449, 37);
+            this.label2.Size = new System.Drawing.Size(449, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sửa thông tin khách hàng";
             // 
             // KhachHang_dtg
             // 
             this.KhachHang_dtg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.KhachHang_dtg.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.KhachHang_dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KhachHang_dtg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -381,8 +371,7 @@ namespace QuanLyQuanTraSua
             this.Column3,
             this.Column4,
             this.Column5});
-            this.KhachHang_dtg.Location = new System.Drawing.Point(1155, 170);
-            this.KhachHang_dtg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.KhachHang_dtg.Location = new System.Drawing.Point(770, 109);
             this.KhachHang_dtg.Name = "KhachHang_dtg";
             this.KhachHang_dtg.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -397,7 +386,7 @@ namespace QuanLyQuanTraSua
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.KhachHang_dtg.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.KhachHang_dtg.RowTemplate.Height = 24;
-            this.KhachHang_dtg.Size = new System.Drawing.Size(921, 712);
+            this.KhachHang_dtg.Size = new System.Drawing.Size(614, 456);
             this.KhachHang_dtg.TabIndex = 7;
             this.KhachHang_dtg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KhachHang_dtg_CellClick);
             // 
@@ -408,7 +397,7 @@ namespace QuanLyQuanTraSua
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 108;
+            this.Column1.Width = 67;
             // 
             // Column2
             // 
@@ -417,7 +406,7 @@ namespace QuanLyQuanTraSua
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.Column2.Width = 77;
             // 
             // Column3
             // 
@@ -426,7 +415,7 @@ namespace QuanLyQuanTraSua
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 116;
+            this.Column3.Width = 72;
             // 
             // Column4
             // 
@@ -435,7 +424,7 @@ namespace QuanLyQuanTraSua
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
+            this.Column4.Width = 77;
             // 
             // Column5
             // 
@@ -444,7 +433,7 @@ namespace QuanLyQuanTraSua
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 222;
+            this.Column5.Width = 137;
             // 
             // report_panel
             // 
@@ -457,19 +446,17 @@ namespace QuanLyQuanTraSua
             this.report_panel.Controls.Add(this.label8);
             this.report_panel.Controls.Add(this.maKH_tk);
             this.report_panel.Controls.Add(this.label1);
-            this.report_panel.Location = new System.Drawing.Point(18, 88);
-            this.report_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.report_panel.Location = new System.Drawing.Point(12, 56);
             this.report_panel.Name = "report_panel";
-            this.report_panel.Size = new System.Drawing.Size(2136, 944);
+            this.report_panel.Size = new System.Drawing.Size(1424, 604);
             this.report_panel.TabIndex = 6;
             this.report_panel.Visible = false;
             // 
             // all_KH_btn
             // 
-            this.all_KH_btn.Location = new System.Drawing.Point(178, 80);
-            this.all_KH_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.all_KH_btn.Location = new System.Drawing.Point(119, 51);
             this.all_KH_btn.Name = "all_KH_btn";
-            this.all_KH_btn.Size = new System.Drawing.Size(416, 48);
+            this.all_KH_btn.Size = new System.Drawing.Size(277, 31);
             this.all_KH_btn.TabIndex = 19;
             this.all_KH_btn.Text = "Toàn bộ khách hàng";
             this.all_KH_btn.UseVisualStyleBackColor = true;
@@ -481,11 +468,10 @@ namespace QuanLyQuanTraSua
             reportDataSource1.Value = this.KHACHHANGBindingSource;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportAllKhachHang.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(178, 170);
-            this.reportViewer3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reportViewer3.Location = new System.Drawing.Point(119, 109);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(1745, 711);
+            this.reportViewer3.Size = new System.Drawing.Size(1164, 456);
             this.reportViewer3.TabIndex = 18;
             // 
             // reportViewer2
@@ -494,11 +480,10 @@ namespace QuanLyQuanTraSua
             reportDataSource2.Value = this.BangChiTietKhachHangBindingSource;
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportChiTietKH.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(178, 170);
-            this.reportViewer2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reportViewer2.Location = new System.Drawing.Point(119, 109);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(1745, 711);
+            this.reportViewer2.Size = new System.Drawing.Size(1164, 456);
             this.reportViewer2.TabIndex = 17;
             // 
             // reportViewer1
@@ -507,19 +492,17 @@ namespace QuanLyQuanTraSua
             reportDataSource3.Value = this.BangTongQuatKhachHangBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportTongQuatKH.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(178, 170);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reportViewer1.Location = new System.Drawing.Point(119, 109);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1745, 711);
+            this.reportViewer1.Size = new System.Drawing.Size(1164, 456);
             this.reportViewer1.TabIndex = 16;
             // 
             // chitiet_bt
             // 
-            this.chitiet_bt.Location = new System.Drawing.Point(1676, 72);
-            this.chitiet_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chitiet_bt.Location = new System.Drawing.Point(1117, 46);
             this.chitiet_bt.Name = "chitiet_bt";
-            this.chitiet_bt.Size = new System.Drawing.Size(249, 48);
+            this.chitiet_bt.Size = new System.Drawing.Size(166, 31);
             this.chitiet_bt.TabIndex = 15;
             this.chitiet_bt.Text = "Chi Tiết";
             this.chitiet_bt.UseVisualStyleBackColor = true;
@@ -527,10 +510,9 @@ namespace QuanLyQuanTraSua
             // 
             // timkiem_bt
             // 
-            this.timkiem_bt.Location = new System.Drawing.Point(1412, 72);
-            this.timkiem_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.timkiem_bt.Location = new System.Drawing.Point(941, 46);
             this.timkiem_bt.Name = "timkiem_bt";
-            this.timkiem_bt.Size = new System.Drawing.Size(248, 48);
+            this.timkiem_bt.Size = new System.Drawing.Size(165, 31);
             this.timkiem_bt.TabIndex = 14;
             this.timkiem_bt.Text = "Tìm Kiếm";
             this.timkiem_bt.UseVisualStyleBackColor = true;
@@ -539,28 +521,25 @@ namespace QuanLyQuanTraSua
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1048, 80);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(699, 51);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 37);
+            this.label8.Size = new System.Drawing.Size(65, 23);
             this.label8.TabIndex = 13;
             this.label8.Text = "Mã KH";
             // 
             // maKH_tk
             // 
-            this.maKH_tk.Location = new System.Drawing.Point(1155, 73);
-            this.maKH_tk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maKH_tk.Location = new System.Drawing.Point(770, 47);
             this.maKH_tk.Name = "maKH_tk";
-            this.maKH_tk.Size = new System.Drawing.Size(223, 45);
+            this.maKH_tk.Size = new System.Drawing.Size(150, 31);
             this.maKH_tk.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(31, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 37);
+            this.label1.Size = new System.Drawing.Size(76, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Report";
             // 
@@ -578,12 +557,12 @@ namespace QuanLyQuanTraSua
             // 
             // FormKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2223, 1177);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1505, 846);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormKhachHang";
             this.Text = "FormKhachHang";
             this.Load += new System.EventHandler(this.FormKhachHang_Load);

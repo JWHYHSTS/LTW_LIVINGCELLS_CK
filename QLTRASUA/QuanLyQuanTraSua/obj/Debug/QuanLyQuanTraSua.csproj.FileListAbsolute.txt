@@ -587,3 +587,173 @@ D:\TAILIEUDAIHOC\HK5\LTWINDOW\Test_Dang\QLTRASUA\QuanLyQuanTraSua\obj\Debug\Quan
 D:\TAILIEUDAIHOC\HK5\LTWINDOW\Test_Dang\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQu.D043C984.Up2Date
 D:\TAILIEUDAIHOC\HK5\LTWINDOW\Test_Dang\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.exe
 D:\TAILIEUDAIHOC\HK5\LTWINDOW\Test_Dang\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.pdb
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\QuanLyQuanTraSua.exe.config
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\QuanLyQuanTraSua.exe
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\QuanLyQuanTraSua.pdb
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Guna.UI2.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EnvDTE.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\stdole.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.xml
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.AssemblyReference.cache
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.exe.config
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.Form1.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormCaLam.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormChiPhi.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormDoanhThu.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormHoaDon.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormKhachHang.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormLoiNhuan.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormNhanVien.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormShowHoaDon.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.Intro.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.Properties.Resources.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.SignIn.resources
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.GenerateResource.cache
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.CoreCompileInputs.cache
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQu.D043C984.Up2Date
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.exe
+C:\Users\Jim\Source\Repos\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.pdb
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\QuanLyQuanTraSua.exe.config
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\QuanLyQuanTraSua.exe
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\QuanLyQuanTraSua.pdb
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Guna.UI2.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EnvDTE.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\stdole.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.xml
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.AssemblyReference.cache
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.exe.config
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.Form1.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormCaLam.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormChiPhi.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormDoanhThu.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormHoaDon.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormKhachHang.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormLoiNhuan.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormNhanVien.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.FormShowHoaDon.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.Intro.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.Properties.Resources.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.SignIn.resources
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.GenerateResource.cache
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.csproj.CoreCompileInputs.cache
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQu.D043C984.Up2Date
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.exe
+C:\Users\Phat\Downloads\LTW_LIVINGCELLS_CK (2)\LTW_LIVINGCELLS_CK\QLTRASUA\QuanLyQuanTraSua\obj\Debug\QuanLyQuanTraSua.pdb

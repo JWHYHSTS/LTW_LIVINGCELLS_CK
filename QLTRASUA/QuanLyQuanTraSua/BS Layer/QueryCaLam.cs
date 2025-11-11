@@ -8,46 +8,32 @@ namespace QuanLyQuanTraSua.BS_Layer
 {
     class QueryCaLam
     {
-        // ===== Helpers =====
-        private static DateTime ParseDate(string s)
-        {
-            // Hỗ trợ các định dạng phổ biến để tránh lỗi culture
-            string[] fmts = { "yyyy-MM-dd", "dd/MM/yyyy", "MM/dd/yyyy", "yyyy/M/d", "d/M/yyyy" };
-            if (DateTime.TryParseExact(s.Trim(), fmts, System.Globalization.CultureInfo.InvariantCulture,
-                                       System.Globalization.DateTimeStyles.None, out var dt))
-                return dt;
-            // Dự phòng: cố gắng Parse thường
-            return DateTime.Parse(s);
-        }
-
-        private static string Nz(string s) => (s ?? string.Empty).Trim();
-
-        // ===== Đăng ký ca =====
         public bool Regis_Shift(string maNV, string maCa, string tgian, ref string err)
         {
             try
             {
-                DateTime dt = ParseDate(tgian);
+                // tgian dạng "yyyy-MM-dd" hoặc "yyyy-M-d"
+                string[] tg = tgian.Split('-');
+                var dt = new DateTime(int.Parse(tg[0]), int.Parse(tg[1]), int.Parse(tg[2]));
 
-                using (var ctx = new QUANLYQUANTRADataContext())
+                using (var db = new QUANLYQUANTRADataContext())
                 {
-                    bool existed = ctx.QUANLYLUONGs.Any(p =>
-                        p.ThoiGian == dt &&
-                        p.MaNV.Trim() == Nz(maNV) &&
-                        p.MaCa.Trim() == Nz(maCa));
-
-                    if (existed) return false;
+                    var existed = db.QUANLYLUONGs
+                        .SingleOrDefault(p => p.ThoiGian == dt
+                                           && p.MaNV.Trim() == maNV
+                                           && p.MaCa.Trim() == maCa);
+                    if (existed != null) return false;
 
                     var ql = new QUANLYLUONG
                     {
                         ThoiGian = dt,
-                        MaNV = Nz(maNV),
-                        MaCa = Nz(maCa),
+                        MaNV = maNV,
+                        MaCa = maCa,
                         MucDoHoanThanh = 0,
                         Luong = 0
                     };
-                    ctx.QUANLYLUONGs.InsertOnSubmit(ql);
-                    ctx.SubmitChanges();
+                    db.QUANLYLUONGs.InsertOnSubmit(ql);
+                    db.SubmitChanges();
                     return true;
                 }
             }
@@ -58,68 +44,78 @@ namespace QuanLyQuanTraSua.BS_Layer
             }
         }
 
-        // ===== Lương/giờ cho ca =====
         private double TienLuongca(string maCa)
         {
-            using (var ctx = new QUANLYQUANTRADataContext())
+            // Trả về 0 nếu không tìm thấy ca để tránh NullReference
+            if (string.IsNullOrWhiteSpace(maCa)) return 0;
+
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var ca = ctx.CALAMs.FirstOrDefault(p => p.MaCa.Trim() == Nz(maCa));
-                // LuongTheoGio có thể là double?/float?
-                return ca == null ? 0.0 : Convert.ToDouble(ca.LuongTheoGio);
+                var ca = db.CALAMs.SingleOrDefault(p => p.MaCa.Trim() == maCa.Trim());
+                return ca != null ? ca.LuongTheoGio : 0;
             }
         }
 
-        // ===== Khung giờ làm của từng ca =====
         public Dictionary<string, List<TimeSpan>> ThoiGianLam()
         {
-            var list_time_ca = new Dictionary<string, List<TimeSpan>>();
-            using (var ctx = new QUANLYQUANTRADataContext())
+            var list = new Dictionary<string, List<TimeSpan>>(StringComparer.OrdinalIgnoreCase);
+
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tsb = ctx.CALAMs.Select(p => new { p.MaCa, p.ThoiGianBatDau, p.ThoiGianKetThuc }).ToList();
-                foreach (var r in tsb)
+                var query = from p in db.CALAMs select p;
+
+                foreach (var r in query)
                 {
                     var start = (TimeSpan)r.ThoiGianBatDau;
                     var end = (TimeSpan)r.ThoiGianKetThuc;
-                    list_time_ca[Nz(r.MaCa)] = new List<TimeSpan> { start, end };
+
+                    list[r.MaCa.Trim()] = new List<TimeSpan> { start, end };
                 }
             }
-            return list_time_ca;
+            return list;
         }
 
-        // ===== Số NV tối đa mỗi ca =====
         public Dictionary<string, int> Max_nv()
         {
-            var list_max_ca = new Dictionary<string, int>();
-            using (var ctx = new QUANLYQUANTRADataContext())
+            var result = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tsb = ctx.CALAMs.Select(p => new { p.MaCa, p.NhanVienToiDa }).ToList();
-                foreach (var r in tsb)
-                    list_max_ca[Nz(r.MaCa)] = Convert.ToInt32(r.NhanVienToiDa ?? 0);
+                var query = from p in db.CALAMs select p;
+
+                foreach (var r in query)
+                {
+                    result[r.MaCa.Trim()] = (int)r.NhanVienToiDa;
+                }
             }
-            return list_max_ca;
+            return result;
         }
 
-        // ===== Chốt ca (cập nhật mức độ hoàn thành & lương) =====
         public bool Finish_work(string maNV, string tgian, string maCa, int rate, ref string err)
         {
             try
             {
-                // Công thức cũ của bạn: 4 * lương/giờ * rate
+                // Tính lương: 4 giờ * lương theo giờ * hệ số hoàn thành
                 double luong = 4 * TienLuongca(maCa) * rate;
-                DateTime dt = ParseDate(tgian);
 
-                using (var ctx = new QUANLYQUANTRADataContext())
+                string[] tg = tgian.Split('-');
+                var dt = new DateTime(int.Parse(tg[0]), int.Parse(tg[1]), int.Parse(tg[2]));
+
+                using (var db = new QUANLYQUANTRADataContext())
                 {
-                    var tsb = ctx.QUANLYLUONGs.FirstOrDefault(p =>
-                        p.ThoiGian == dt &&
-                        p.MaNV.Trim() == Nz(maNV) &&
-                        p.MaCa.Trim() == Nz(maCa));
+                    var row = db.QUANLYLUONGs
+                                .SingleOrDefault(p => p.ThoiGian == dt
+                                                   && p.MaNV.Trim() == maNV
+                                                   && p.MaCa.Trim() == maCa);
+                    if (row == null)
+                    {
+                        err = "Không tìm thấy đăng ký ca để chốt công.";
+                        return false;
+                    }
 
-                    if (tsb == null) return false;
-
-                    tsb.MucDoHoanThanh = rate;
-                    tsb.Luong = (float)luong;
-                    ctx.SubmitChanges();
+                    row.MucDoHoanThanh = rate;
+                    row.Luong = (float)luong;
+                    db.SubmitChanges();
                     return true;
                 }
             }
@@ -130,65 +126,70 @@ namespace QuanLyQuanTraSua.BS_Layer
             }
         }
 
-        // ===== Danh sách đăng ký trong khoảng ngày =====
         private DataTable GetRegisList(DateTime start, DateTime end)
         {
-            using (var ctx = new QUANLYQUANTRADataContext())
+            var tb = new DataTable();
+            tb.Columns.Add("ThoiGian", typeof(DateTime));
+            tb.Columns.Add("MaNV", typeof(string));
+            tb.Columns.Add("MaCa", typeof(string));
+            tb.Columns.Add("MucDoHoanThanh", typeof(float));  // đổi sang float
+            tb.Columns.Add("Luong", typeof(float));
+
+            using (var db = new QUANLYQUANTRADataContext())
             {
-                var tsb = ctx.QUANLYLUONGs
-                    .Where(p => p.ThoiGian >= start && p.ThoiGian <= end)
-                    .Select(p => new { p.ThoiGian, p.MaNV, p.MaCa, p.MucDoHoanThanh, p.Luong })
-                    .ToList();
+                var query = db.QUANLYLUONGs
+                              .Where(p => p.ThoiGian >= start && p.ThoiGian <= end);
 
-                var tb = new DataTable();
-                tb.Columns.Add("ThoiGian", typeof(DateTime));
-                tb.Columns.Add("MaNV", typeof(string));
-                tb.Columns.Add("MaCa", typeof(string));
-                tb.Columns.Add("MucDoHoanThanh", typeof(int));
-                tb.Columns.Add("Luong", typeof(float));
+                foreach (var p in query)
+                {
+                    float mdht = p.MucDoHoanThanh.HasValue ? p.MucDoHoanThanh.Value : 0f;
+                    float luong = p.Luong.HasValue ? p.Luong.Value : 0f;
 
-                foreach (var p in tsb)
-                    tb.Rows.Add(p.ThoiGian, p.MaNV, p.MaCa, p.MucDoHoanThanh, p.Luong);
-
-                return tb;
+                    tb.Rows.Add(p.ThoiGian, p.MaNV, p.MaCa, mdht, luong);
+                }
             }
+            return tb;
         }
 
-        // → Nếu bạn muốn mã ca hiển thị cả năm, đổi "dd/MM" thành "dd/MM/yyyy"
         private string Get_shift_code(DataRow row)
         {
-            string maCa = Nz((string)row["MaCa"]);
-            DateTime dt = (DateTime)row["ThoiGian"];
-            return $"{maCa}-{dt:dd/MM/yyyy}";
+            var maCa = ((string)row["MaCa"]).Trim();
+            var dt = (DateTime)row["ThoiGian"];
+            return string.Format("{0}-{1:dd/MM}", maCa, dt);
         }
 
-        private string GetName(string MaNV)
+        private string GetName(string maNV)
         {
-            using (var ctx = new QUANLYQUANTRADataContext())
-            {
-                var nv = ctx.NHANVIENs.FirstOrDefault(p => p.MaNV == MaNV);
-                var name = Nz(nv?.TenNV);
-                var parts = name.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                return parts.Length > 0 ? parts[parts.Length - 1] : string.Empty;
+            if (string.IsNullOrWhiteSpace(maNV)) return "";
 
+            using (var db = new QUANLYQUANTRADataContext())
+            {
+                var nv = db.NHANVIENs.SingleOrDefault(p => p.MaNV == maNV);
+                if (nv == null || string.IsNullOrWhiteSpace(nv.TenNV))
+                    return "";
+
+                string[] parts = nv.TenNV.Trim().Split(' ');
+                // C# 7.3: không dùng ^1
+                return parts.Length == 0 ? "" : parts[parts.Length - 1];
             }
         }
 
-        public List<List<string>> LoadTimeTable(DateTime start, DateTime end)
+        public List<List<String>> LoadTimeTable(DateTime start, DateTime end)
         {
-            var list_ca = new List<List<string>>();
+            var result = new List<List<string>>();
             var tb = GetRegisList(start, end);
-            foreach (DataRow row in tb.Select())
+
+            foreach (DataRow row in tb.Rows)
             {
-                var temp = new List<string>
+                var maNV = (string)row["MaNV"];
+                result.Add(new List<string>
                 {
-                    Get_shift_code(row),                 // có cả năm
-                    Nz((string)row["MaNV"]),
-                    GetName(Nz((string)row["MaNV"]))
-                };
-                list_ca.Add(temp);
+                    Get_shift_code(row),
+                    maNV,
+                    GetName(maNV)
+                });
             }
-            return list_ca;
+            return result;
         }
     }
 }

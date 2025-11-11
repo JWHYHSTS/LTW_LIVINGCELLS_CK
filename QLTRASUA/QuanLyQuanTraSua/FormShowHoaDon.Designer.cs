@@ -52,15 +52,16 @@ namespace QuanLyQuanTraSua
             // 
             // reportViewer1
             // 
+            this.reportViewer1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.reportViewer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.BangChiTietHoaDonBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportDetailHoaDon.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(33, 42);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reportViewer1.Location = new System.Drawing.Point(22, 27);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1446, 872);
+            this.reportViewer1.Size = new System.Drawing.Size(965, 559);
             this.reportViewer1.TabIndex = 0;
             // 
             // BangHoaDonTableAdapter
@@ -69,12 +70,12 @@ namespace QuanLyQuanTraSua
             // 
             // FormShowHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1524, 961);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1016, 615);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormShowHoaDon";
             this.Text = "FormShowHoaDon";
             this.Load += new System.EventHandler(this.FormShowHoaDon_Load);
