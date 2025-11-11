@@ -392,5 +392,20 @@ namespace QuanLyQuanTraSua
         {
 
         }
+
+        private void mon_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tue_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void wed_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
