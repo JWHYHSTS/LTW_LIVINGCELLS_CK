@@ -338,6 +338,186 @@ namespace QuanLyQuanTraSua
                                 "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void HOADONBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BangChiTietHoaDonBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void windows_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void add_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhanvien_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void total_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void discount_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void coupon_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void diemtichluyKH_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maKH_lb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void item_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void diachiKH_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sdtKH_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tenKH_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void order_his_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void maHD_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer_chung_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filter_rdb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void show_all_rdb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filter_date_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer_detail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

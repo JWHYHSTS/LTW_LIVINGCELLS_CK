@@ -66,10 +66,10 @@ namespace QuanLyQuanTraSua
             this.task_icon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.task_icon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.task_icon.Image = global::QuanLyQuanTraSua.Properties.Resources.task2;
-            this.task_icon.Location = new System.Drawing.Point(34, 57);
-            this.task_icon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.task_icon.Location = new System.Drawing.Point(68, 110);
+            this.task_icon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.task_icon.Name = "task_icon";
-            this.task_icon.Size = new System.Drawing.Size(38, 42);
+            this.task_icon.Size = new System.Drawing.Size(76, 81);
             this.task_icon.TabIndex = 7;
             this.task_icon.UseVisualStyleBackColor = false;
             this.task_icon.Click += new System.EventHandler(this.task_icon_Click);
@@ -78,10 +78,10 @@ namespace QuanLyQuanTraSua
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(538, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1076, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(498, 57);
+            this.label1.Size = new System.Drawing.Size(986, 114);
             this.label1.TabIndex = 8;
             this.label1.Text = "Have a nice day!! Friends";
             // 
@@ -89,9 +89,9 @@ namespace QuanLyQuanTraSua
             // 
             this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.panda;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -100,10 +100,10 @@ namespace QuanLyQuanTraSua
             // 
             this.date_label.AutoSize = true;
             this.date_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_label.Location = new System.Drawing.Point(2, 1);
-            this.date_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.date_label.Location = new System.Drawing.Point(4, 2);
+            this.date_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.date_label.Name = "date_label";
-            this.date_label.Size = new System.Drawing.Size(38, 17);
+            this.date_label.Size = new System.Drawing.Size(74, 32);
             this.date_label.TabIndex = 4;
             this.date_label.Text = "Date";
             // 
@@ -112,10 +112,10 @@ namespace QuanLyQuanTraSua
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Controls.Add(this.date_label);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 662);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 1471);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1155, 25);
+            this.panel2.Size = new System.Drawing.Size(2310, 48);
             this.panel2.TabIndex = 5;
             // 
             // date_timer
@@ -138,10 +138,10 @@ namespace QuanLyQuanTraSua
             this.task_panel.Controls.Add(this.exit_btn);
             this.task_panel.Controls.Add(this.sign_in_btn);
             this.task_panel.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task_panel.Location = new System.Drawing.Point(5, 136);
-            this.task_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.task_panel.Location = new System.Drawing.Point(10, 262);
+            this.task_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.task_panel.Name = "task_panel";
-            this.task_panel.Size = new System.Drawing.Size(202, 662);
+            this.task_panel.Size = new System.Drawing.Size(402, 1150);
             this.task_panel.TabIndex = 6;
             // 
             // profit_mana_btn
@@ -151,10 +151,10 @@ namespace QuanLyQuanTraSua
             this.profit_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.profit_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profit_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.profit_mana_btn.Location = new System.Drawing.Point(2, 364);
-            this.profit_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.profit_mana_btn.Location = new System.Drawing.Point(4, 700);
+            this.profit_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.profit_mana_btn.Name = "profit_mana_btn";
-            this.profit_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.profit_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.profit_mana_btn.TabIndex = 10;
             this.profit_mana_btn.Tag = "task_button";
             this.profit_mana_btn.Text = "Quản lý lợi nhuận";
@@ -168,10 +168,10 @@ namespace QuanLyQuanTraSua
             this.shift_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.shift_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shift_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.shift_mana_btn.Location = new System.Drawing.Point(2, 153);
-            this.shift_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shift_mana_btn.Location = new System.Drawing.Point(4, 294);
+            this.shift_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.shift_mana_btn.Name = "shift_mana_btn";
-            this.shift_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.shift_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.shift_mana_btn.TabIndex = 9;
             this.shift_mana_btn.Tag = "task_button";
             this.shift_mana_btn.Text = "Quản lý ca làm";
@@ -185,10 +185,10 @@ namespace QuanLyQuanTraSua
             this.staff_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.staff_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.staff_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.staff_mana_btn.Location = new System.Drawing.Point(2, 235);
-            this.staff_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.staff_mana_btn.Location = new System.Drawing.Point(4, 452);
+            this.staff_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.staff_mana_btn.Name = "staff_mana_btn";
-            this.staff_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.staff_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.staff_mana_btn.TabIndex = 8;
             this.staff_mana_btn.Tag = "task_button";
             this.staff_mana_btn.Text = "Quản lý nhân viên";
@@ -202,10 +202,10 @@ namespace QuanLyQuanTraSua
             this.expense_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.expense_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.expense_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.expense_mana_btn.Location = new System.Drawing.Point(2, 322);
-            this.expense_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.expense_mana_btn.Location = new System.Drawing.Point(4, 619);
+            this.expense_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.expense_mana_btn.Name = "expense_mana_btn";
-            this.expense_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.expense_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.expense_mana_btn.TabIndex = 7;
             this.expense_mana_btn.Tag = "task_button";
             this.expense_mana_btn.Text = "Quản lý khoản chi";
@@ -219,10 +219,10 @@ namespace QuanLyQuanTraSua
             this.sale_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.sale_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sale_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.sale_mana_btn.Location = new System.Drawing.Point(2, 278);
-            this.sale_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sale_mana_btn.Location = new System.Drawing.Point(4, 535);
+            this.sale_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sale_mana_btn.Name = "sale_mana_btn";
-            this.sale_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.sale_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.sale_mana_btn.TabIndex = 6;
             this.sale_mana_btn.Tag = "task_button";
             this.sale_mana_btn.Text = "Quản lý doanh thu";
@@ -236,10 +236,10 @@ namespace QuanLyQuanTraSua
             this.customer_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.customer_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customer_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.customer_mana_btn.Location = new System.Drawing.Point(2, 110);
-            this.customer_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customer_mana_btn.Location = new System.Drawing.Point(4, 212);
+            this.customer_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customer_mana_btn.Name = "customer_mana_btn";
-            this.customer_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.customer_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.customer_mana_btn.TabIndex = 5;
             this.customer_mana_btn.Tag = "task_button";
             this.customer_mana_btn.Text = "Quản lý khách hàng";
@@ -253,10 +253,10 @@ namespace QuanLyQuanTraSua
             this.order_mana_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.order_mana_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.order_mana_btn.ForeColor = System.Drawing.Color.Black;
-            this.order_mana_btn.Location = new System.Drawing.Point(2, 67);
-            this.order_mana_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.order_mana_btn.Location = new System.Drawing.Point(4, 129);
+            this.order_mana_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.order_mana_btn.Name = "order_mana_btn";
-            this.order_mana_btn.Size = new System.Drawing.Size(194, 38);
+            this.order_mana_btn.Size = new System.Drawing.Size(388, 73);
             this.order_mana_btn.TabIndex = 4;
             this.order_mana_btn.Tag = "task_button";
             this.order_mana_btn.Text = "Quản lý đơn hàng";
@@ -270,10 +270,10 @@ namespace QuanLyQuanTraSua
             this.sign_out_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.sign_out_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_out_btn.ForeColor = System.Drawing.Color.Black;
-            this.sign_out_btn.Location = new System.Drawing.Point(2, 557);
-            this.sign_out_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sign_out_btn.Location = new System.Drawing.Point(4, 988);
+            this.sign_out_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sign_out_btn.Name = "sign_out_btn";
-            this.sign_out_btn.Size = new System.Drawing.Size(194, 38);
+            this.sign_out_btn.Size = new System.Drawing.Size(388, 73);
             this.sign_out_btn.TabIndex = 3;
             this.sign_out_btn.Tag = "task_button";
             this.sign_out_btn.Text = "Đăng xuất";
@@ -287,10 +287,10 @@ namespace QuanLyQuanTraSua
             this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit_btn.ForeColor = System.Drawing.Color.Black;
-            this.exit_btn.Location = new System.Drawing.Point(2, 609);
-            this.exit_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit_btn.Location = new System.Drawing.Point(4, 1069);
+            this.exit_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(194, 38);
+            this.exit_btn.Size = new System.Drawing.Size(388, 73);
             this.exit_btn.TabIndex = 1;
             this.exit_btn.Tag = "task_button";
             this.exit_btn.Text = "Thoát";
@@ -304,10 +304,10 @@ namespace QuanLyQuanTraSua
             this.sign_in_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.sign_in_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_in_btn.ForeColor = System.Drawing.Color.Black;
-            this.sign_in_btn.Location = new System.Drawing.Point(2, 6);
-            this.sign_in_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sign_in_btn.Location = new System.Drawing.Point(4, 12);
+            this.sign_in_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sign_in_btn.Name = "sign_in_btn";
-            this.sign_in_btn.Size = new System.Drawing.Size(194, 38);
+            this.sign_in_btn.Size = new System.Drawing.Size(388, 73);
             this.sign_in_btn.TabIndex = 0;
             this.sign_in_btn.Tag = "task_button";
             this.sign_in_btn.Text = "Đăng nhập";
@@ -324,12 +324,12 @@ namespace QuanLyQuanTraSua
             // 
             this.task_screen.BackColor = System.Drawing.Color.Transparent;
             this.task_screen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task_screen.Location = new System.Drawing.Point(9, 111);
-            this.task_screen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.task_screen.Location = new System.Drawing.Point(18, 213);
+            this.task_screen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.task_screen.Name = "task_screen";
-            this.task_screen.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.task_screen.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.task_screen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.task_screen.Size = new System.Drawing.Size(1425, 716);
+            this.task_screen.Size = new System.Drawing.Size(2850, 1377);
             this.task_screen.TabIndex = 7;
             this.task_screen.TabStop = false;
             this.task_screen.Text = "Welcome";
@@ -339,20 +339,20 @@ namespace QuanLyQuanTraSua
             this.role.AutoSize = true;
             this.role.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.role.ForeColor = System.Drawing.Color.White;
-            this.role.Location = new System.Drawing.Point(786, 22);
-            this.role.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.role.Location = new System.Drawing.Point(1572, 42);
+            this.role.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.role.Name = "role";
-            this.role.Size = new System.Drawing.Size(0, 22);
+            this.role.Size = new System.Drawing.Size(0, 46);
             this.role.TabIndex = 9;
             // 
             // ten
             // 
             this.ten.AutoSize = true;
             this.ten.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ten.Location = new System.Drawing.Point(844, 57);
-            this.ten.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ten.Location = new System.Drawing.Point(1688, 110);
+            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(0, 22);
+            this.ten.Size = new System.Drawing.Size(0, 46);
             this.ten.TabIndex = 10;
             // 
             // panel1
@@ -366,25 +366,25 @@ namespace QuanLyQuanTraSua
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1155, 106);
+            this.panel1.Size = new System.Drawing.Size(2310, 204);
             this.panel1.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.bk1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ClientSize = new System.Drawing.Size(2310, 1519);
             this.Controls.Add(this.task_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.task_screen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
