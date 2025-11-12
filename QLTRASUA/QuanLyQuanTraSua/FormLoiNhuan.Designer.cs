@@ -63,9 +63,10 @@ namespace QuanLyQuanTraSua
             this.windows.Controls.Add(this.profit_panel);
             this.windows.Controls.Add(this.profit_view_btn);
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(12, 12);
+            this.windows.Location = new System.Drawing.Point(14, 15);
+            this.windows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(1450, 660);
+            this.windows.Size = new System.Drawing.Size(1631, 825);
             this.windows.TabIndex = 1;
             // 
             // profit_panel
@@ -74,9 +75,10 @@ namespace QuanLyQuanTraSua
             this.profit_panel.Controls.Add(this.nam);
             this.profit_panel.Controls.Add(this.reportViewer1);
             this.profit_panel.Controls.Add(this.dsloinhuan_bt);
-            this.profit_panel.Location = new System.Drawing.Point(13, 53);
+            this.profit_panel.Location = new System.Drawing.Point(15, 66);
+            this.profit_panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.profit_panel.Name = "profit_panel";
-            this.profit_panel.Size = new System.Drawing.Size(1424, 592);
+            this.profit_panel.Size = new System.Drawing.Size(1602, 740);
             this.profit_panel.TabIndex = 4;
             this.profit_panel.Visible = false;
             // 
@@ -84,12 +86,12 @@ namespace QuanLyQuanTraSua
             // 
             this.nam.CustomFormat = "yyyy";
             this.nam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.nam.Location = new System.Drawing.Point(423, 25);
-            this.nam.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.nam.Location = new System.Drawing.Point(476, 31);
+            this.nam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nam.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.nam.Name = "nam";
             this.nam.ShowUpDown = true;
-            this.nam.Size = new System.Drawing.Size(126, 31);
+            this.nam.Size = new System.Drawing.Size(141, 36);
             this.nam.TabIndex = 15;
             this.nam.Value = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             // 
@@ -100,19 +102,21 @@ namespace QuanLyQuanTraSua
             reportDataSource1.Value = this.LOINHUANBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportLoiNhuan.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(22, 69);
+            this.reportViewer1.Location = new System.Drawing.Point(25, 86);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1380, 508);
+            this.reportViewer1.Size = new System.Drawing.Size(1552, 634);
             this.reportViewer1.TabIndex = 14;
             // 
             // dsloinhuan_bt
             // 
             this.dsloinhuan_bt.BackColor = System.Drawing.Color.RoyalBlue;
             this.dsloinhuan_bt.ForeColor = System.Drawing.Color.White;
-            this.dsloinhuan_bt.Location = new System.Drawing.Point(22, 22);
+            this.dsloinhuan_bt.Location = new System.Drawing.Point(25, 28);
+            this.dsloinhuan_bt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dsloinhuan_bt.Name = "dsloinhuan_bt";
-            this.dsloinhuan_bt.Size = new System.Drawing.Size(395, 41);
+            this.dsloinhuan_bt.Size = new System.Drawing.Size(444, 51);
             this.dsloinhuan_bt.TabIndex = 12;
             this.dsloinhuan_bt.Text = "Lợi Nhuận Các Tháng Năm";
             this.dsloinhuan_bt.UseVisualStyleBackColor = false;
@@ -126,9 +130,10 @@ namespace QuanLyQuanTraSua
             this.profit_view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profit_view_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.profit_view_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profit_view_btn.Location = new System.Drawing.Point(601, 3);
+            this.profit_view_btn.Location = new System.Drawing.Point(676, 4);
+            this.profit_view_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.profit_view_btn.Name = "profit_view_btn";
-            this.profit_view_btn.Size = new System.Drawing.Size(257, 44);
+            this.profit_view_btn.Size = new System.Drawing.Size(289, 55);
             this.profit_view_btn.TabIndex = 3;
             this.profit_view_btn.Text = "Xem lợi nhuận";
             this.profit_view_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,11 +146,12 @@ namespace QuanLyQuanTraSua
             // 
             // FormLoiNhuan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 675);
+            this.ClientSize = new System.Drawing.Size(1443, 844);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormLoiNhuan";
             this.Text = "FormLoiNhuan";
             this.Load += new System.EventHandler(this.FormLoiNhuan_Load);

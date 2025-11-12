@@ -368,25 +368,38 @@ namespace QuanLyQuanTraSua
 
         private void show_report_btn_Click(object sender, EventArgs e)
         {
-            DateTime start_h = new DateTime();
-            DateTime end_h = new DateTime();
-            DateTime filter;
-            if (show_all_rdb.Checked == true)
+            DateTime start_h, end_h;
+
+            if (show_all_rdb.Checked)
             {
-                start_h = new DateTime(2020, 1, 1);
-                end_h = new DateTime(2025, 1, 1);
+                // Rộng hết cỡ + dùng cận trên mở để không rơi bản ghi cuối ngày
+                start_h = new DateTime(2000, 1, 1);
+                end_h = DateTime.Today.AddDays(1);  // <--- thay vì 2025-01-01
             }
-            else if (filter_rdb.Checked == true)
+            else if (filter_rdb.Checked)
             {
-                filter = filter_date.Value;
-                start_h = new DateTime(filter.Year, filter.Month, 1);
-                end_h = new DateTime(filter.Year, filter.Month, DateTime.DaysInMonth(filter.Year, filter.Month));
+                var d = filter_date.Value;
+                start_h = new DateTime(d.Year, d.Month, 1);
+                end_h = start_h.AddMonths(1);       // <--- thay vì ngày cuối tháng
+            }
+            else
+            {
+                MessageBox.Show("Chọn chế độ xem: Tất cả hoặc Lọc theo tháng.");
+                return;
             }
 
-            // TODO: This line of code loads data into the 'QuanLi.QUANLYLUONG' table. You can move, or remove it, as needed.
-            this.QUANLYLUONGTableAdapter.FillBy(this.QuanLi.QUANLYLUONG, UserCode, start_h.ToString("yyyy-MM-dd"), end_h.ToString("yyyy-MM-dd"));
+            // Giữ nguyên lời gọi hiện có (vẫn truyền string yyyy-MM-dd)
+            this.QUANLYLUONGTableAdapter.FillBy(
+                this.QuanLi.QUANLYLUONG,
+                UserCode,
+                start_h.ToString("yyyy-MM-dd"),
+                end_h.ToString("yyyy-MM-dd")
+            );
+
+            reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             this.reportViewer1.RefreshReport();
         }
+
 
         private void Timetable_Enter(object sender, EventArgs e)
         {

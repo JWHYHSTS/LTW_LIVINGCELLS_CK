@@ -14,10 +14,6 @@ namespace QuanLyQuanTraSua
         private readonly QueryNhanVien dbNhanVien = new QueryNhanVien();
         private readonly DateTime today = DateTime.Now;
 
-        // ⚠️ XÓA 2 biến gây warning:
-        // DataTable dtNhanVien = null;   // không dùng
-        // string err;                    // không dùng
-
         private bool Them;
         private readonly QueryNhanVien dbNV = new QueryNhanVien();
 
@@ -62,7 +58,7 @@ namespace QuanLyQuanTraSua
                     .DefaultIfEmpty(0)
                     .Max();
 
-                return "NV" + (maxNum + 1).ToString("D4");
+                return "NV" + (maxNum + 1).ToString("D3");
             }
         }
 
@@ -74,7 +70,7 @@ namespace QuanLyQuanTraSua
             salary_report_panel.Visible = false;
             report_panel.BringToFront();
 
-            // Nạp Report bằng LINQ thay vì TableAdapter
+            // Nạp Report danh sách nhân viên bằng LINQ
             using (var ctx = new QUANLYQUANTRADataContext())
             {
                 var src = ctx.NHANVIENs
@@ -84,20 +80,19 @@ namespace QuanLyQuanTraSua
                         nv.TenNV,
                         nv.SDT,
                         nv.DiaChi,
-                        nv.NgayNV, // đúng cột ngày
+                        nv.NgayNV,
                         nv.CMND
                     })
                     .OrderBy(x => x.MaNV)
                     .ToList();
 
-                // ⚠️ Nếu bạn dùng reportViewer4 cho danh sách nhân viên:
                 reportViewer4.ProcessingMode = ProcessingMode.Local;
                 reportViewer4.LocalReport.DataSources.Clear();
-                reportViewer4.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", src));
+                reportViewer4.LocalReport.DataSources.Add(
+                    new ReportDataSource("DataSet1", src));
 
-                // Nếu dùng embedded RDLC, bỏ ghi chú và đặt đúng đường dẫn resource:
                 // reportViewer4.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.Reports.ReportNhanVien.rdlc";
-                // Hoặc đường dẫn file:
+                // hoặc:
                 // reportViewer4.LocalReport.ReportPath = Application.StartupPath + @"\Reports\ReportNhanVien.rdlc";
 
                 reportViewer4.RefreshReport();
@@ -169,7 +164,7 @@ namespace QuanLyQuanTraSua
 
         private void TinhLuong(int year, int month)
         {
-            // Giữ phương thức cũ nếu bạn cần tổng hợp lương trước khi xem báo cáo
+            // Nếu bạn có bước tổng hợp lương trước khi xem báo cáo
             dbNhanVien.CapNhatBangLuong();
         }
 
@@ -182,29 +177,43 @@ namespace QuanLyQuanTraSua
             {
                 if (rdb_this_month.Checked)
                 {
+                    // Tháng này: [đầu tháng ; ngày mai) - cận trên mở
                     var now = DateTime.Now;
                     var s = new DateTime(now.Year, now.Month, 1);
-                    var e2 = new DateTime(now.Year, now.Month, now.Day);
+                    var e2 = DateTime.Today.AddDays(1);
 
                     using (var ctx = new QUANLYQUANTRADataContext())
                     {
                         var src = ctx.QUANLYLUONGs
-                            .Where(q => q.ThoiGian >= s && q.ThoiGian <= e2)
+                            .Where(q => q.ThoiGian >= s && q.ThoiGian < e2)
                             .Select(q => new
                             {
                                 q.ThoiGian,
-                                q.MaNV,
+                                MaNV = q.MaNV.Trim(),
                                 q.MaCa,
                                 q.MucDoHoanThanh,
-                                q.Luong
+                                // ✅ thêm alias TienLuong để RDLC dùng ổn định
+                                Luong = (double)(q.Luong ?? 0f),
+                                TienLuong = (double)(q.Luong ?? 0f)
                             })
                             .OrderBy(q => q.ThoiGian).ThenBy(q => q.MaNV)
                             .ToList();
 
+                        // Dataset phụ: NHANVIEN (để RDLC Lookup tên NV)
+                        var dsNV = ctx.NHANVIENs
+                                      .Select(n => new { MaNV = n.MaNV.Trim(), TenNV = (n.TenNV ?? "").Trim() })
+                                      .ToList();
+
                         reportViewer1.ProcessingMode = ProcessingMode.Local;
                         reportViewer1.LocalReport.DataSources.Clear();
-                        reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", src));
+                        reportViewer1.LocalReport.DataSources.Add(
+                            new ReportDataSource("DataSet1", src));   // dataset chính của report
+                        reportViewer1.LocalReport.DataSources.Add(
+                            new ReportDataSource("dsNV", dsNV));      // dataset phụ để Lookup tên NV
+
                         // reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.Reports.ReportLuongThangNay.rdlc";
+
+                        reportViewer1.ZoomMode = ZoomMode.PageWidth;
                         reportViewer1.RefreshReport();
                     }
 
@@ -215,6 +224,7 @@ namespace QuanLyQuanTraSua
                 }
                 else if (rbt_old_month.Checked)
                 {
+                    // Tháng cũ: gộp theo nhân viên, join để có TenNV luôn
                     reportViewer1.Visible = false;
                     reportViewer2.Visible = true;
                     reportViewer3.Visible = false;
@@ -223,58 +233,79 @@ namespace QuanLyQuanTraSua
                     var y = time1.Value.Year;
                     var m = time1.Value.Month;
                     var s = new DateTime(y, m, 1);
-                    var e2 = new DateTime(y, m, DateTime.DaysInMonth(y, m));
+                    var e2 = s.AddMonths(1); // cận trên mở
 
                     using (var ctx = new QUANLYQUANTRADataContext())
                     {
-                        var src = ctx.QUANLYLUONGs
-                            .Where(q => q.ThoiGian >= s && q.ThoiGian <= e2)
-                            .GroupBy(q => q.MaNV)
-                            .Select(g => new
-                            {
-                                MaNV = g.Key,
-                                TongCa = g.Count(),
-                                TongTien = g.Sum(x => (double)x.Luong),
-                                TuNgay = s,
-                                DenNgay = e2
-                            })
-                            .OrderBy(x => x.MaNV)
-                            .ToList();
+                        var src = (from q in ctx.QUANLYLUONGs
+                                   where q.ThoiGian >= s && q.ThoiGian < e2
+                                   join n in ctx.NHANVIENs on q.MaNV.Trim() equals n.MaNV.Trim()
+                                   group new { q, n } by new { n.MaNV } into g
+                                   orderby g.Key.MaNV
+                                   select new
+                                   {
+                                       MaNV = g.Key.MaNV,
+                                       TenNV = g.Max(x => x.n.TenNV),            // lấy tên
+                                       TongCa = g.Count(),
+                                       // ✅ trả về cả hai tên field để tương thích RDLC
+                                       TienLuong = g.Sum(x => (double)(x.q.Luong ?? 0f)),
+                                       TongTien = g.Sum(x => (double)(x.q.Luong ?? 0f)),
+                                       TuNgay = s,
+                                       DenNgay = e2.AddDays(-1)
+                                   }).ToList();
 
                         reportViewer2.ProcessingMode = ProcessingMode.Local;
                         reportViewer2.LocalReport.DataSources.Clear();
-                        reportViewer2.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", src));
+                        reportViewer2.LocalReport.DataSources.Add(
+                            new ReportDataSource("DataSet1", src));
+
                         // reportViewer2.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.Reports.ReportBangLuongThang.rdlc";
+
+                        reportViewer2.ZoomMode = ZoomMode.PageWidth;
                         reportViewer2.RefreshReport();
                     }
                 }
                 else if (search_NV.Checked)
                 {
+                    // Tìm theo 1 nhân viên trong 1 tháng
                     var y = time2.Value.Year;
                     var m = time2.Value.Month;
                     var s = new DateTime(y, m, 1);
-                    var e2 = new DateTime(y, m, DateTime.DaysInMonth(y, m));
-                    var id = Nz(maNV_txt.Text);
+                    var e2 = s.AddMonths(1); // cận trên mở
+                    var id = Nz(maNV_txt.Text).Trim();
 
                     using (var ctx = new QUANLYQUANTRADataContext())
                     {
                         var src = ctx.QUANLYLUONGs
-                            .Where(q => q.ThoiGian >= s && q.ThoiGian <= e2 && q.MaNV == id)
+                            .Where(q => q.ThoiGian >= s && q.ThoiGian < e2 && q.MaNV.Trim() == id)
                             .Select(q => new
                             {
                                 q.ThoiGian,
-                                q.MaNV,
+                                MaNV = q.MaNV.Trim(),
                                 q.MaCa,
                                 q.MucDoHoanThanh,
-                                q.Luong
+                                // ✅ thêm alias TienLuong
+                                Luong = (double)(q.Luong ?? 0f),
+                                TienLuong = (double)(q.Luong ?? 0f)
                             })
                             .OrderBy(q => q.ThoiGian)
                             .ToList();
 
+                        // Dataset phụ cho Lookup tên
+                        var dsNV = ctx.NHANVIENs
+                                      .Select(n => new { MaNV = n.MaNV.Trim(), TenNV = (n.TenNV ?? "").Trim() })
+                                      .ToList();
+
                         reportViewer3.ProcessingMode = ProcessingMode.Local;
                         reportViewer3.LocalReport.DataSources.Clear();
-                        reportViewer3.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", src));
+                        reportViewer3.LocalReport.DataSources.Add(
+                            new ReportDataSource("DataSet1", src));
+                        reportViewer3.LocalReport.DataSources.Add(
+                            new ReportDataSource("dsNV", dsNV));
+
                         // reportViewer3.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.Reports.ReportLuongNhanVien.rdlc";
+
+                        reportViewer3.ZoomMode = ZoomMode.PageWidth;
                         reportViewer3.RefreshReport();
                     }
 
@@ -289,16 +320,16 @@ namespace QuanLyQuanTraSua
                     {
                         var now = today;
                         var s = new DateTime(now.Year, now.Month, 1);
-                        var e2 = new DateTime(now.Year, now.Month, now.Day);
+                        var e2 = DateTime.Today.AddDays(1); // cận trên mở
 
                         var tb = ctx.QUANLYLUONGs
-                            .Where(q => q.ThoiGian >= s && q.ThoiGian <= e2)
+                            .Where(q => q.ThoiGian >= s && q.ThoiGian < e2)
                             .GroupBy(q => q.MaNV)
                             .Select(g => new
                             {
                                 MaNV = g.Key,
                                 TongCa = g.Count(),
-                                TongLuong = g.Sum(x => (double)x.Luong)
+                                TongLuong = g.Sum(x => (double)(x.Luong ?? 0f))
                             })
                             .OrderBy(x => x.MaNV)
                             .ToList();
