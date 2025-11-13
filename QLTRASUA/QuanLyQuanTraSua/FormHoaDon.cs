@@ -74,6 +74,10 @@ namespace QuanLyQuanTraSua
 
         private void check_don_btn_Click(object sender, EventArgs e)
         {
+            // ===== [ADD] Ràng buộc số lượng trước khi tính =====
+            if (!ValidateItemRows()) return;
+            // ====================================================
+
             total_point = 0;
             total = 0;
 
@@ -102,10 +106,16 @@ namespace QuanLyQuanTraSua
             int cost = 0, value = 0, sl = 0, temp_cost = 0;
             foreach (DataGridViewRow row in item_dgv.Rows)
             {
+                if (row.IsNewRow) continue;
                 if (row.Cells[0].Value != null)
                 {
                     dbMenu.GetGia(row.Cells[0].Value.ToString().Trim(), out cost, out value);
-                    sl = Int32.Parse(row.Cells[1].Value.ToString());
+
+                    // ===== [CHANGE] Đọc số lượng an toàn, bỏ qua nếu chưa nhập/hợp lệ =====
+                    if (!int.TryParse(row.Cells[1].Value?.ToString(), out sl) || sl <= 0)
+                        continue;
+                    // =====================================================================
+
                     row.Cells[2].Value = (value * sl);
                     row.Cells[3].Value = (cost * sl);
                     temp_cost += cost * sl;
@@ -139,6 +149,10 @@ namespace QuanLyQuanTraSua
         {
             try
             {
+                // ===== [ADD] Ràng buộc số lượng khi lưu =====
+                if (!ValidateItemRows()) return;
+                // ============================================
+
                 // 1) Ràng buộc: phải có ít nhất 1 dòng món hợp lệ
                 bool hasItem = false;
                 foreach (DataGridViewRow row in item_dgv.Rows)
@@ -339,185 +353,33 @@ namespace QuanLyQuanTraSua
             }
         }
 
-        private void HOADONBindingSource_CurrentChanged(object sender, EventArgs e)
+        // ========================= [ADD] Kiểm tra số lượng hợp lệ ======================
+        private bool ValidateItemRows()
         {
+            foreach (DataGridViewRow row in item_dgv.Rows)
+            {
+                if (row.IsNewRow) continue;
 
+                var tenMon = row.Cells[0].Value?.ToString().Trim();
+                if (!string.IsNullOrEmpty(tenMon))
+                {
+                    var qtyObj = row.Cells[1].Value;
+                    int sl;
+                    if (qtyObj == null || !int.TryParse(qtyObj.ToString(), out sl) || sl <= 0)
+                    {
+                        MessageBox.Show(
+                            $"Vui lòng nhập số lượng.",
+                            "Thiếu/không hợp lệ số lượng",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning
+                        );
+                        item_dgv.CurrentCell = row.Cells[1];
+                        item_dgv.BeginEdit(true);
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
-
-        private void BangChiTietHoaDonBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void windows_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void add_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void date_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nhanvien_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void total_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void discount_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void coupon_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void diemtichluyKH_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maKH_lb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void item_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void diachiKH_tb_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sdtKH_tb_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tenKH_tb_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void order_his_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void maHD_txt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reportViewer_chung_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void filter_rdb_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void show_all_rdb_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void filter_date_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reportViewer_detail_Load(object sender, EventArgs e)
-        {
-
-        }
+        // ===============================================================================
     }
 }
-
