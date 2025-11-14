@@ -53,16 +53,18 @@ namespace QuanLyQuanTraSua
             // reportViewer1
             // 
             this.reportViewer1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.BangChiTietHoaDonBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportDetailHoaDon.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(22, 27);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(965, 559);
+            this.reportViewer1.Size = new System.Drawing.Size(1016, 615);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // BangHoaDonTableAdapter
             // 

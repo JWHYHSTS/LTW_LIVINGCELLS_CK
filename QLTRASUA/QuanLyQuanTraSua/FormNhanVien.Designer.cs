@@ -106,6 +106,10 @@ namespace QuanLyQuanTraSua
             this.BangLuongThangTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.BangLuongThangTableAdapter();
             this.BangChiTietLuongNVTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.BangChiTietLuongNVTableAdapter();
             this.NHANVIENTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.NHANVIENTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NHANVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BangChiTietLuongNVBindingSource)).BeginInit();
@@ -322,6 +326,7 @@ namespace QuanLyQuanTraSua
             // fix_btn
             // 
             this.fix_btn.BackColor = System.Drawing.Color.Moccasin;
+            this.fix_btn.FlatAppearance.BorderSize = 0;
             this.fix_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.fix_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.fix_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -337,7 +342,6 @@ namespace QuanLyQuanTraSua
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.maNV_tb);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.ngayNV_dtp);
@@ -418,9 +422,12 @@ namespace QuanLyQuanTraSua
             // 
             // modify_infor_panel
             // 
-            this.modify_infor_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.modify_infor_panel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.modify_infor_panel.Controls.Add(this.button3);
             this.modify_infor_panel.Controls.Add(this.DeleteNV_btn);
+            this.modify_infor_panel.Controls.Add(this.button2);
             this.modify_infor_panel.Controls.Add(this.AddNV_btn);
+            this.modify_infor_panel.Controls.Add(this.button1);
             this.modify_infor_panel.Controls.Add(this.save_btn);
             this.modify_infor_panel.Controls.Add(this.search_tb);
             this.modify_infor_panel.Controls.Add(this.search_btn);
@@ -437,6 +444,7 @@ namespace QuanLyQuanTraSua
             // DeleteNV_btn
             // 
             this.DeleteNV_btn.BackColor = System.Drawing.Color.Moccasin;
+            this.DeleteNV_btn.FlatAppearance.BorderSize = 0;
             this.DeleteNV_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.DeleteNV_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.DeleteNV_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -452,6 +460,7 @@ namespace QuanLyQuanTraSua
             // AddNV_btn
             // 
             this.AddNV_btn.BackColor = System.Drawing.Color.Moccasin;
+            this.AddNV_btn.FlatAppearance.BorderSize = 0;
             this.AddNV_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.AddNV_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.AddNV_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -467,6 +476,7 @@ namespace QuanLyQuanTraSua
             // save_btn
             // 
             this.save_btn.BackColor = System.Drawing.Color.Orange;
+            this.save_btn.FlatAppearance.BorderSize = 0;
             this.save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -484,6 +494,7 @@ namespace QuanLyQuanTraSua
             // search_btn
             // 
             this.search_btn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.search_btn.FlatAppearance.BorderSize = 0;
             this.search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -516,6 +527,7 @@ namespace QuanLyQuanTraSua
             // salary_btn
             // 
             this.salary_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.salary_btn.FlatAppearance.BorderSize = 0;
             this.salary_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.salary_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.salary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -533,6 +545,7 @@ namespace QuanLyQuanTraSua
             // modify_btn
             // 
             this.modify_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.modify_btn.FlatAppearance.BorderSize = 0;
             this.modify_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.modify_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.modify_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -550,6 +563,7 @@ namespace QuanLyQuanTraSua
             // view_btn
             // 
             this.view_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.view_btn.FlatAppearance.BorderSize = 0;
             this.view_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.view_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -850,11 +864,67 @@ namespace QuanLyQuanTraSua
             // 
             this.NHANVIENTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(304, -50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(336, 44);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Xem danh sách nhân viên";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.view_btn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(646, -50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(366, 44);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Sửa danh sách nhân viên";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.modify_btn_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::QuanLyQuanTraSua.Properties.Resources.coin;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(1018, -50);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(317, 44);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Tính lương nhân viên";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.salary_btn_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.panel3;
+            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1544, 893);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -951,5 +1021,9 @@ namespace QuanLyQuanTraSua
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
