@@ -80,6 +80,7 @@ namespace QuanLyQuanTraSua
             this.TongQuatKhachHangTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.TongQuatKhachHangTableAdapter();
             this.BangChiTietKhachHangTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.BangChiTietKhachHangTableAdapter();
             this.KHACHHANGTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.KHACHHANGTableAdapter();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.KHACHHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BangChiTietKhachHangBindingSource)).BeginInit();
@@ -113,25 +114,27 @@ namespace QuanLyQuanTraSua
             // 
             // windows
             // 
+            this.windows.Controls.Add(this.modify_infor_panel);
             this.windows.Controls.Add(this.modify_btn);
             this.windows.Controls.Add(this.view_btn);
-            this.windows.Controls.Add(this.modify_infor_panel);
             this.windows.Controls.Add(this.report_panel);
+            this.windows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(12, 12);
+            this.windows.Location = new System.Drawing.Point(0, 0);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(1450, 660);
+            this.windows.Size = new System.Drawing.Size(1924, 1055);
             this.windows.TabIndex = 0;
             // 
             // modify_btn
             // 
             this.modify_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.modify_btn.FlatAppearance.BorderSize = 0;
             this.modify_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.modify_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.modify_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.modify_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.modify_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.modify_btn.Location = new System.Drawing.Point(738, 6);
+            this.modify_btn.Location = new System.Drawing.Point(1017, 14);
             this.modify_btn.Name = "modify_btn";
             this.modify_btn.Size = new System.Drawing.Size(366, 44);
             this.modify_btn.TabIndex = 5;
@@ -143,12 +146,13 @@ namespace QuanLyQuanTraSua
             // view_btn
             // 
             this.view_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.view_btn.FlatAppearance.BorderSize = 0;
             this.view_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.view_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.view_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.view_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.view_btn.Location = new System.Drawing.Point(358, 6);
+            this.view_btn.Location = new System.Drawing.Point(637, 14);
             this.view_btn.Name = "view_btn";
             this.view_btn.Size = new System.Drawing.Size(374, 44);
             this.view_btn.TabIndex = 2;
@@ -159,7 +163,7 @@ namespace QuanLyQuanTraSua
             // 
             // modify_infor_panel
             // 
-            this.modify_infor_panel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.modify_infor_panel.BackColor = System.Drawing.Color.PaleTurquoise;
             this.modify_infor_panel.Controls.Add(this.save_btn);
             this.modify_infor_panel.Controls.Add(this.search_tb);
             this.modify_infor_panel.Controls.Add(this.search_btn);
@@ -167,15 +171,16 @@ namespace QuanLyQuanTraSua
             this.modify_infor_panel.Controls.Add(this.panel3);
             this.modify_infor_panel.Controls.Add(this.label2);
             this.modify_infor_panel.Controls.Add(this.KhachHang_dtg);
-            this.modify_infor_panel.Location = new System.Drawing.Point(12, 56);
+            this.modify_infor_panel.Location = new System.Drawing.Point(291, 100);
             this.modify_infor_panel.Name = "modify_infor_panel";
-            this.modify_infor_panel.Size = new System.Drawing.Size(1424, 604);
+            this.modify_infor_panel.Size = new System.Drawing.Size(1424, 627);
             this.modify_infor_panel.TabIndex = 7;
             this.modify_infor_panel.Visible = false;
             // 
             // save_btn
             // 
             this.save_btn.BackColor = System.Drawing.Color.Orange;
+            this.save_btn.FlatAppearance.BorderSize = 0;
             this.save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -220,6 +225,7 @@ namespace QuanLyQuanTraSua
             // fix_btn
             // 
             this.fix_btn.BackColor = System.Drawing.Color.Bisque;
+            this.fix_btn.FlatAppearance.BorderSize = 0;
             this.fix_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.fix_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.fix_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -237,7 +243,6 @@ namespace QuanLyQuanTraSua
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.diemtichluyKH_lb);
             this.panel3.Controls.Add(this.label7);
@@ -446,7 +451,7 @@ namespace QuanLyQuanTraSua
             this.report_panel.Controls.Add(this.label8);
             this.report_panel.Controls.Add(this.maKH_tk);
             this.report_panel.Controls.Add(this.label1);
-            this.report_panel.Location = new System.Drawing.Point(12, 56);
+            this.report_panel.Location = new System.Drawing.Point(294, 100);
             this.report_panel.Name = "report_panel";
             this.report_panel.Size = new System.Drawing.Size(1424, 604);
             this.report_panel.TabIndex = 6;
@@ -454,6 +459,7 @@ namespace QuanLyQuanTraSua
             // 
             // all_KH_btn
             // 
+            this.all_KH_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.all_KH_btn.Location = new System.Drawing.Point(119, 51);
             this.all_KH_btn.Name = "all_KH_btn";
             this.all_KH_btn.Size = new System.Drawing.Size(277, 31);
@@ -473,6 +479,7 @@ namespace QuanLyQuanTraSua
             this.reportViewer3.ServerReport.BearerToken = null;
             this.reportViewer3.Size = new System.Drawing.Size(1164, 456);
             this.reportViewer3.TabIndex = 18;
+            this.reportViewer3.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // reportViewer2
             // 
@@ -500,6 +507,7 @@ namespace QuanLyQuanTraSua
             // 
             // chitiet_bt
             // 
+            this.chitiet_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chitiet_bt.Location = new System.Drawing.Point(1117, 46);
             this.chitiet_bt.Name = "chitiet_bt";
             this.chitiet_bt.Size = new System.Drawing.Size(166, 31);
@@ -510,6 +518,7 @@ namespace QuanLyQuanTraSua
             // 
             // timkiem_bt
             // 
+            this.timkiem_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timkiem_bt.Location = new System.Drawing.Point(941, 46);
             this.timkiem_bt.Name = "timkiem_bt";
             this.timkiem_bt.Size = new System.Drawing.Size(165, 31);
@@ -537,9 +546,10 @@ namespace QuanLyQuanTraSua
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(31, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Report";
             // 
@@ -555,12 +565,17 @@ namespace QuanLyQuanTraSua
             // 
             this.KHACHHANGTableAdapter.ClearBeforeFill = true;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.panel3;
+            // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1505, 846);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKhachHang";
@@ -627,5 +642,6 @@ namespace QuanLyQuanTraSua
         private System.Windows.Forms.BindingSource KHACHHANGBindingSource;
         private QuanLiTableAdapters.KHACHHANGTableAdapter KHACHHANGTableAdapter;
         private System.Windows.Forms.Button all_KH_btn;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

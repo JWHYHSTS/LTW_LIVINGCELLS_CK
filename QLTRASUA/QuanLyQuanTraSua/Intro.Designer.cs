@@ -41,21 +41,19 @@ namespace QuanLyQuanTraSua
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLyQuanTraSua.Properties.Resources.loading;
-            this.pictureBox2.Location = new System.Drawing.Point(34, 1028);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 658);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(795, 75);
+            this.pictureBox2.Size = new System.Drawing.Size(530, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.poster;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 19);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.cropped_circle_image;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(795, 1000);
+            this.pictureBox1.Size = new System.Drawing.Size(530, 640);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -68,14 +66,13 @@ namespace QuanLyQuanTraSua
             // 
             // Intro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.bk1;
-            this.ClientSize = new System.Drawing.Size(866, 1102);
+            this.ClientSize = new System.Drawing.Size(577, 675);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Intro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intro";

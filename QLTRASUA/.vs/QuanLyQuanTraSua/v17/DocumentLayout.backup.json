@@ -1,98 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\",
+  "WorkspaceRootPath": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|d:\\tailieudaihoc\\hk5\\ltwindow\\test_dang\\qltrasua\\quanlyquantrasua\\reportchiphi.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\reportchiphi.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\reportallorder.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\reportallorder.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formshowhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formshowhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formshowhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formshowhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formloinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formloinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\formloinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formloinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\bs layer\\querycalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|d:\\tailieudaihoc\\hk5\\ltwindow\\test_vluan\\ltw_livingcells_ck\\ltw_livingcells_ck\\qltrasua\\quanlyquantrasua\\bs layer\\querycalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\bs layer\\querycalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\reportallkhachhang.rdlc||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\reportallkhachhang.rdlc||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\reportchitietkh.rdlc||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\reportchitietkh.rdlc||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formcalam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formchiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formchiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\quanlyquantra.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\quanlyquantra.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formdoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formdoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\quanlyquantrasua\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formloinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formloinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formshowhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formshowhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\intro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\intro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\quanlyquantrasua\\formchiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0682110D-5884-4494-89D8-42A1DD2F1870}|QuanLyQuanTraSua\\QuanLyQuanTraSua.csproj|solutionrelative:quanlyquantrasua\\formchiphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,21 +70,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 12,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormHoaDon.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormHoaDon.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormHoaDon.cs",
-              "ViewState": "AgIAAEcBAAAAAAAAAAAcwHIBAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:54:57.539Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -163,252 +118,172 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportChiPhi.rdlc [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportChiPhi.rdlc",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\ReportChiPhi.rdlc",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportChiPhi.rdlc [Design]",
-              "RelativeToolTip": "QuanLyQuanTraSua\\ReportChiPhi.rdlc [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-11-13T01:41:19.715Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormCaLam.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
+              "DocumentIndex": 2,
+              "Title": "FormCaLam.cs",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
               "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormCaLam.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs [Design]",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormCaLam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:04:57.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormHoaDon.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormHoaDon.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:54:56.834Z"
+              "WhenOpened": "2025-11-14T12:48:47.899Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs [Design]*",
-              "RelativeToolTip": "QuanLyQuanTraSua\\Form1.cs [Design]*",
+              "Title": "QueryCaLam.cs",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAuwKwAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T07:06:42.483Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReportAllOrder.rdlc [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportAllOrder.rdlc",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\ReportAllOrder.rdlc",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\ReportAllOrder.rdlc [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-11-13T01:41:10.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs*",
-              "RelativeToolTip": "QuanLyQuanTraSua\\Form1.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T07:03:38.077Z",
+              "WhenOpened": "2025-11-14T12:45:12.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FormShowHoaDon.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormShowHoaDon.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormShowHoaDon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Title": "FormDoanhThu.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormDoanhThu.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormDoanhThu.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormDoanhThu.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormDoanhThu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:54:49.723Z"
+              "WhenOpened": "2025-11-14T09:19:13.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormNhanVien.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormNhanVien.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "FormChiPhi.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormChiPhi.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormChiPhi.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormChiPhi.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormChiPhi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:12:30.674Z"
+              "WhenOpened": "2025-11-14T09:17:42.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCaLam.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormCaLam.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormCaLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T09:16:26.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignIn.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\SignIn.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\SignIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T09:10:56.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T08:47:35.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Form1.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Form1.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\Form1.cs",
+              "ViewState": "AgIAABEBAAAAAAAAAAAwwCYBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T12:41:03.065Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FormNhanVien.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormNhanVien.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormNhanVien.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAhwDwAAAA3AAAAAAAAAA==",
+              "Title": "FormHoaDon.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormHoaDon.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormHoaDon.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormHoaDon.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:12:33.502Z"
+              "WhenOpened": "2025-11-14T09:00:33.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormLoiNhuan.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormLoiNhuan.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormLoiNhuan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T09:06:45.574Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "FormKhachHang.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormKhachHang.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormKhachHang.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Title": "FormNhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormNhanVien.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormNhanVien.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormNhanVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:54:23.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormShowHoaDon.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormShowHoaDon.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:54:48.312Z"
+              "WhenOpened": "2025-11-14T08:59:17.383Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "FormKhachHang.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormKhachHang.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs [Design]",
+              "Title": "FormShowHoaDon.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormShowHoaDon.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormShowHoaDon.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormShowHoaDon.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:54:22.411Z"
+              "WhenOpened": "2025-11-14T09:10:32.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Intro.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Intro.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\Intro.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\Intro.cs [Design]",
+              "RelativeToolTip": "QuanLyQuanTraSua\\Intro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T09:10:52.693Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "FormCaLam.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormCaLam.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormCaLam.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormCaLam.cs",
-              "ViewState": "AgIAAGsBAAAAAAAAAAAQwJEBAAAAAAAAAAAAAA==",
+              "Title": "FormKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormKhachHang.cs",
+              "ToolTip": "E:\\fileTest\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormKhachHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:06:06.518Z"
+              "WhenOpened": "2025-11-14T08:47:30.966Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "FormLoiNhuan.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormLoiNhuan.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\FormLoiNhuan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Title": "FormChiPhi.cs",
+              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormChiPhi.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormChiPhi.cs",
+              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_VLuan\\LTW_LIVINGCELLS_CK\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormChiPhi.cs",
+              "RelativeToolTip": "QuanLyQuanTraSua\\FormChiPhi.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:39:05.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "QueryCaLam.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\BS Layer\\QueryCaLam.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAgwMMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T01:41:28.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FormLoiNhuan.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\FormLoiNhuan.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\FormLoiNhuan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:05:09.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ReportAllKhachHang.rdlc",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportAllKhachHang.rdlc",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\ReportAllKhachHang.rdlc",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportAllKhachHang.rdlc",
-              "RelativeToolTip": "QuanLyQuanTraSua\\ReportAllKhachHang.rdlc",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAAPMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-11-11T01:59:46.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ReportChiTietKH.rdlc",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportChiTietKH.rdlc",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\ReportChiTietKH.rdlc",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\ReportChiTietKH.rdlc",
-              "RelativeToolTip": "QuanLyQuanTraSua\\ReportChiTietKH.rdlc",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-11-11T01:48:28.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "QUANLYQUANTRA.dbml",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\QUANLYQUANTRA.dbml",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\QUANLYQUANTRA.dbml",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\QUANLYQUANTRA.dbml",
-              "RelativeToolTip": "QuanLyQuanTraSua\\QUANLYQUANTRA.dbml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2025-11-11T00:30:32.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SignIn.cs",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\SignIn.cs",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs",
-              "RelativeToolTip": "QuanLyQuanTraSua\\SignIn.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAYwFQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:26:42.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SignIn.cs [Design]",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\SignIn.cs",
-              "ToolTip": "C:\\Users\\Phat\\Downloads\\LTW_LIVINGCELLS_CK (2)\\LTW_LIVINGCELLS_CK\\QLTRASUA\\QuanLyQuanTraSua\\SignIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T00:26:24.899Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\App.config",
-              "RelativeDocumentMoniker": "QuanLyQuanTraSua\\App.config",
-              "ToolTip": "D:\\TAILIEUDAIHOC\\HK5\\LTWINDOW\\Test_Dang\\QLTRASUA\\QuanLyQuanTraSua\\App.config",
-              "RelativeToolTip": "QuanLyQuanTraSua\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAADKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-08T06:33:05.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-14T09:18:16.808Z"
             }
           ]
         },

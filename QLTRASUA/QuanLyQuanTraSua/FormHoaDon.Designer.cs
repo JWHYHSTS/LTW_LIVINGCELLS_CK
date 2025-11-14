@@ -30,15 +30,28 @@ namespace QuanLyQuanTraSua
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoaDon));
             this.HOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.QuanLi = new QuanLyQuanTraSua.QuanLi();
             this.BangChiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.windows = new System.Windows.Forms.Panel();
+            this.order_his_panel = new System.Windows.Forms.Panel();
+            this.maHD_txt = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.detail_btn = new System.Windows.Forms.Button();
+            this.show_report_btn = new System.Windows.Forms.Button();
+            this.reportViewer_chung = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.filter_rdb = new System.Windows.Forms.RadioButton();
+            this.show_all_rdb = new System.Windows.Forms.RadioButton();
+            this.filter_date = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.reportViewer_detail = new Microsoft.Reporting.WinForms.ReportViewer();
             this.history_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.add_panel = new System.Windows.Forms.Panel();
@@ -71,30 +84,17 @@ namespace QuanLyQuanTraSua
             this.print_order_btn = new System.Windows.Forms.Button();
             this.check_don_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
-            this.order_his_panel = new System.Windows.Forms.Panel();
-            this.maHD_txt = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.detail_btn = new System.Windows.Forms.Button();
-            this.show_report_btn = new System.Windows.Forms.Button();
-            this.reportViewer_chung = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.filter_rdb = new System.Windows.Forms.RadioButton();
-            this.show_all_rdb = new System.Windows.Forms.RadioButton();
-            this.filter_date = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.reportViewer_detail = new Microsoft.Reporting.WinForms.ReportViewer();
             this.HOADONTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.HOADONTableAdapter();
             this.BangHoaDonTableAdapter = new QuanLyQuanTraSua.QuanLiTableAdapters.BangHoaDonTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.HOADONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BangChiTietHoaDonBindingSource)).BeginInit();
             this.windows.SuspendLayout();
+            this.order_his_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.add_panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv)).BeginInit();
-            this.order_his_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HOADONBindingSource
@@ -114,29 +114,193 @@ namespace QuanLyQuanTraSua
             // 
             // windows
             // 
+            this.windows.Controls.Add(this.order_his_panel);
             this.windows.Controls.Add(this.history_btn);
             this.windows.Controls.Add(this.add_btn);
             this.windows.Controls.Add(this.add_panel);
-            this.windows.Controls.Add(this.order_his_panel);
+            this.windows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.windows.Location = new System.Drawing.Point(9, 10);
-            this.windows.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.windows.Location = new System.Drawing.Point(0, 0);
+            this.windows.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(1088, 536);
+            this.windows.Size = new System.Drawing.Size(1924, 1055);
             this.windows.TabIndex = 0;
+            // 
+            // order_his_panel
+            // 
+            this.order_his_panel.Controls.Add(this.maHD_txt);
+            this.order_his_panel.Controls.Add(this.label13);
+            this.order_his_panel.Controls.Add(this.detail_btn);
+            this.order_his_panel.Controls.Add(this.show_report_btn);
+            this.order_his_panel.Controls.Add(this.reportViewer_chung);
+            this.order_his_panel.Controls.Add(this.filter_rdb);
+            this.order_his_panel.Controls.Add(this.show_all_rdb);
+            this.order_his_panel.Controls.Add(this.filter_date);
+            this.order_his_panel.Controls.Add(this.pictureBox1);
+            this.order_his_panel.Controls.Add(this.label12);
+            this.order_his_panel.Controls.Add(this.label11);
+            this.order_his_panel.Controls.Add(this.reportViewer_detail);
+            this.order_his_panel.Location = new System.Drawing.Point(92, 70);
+            this.order_his_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.order_his_panel.Name = "order_his_panel";
+            this.order_his_panel.Size = new System.Drawing.Size(1766, 661);
+            this.order_his_panel.TabIndex = 7;
+            this.order_his_panel.Visible = false;
+            // 
+            // maHD_txt
+            // 
+            this.maHD_txt.Location = new System.Drawing.Point(1070, 49);
+            this.maHD_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.maHD_txt.Name = "maHD_txt";
+            this.maHD_txt.Size = new System.Drawing.Size(233, 31);
+            this.maHD_txt.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(987, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 23);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Mã HD:";
+            // 
+            // detail_btn
+            // 
+            this.detail_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.detail_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.detail_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.detail_btn.Location = new System.Drawing.Point(1319, 50);
+            this.detail_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.detail_btn.Name = "detail_btn";
+            this.detail_btn.Size = new System.Drawing.Size(233, 32);
+            this.detail_btn.TabIndex = 11;
+            this.detail_btn.Text = "Hiển thị chi tiết";
+            this.detail_btn.UseVisualStyleBackColor = true;
+            this.detail_btn.Click += new System.EventHandler(this.detail_btn_Click);
+            // 
+            // show_report_btn
+            // 
+            this.show_report_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.show_report_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.show_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_report_btn.Location = new System.Drawing.Point(662, 49);
+            this.show_report_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.show_report_btn.Name = "show_report_btn";
+            this.show_report_btn.Size = new System.Drawing.Size(161, 32);
+            this.show_report_btn.TabIndex = 10;
+            this.show_report_btn.Text = "Hiển thị";
+            this.show_report_btn.UseVisualStyleBackColor = true;
+            this.show_report_btn.Click += new System.EventHandler(this.show_report_btn_Click);
+            // 
+            // reportViewer_chung
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.HOADONBindingSource;
+            this.reportViewer_chung.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer_chung.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportAllOrder.rdlc";
+            this.reportViewer_chung.Location = new System.Drawing.Point(169, 90);
+            this.reportViewer_chung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportViewer_chung.Name = "reportViewer_chung";
+            this.reportViewer_chung.ServerReport.BearerToken = null;
+            this.reportViewer_chung.Size = new System.Drawing.Size(1409, 489);
+            this.reportViewer_chung.TabIndex = 9;
+            this.reportViewer_chung.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // filter_rdb
+            // 
+            this.filter_rdb.AutoSize = true;
+            this.filter_rdb.Location = new System.Drawing.Point(444, 55);
+            this.filter_rdb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filter_rdb.Name = "filter_rdb";
+            this.filter_rdb.Size = new System.Drawing.Size(17, 16);
+            this.filter_rdb.TabIndex = 8;
+            this.filter_rdb.UseVisualStyleBackColor = true;
+            // 
+            // show_all_rdb
+            // 
+            this.show_all_rdb.AutoSize = true;
+            this.show_all_rdb.Checked = true;
+            this.show_all_rdb.Location = new System.Drawing.Point(195, 55);
+            this.show_all_rdb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.show_all_rdb.Name = "show_all_rdb";
+            this.show_all_rdb.Size = new System.Drawing.Size(17, 16);
+            this.show_all_rdb.TabIndex = 7;
+            this.show_all_rdb.TabStop = true;
+            this.show_all_rdb.UseVisualStyleBackColor = true;
+            // 
+            // filter_date
+            // 
+            this.filter_date.CustomFormat = "MM/yyyy";
+            this.filter_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.filter_date.Location = new System.Drawing.Point(507, 49);
+            this.filter_date.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filter_date.MaxDate = new System.DateTime(9998, 1, 1, 0, 0, 0, 0);
+            this.filter_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.filter_date.Name = "filter_date";
+            this.filter_date.ShowUpDown = true;
+            this.filter_date.Size = new System.Drawing.Size(148, 31);
+            this.filter_date.TabIndex = 6;
+            this.filter_date.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.loc;
+            this.pictureBox1.Location = new System.Drawing.Point(467, 46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(208, 53);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(175, 23);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Tất cả đơn hàng";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(170, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(186, 23);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Lịch sử đơn hàng";
+            // 
+            // reportViewer_detail
+            // 
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.BangChiTietHoaDonBindingSource;
+            this.reportViewer_detail.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer_detail.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportDetailHoaDon.rdlc";
+            this.reportViewer_detail.Location = new System.Drawing.Point(169, 89);
+            this.reportViewer_detail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportViewer_detail.Name = "reportViewer_detail";
+            this.reportViewer_detail.ServerReport.BearerToken = null;
+            this.reportViewer_detail.Size = new System.Drawing.Size(1409, 489);
+            this.reportViewer_detail.TabIndex = 14;
+            this.reportViewer_detail.Visible = false;
+            this.reportViewer_detail.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // history_btn
             // 
             this.history_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.history_btn.FlatAppearance.BorderSize = 0;
             this.history_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.history_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.history_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.history_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.history_btn.Location = new System.Drawing.Point(537, 2);
-            this.history_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.history_btn.Location = new System.Drawing.Point(906, 2);
+            this.history_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.history_btn.Name = "history_btn";
-            this.history_btn.Size = new System.Drawing.Size(202, 36);
+            this.history_btn.Size = new System.Drawing.Size(269, 44);
             this.history_btn.TabIndex = 1;
             this.history_btn.Text = "Lịch sử đơn hàng";
             this.history_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,15 +310,16 @@ namespace QuanLyQuanTraSua
             // add_btn
             // 
             this.add_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.add_btn.FlatAppearance.BorderSize = 0;
             this.add_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.add_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.add;
             this.add_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.add_btn.Location = new System.Drawing.Point(403, 2);
-            this.add_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.add_btn.Location = new System.Drawing.Point(709, 2);
+            this.add_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(130, 36);
+            this.add_btn.Size = new System.Drawing.Size(173, 44);
             this.add_btn.TabIndex = 0;
             this.add_btn.Text = "Thêm đơn";
             this.add_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,15 +328,15 @@ namespace QuanLyQuanTraSua
             // 
             // add_panel
             // 
-            this.add_panel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.add_panel.BackColor = System.Drawing.Color.PaleTurquoise;
             this.add_panel.Controls.Add(this.groupBox1);
             this.add_panel.Controls.Add(this.print_order_btn);
             this.add_panel.Controls.Add(this.check_don_btn);
             this.add_panel.Controls.Add(this.save_btn);
-            this.add_panel.Location = new System.Drawing.Point(10, 39);
-            this.add_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.add_panel.Location = new System.Drawing.Point(90, 69);
+            this.add_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.add_panel.Name = "add_panel";
-            this.add_panel.Size = new System.Drawing.Size(1068, 491);
+            this.add_panel.Size = new System.Drawing.Size(1766, 653);
             this.add_panel.TabIndex = 6;
             this.add_panel.Visible = false;
             // 
@@ -201,11 +366,11 @@ namespace QuanLyQuanTraSua
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(14, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(151, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(788, 476);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1051, 605);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đơn hàng";
@@ -215,10 +380,9 @@ namespace QuanLyQuanTraSua
             // 
             this.date_lb.AutoSize = true;
             this.date_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_lb.Location = new System.Drawing.Point(568, 444);
-            this.date_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.date_lb.Location = new System.Drawing.Point(757, 546);
             this.date_lb.Name = "date_lb";
-            this.date_lb.Size = new System.Drawing.Size(90, 19);
+            this.date_lb.Size = new System.Drawing.Size(109, 23);
             this.date_lb.TabIndex = 20;
             this.date_lb.Text = "Not check";
             // 
@@ -226,10 +390,9 @@ namespace QuanLyQuanTraSua
             // 
             this.nhanvien_lb.AutoSize = true;
             this.nhanvien_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanvien_lb.Location = new System.Drawing.Point(229, 444);
-            this.nhanvien_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nhanvien_lb.Location = new System.Drawing.Point(305, 546);
             this.nhanvien_lb.Name = "nhanvien_lb";
-            this.nhanvien_lb.Size = new System.Drawing.Size(90, 19);
+            this.nhanvien_lb.Size = new System.Drawing.Size(109, 23);
             this.nhanvien_lb.TabIndex = 19;
             this.nhanvien_lb.Text = "Not check";
             // 
@@ -237,10 +400,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(434, 444);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(579, 546);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 19);
+            this.label10.Size = new System.Drawing.Size(164, 23);
             this.label10.TabIndex = 18;
             this.label10.Text = "Ngày xuất HĐ: ";
             // 
@@ -248,10 +410,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 444);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(37, 546);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(207, 19);
+            this.label9.Size = new System.Drawing.Size(252, 23);
             this.label9.TabIndex = 17;
             this.label9.Text = "Nhân viên thanh toán: ";
             // 
@@ -259,10 +420,9 @@ namespace QuanLyQuanTraSua
             // 
             this.total_lb.AutoSize = true;
             this.total_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_lb.Location = new System.Drawing.Point(643, 415);
-            this.total_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.total_lb.Location = new System.Drawing.Point(857, 511);
             this.total_lb.Name = "total_lb";
-            this.total_lb.Size = new System.Drawing.Size(90, 19);
+            this.total_lb.Size = new System.Drawing.Size(109, 23);
             this.total_lb.TabIndex = 16;
             this.total_lb.Text = "Not check";
             // 
@@ -270,10 +430,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 415);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(37, 511);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 19);
+            this.label8.Size = new System.Drawing.Size(142, 23);
             this.label8.TabIndex = 15;
             this.label8.Text = "Thành tiền: ";
             // 
@@ -281,10 +440,9 @@ namespace QuanLyQuanTraSua
             // 
             this.discount_lb.AutoSize = true;
             this.discount_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discount_lb.Location = new System.Drawing.Point(643, 384);
-            this.discount_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.discount_lb.Location = new System.Drawing.Point(857, 473);
             this.discount_lb.Name = "discount_lb";
-            this.discount_lb.Size = new System.Drawing.Size(90, 19);
+            this.discount_lb.Size = new System.Drawing.Size(109, 23);
             this.discount_lb.TabIndex = 14;
             this.discount_lb.Text = "Not check";
             // 
@@ -292,10 +450,9 @@ namespace QuanLyQuanTraSua
             // 
             this.coupon_lb.AutoSize = true;
             this.coupon_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coupon_lb.Location = new System.Drawing.Point(106, 384);
-            this.coupon_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.coupon_lb.Location = new System.Drawing.Point(141, 473);
             this.coupon_lb.Name = "coupon_lb";
-            this.coupon_lb.Size = new System.Drawing.Size(90, 19);
+            this.coupon_lb.Size = new System.Drawing.Size(109, 23);
             this.coupon_lb.TabIndex = 13;
             this.coupon_lb.Text = "Not check";
             // 
@@ -303,10 +460,9 @@ namespace QuanLyQuanTraSua
             // 
             this.diemtichluyKH_lb.AutoSize = true;
             this.diemtichluyKH_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diemtichluyKH_lb.Location = new System.Drawing.Point(525, 119);
-            this.diemtichluyKH_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.diemtichluyKH_lb.Location = new System.Drawing.Point(700, 146);
             this.diemtichluyKH_lb.Name = "diemtichluyKH_lb";
-            this.diemtichluyKH_lb.Size = new System.Drawing.Size(90, 19);
+            this.diemtichluyKH_lb.Size = new System.Drawing.Size(109, 23);
             this.diemtichluyKH_lb.TabIndex = 12;
             this.diemtichluyKH_lb.Text = "Not check";
             // 
@@ -314,10 +470,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 119);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(397, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(225, 19);
+            this.label7.Size = new System.Drawing.Size(274, 23);
             this.label7.TabIndex = 11;
             this.label7.Text = "Điểm tích lũy hiện tại: ";
             // 
@@ -325,10 +480,9 @@ namespace QuanLyQuanTraSua
             // 
             this.maKH_lb.AutoSize = true;
             this.maKH_lb.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maKH_lb.Location = new System.Drawing.Point(169, 119);
-            this.maKH_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maKH_lb.Location = new System.Drawing.Point(225, 146);
             this.maKH_lb.Name = "maKH_lb";
-            this.maKH_lb.Size = new System.Drawing.Size(90, 19);
+            this.maKH_lb.Size = new System.Drawing.Size(109, 23);
             this.maKH_lb.TabIndex = 10;
             this.maKH_lb.Text = "Not check";
             // 
@@ -336,10 +490,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 119);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(37, 146);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 19);
+            this.label6.Size = new System.Drawing.Size(186, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Mã Khách Hàng : ";
             // 
@@ -347,10 +500,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 384);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(37, 473);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 19);
+            this.label5.Size = new System.Drawing.Size(98, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "Coupon: ";
             // 
@@ -364,8 +516,8 @@ namespace QuanLyQuanTraSua
             this.soluong,
             this.grade,
             this.cost});
-            this.item_dgv.Location = new System.Drawing.Point(31, 192);
-            this.item_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.item_dgv.Location = new System.Drawing.Point(41, 236);
+            this.item_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.item_dgv.Name = "item_dgv";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -379,7 +531,7 @@ namespace QuanLyQuanTraSua
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.item_dgv.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.item_dgv.RowTemplate.Height = 24;
-            this.item_dgv.Size = new System.Drawing.Size(746, 183);
+            this.item_dgv.Size = new System.Drawing.Size(995, 225);
             this.item_dgv.TabIndex = 7;
             // 
             // cbbMenu
@@ -414,46 +566,44 @@ namespace QuanLyQuanTraSua
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 162);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(37, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 19);
+            this.label4.Size = new System.Drawing.Size(98, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Đơn hàng";
             // 
             // diachiKH_tb
             // 
-            this.diachiKH_tb.Location = new System.Drawing.Point(469, 82);
-            this.diachiKH_tb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.diachiKH_tb.Location = new System.Drawing.Point(625, 101);
+            this.diachiKH_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.diachiKH_tb.Name = "diachiKH_tb";
-            this.diachiKH_tb.Size = new System.Drawing.Size(301, 26);
+            this.diachiKH_tb.Size = new System.Drawing.Size(400, 31);
             this.diachiKH_tb.TabIndex = 5;
             // 
             // sdtKH_tb
             // 
-            this.sdtKH_tb.Location = new System.Drawing.Point(172, 78);
-            this.sdtKH_tb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sdtKH_tb.Location = new System.Drawing.Point(229, 96);
+            this.sdtKH_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sdtKH_tb.MaxLength = 10;
             this.sdtKH_tb.Name = "sdtKH_tb";
-            this.sdtKH_tb.Size = new System.Drawing.Size(154, 26);
+            this.sdtKH_tb.Size = new System.Drawing.Size(204, 31);
             this.sdtKH_tb.TabIndex = 4;
             // 
             // tenKH_tb
             // 
-            this.tenKH_tb.Location = new System.Drawing.Point(172, 37);
-            this.tenKH_tb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tenKH_tb.Location = new System.Drawing.Point(229, 46);
+            this.tenKH_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tenKH_tb.Name = "tenKH_tb";
-            this.tenKH_tb.Size = new System.Drawing.Size(238, 26);
+            this.tenKH_tb.Size = new System.Drawing.Size(316, 31);
             this.tenKH_tb.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(382, 84);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(509, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 19);
+            this.label3.Size = new System.Drawing.Size(109, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Địa chỉ: ";
             // 
@@ -461,10 +611,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(37, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 19);
+            this.label2.Size = new System.Drawing.Size(186, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại : ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -473,10 +622,9 @@ namespace QuanLyQuanTraSua
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(37, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 19);
+            this.label1.Size = new System.Drawing.Size(186, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Khách Hàng: ";
             // 
@@ -488,10 +636,10 @@ namespace QuanLyQuanTraSua
             this.print_order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.print_order_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.printing_icon_9;
             this.print_order_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.print_order_btn.Location = new System.Drawing.Point(860, 434);
-            this.print_order_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.print_order_btn.Location = new System.Drawing.Point(1320, 545);
+            this.print_order_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.print_order_btn.Name = "print_order_btn";
-            this.print_order_btn.Size = new System.Drawing.Size(166, 47);
+            this.print_order_btn.Size = new System.Drawing.Size(221, 58);
             this.print_order_btn.TabIndex = 4;
             this.print_order_btn.Text = "Xuất hóa đơn";
             this.print_order_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -506,10 +654,10 @@ namespace QuanLyQuanTraSua
             this.check_don_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.check_don_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.check;
             this.check_don_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.check_don_btn.Location = new System.Drawing.Point(819, 28);
-            this.check_don_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.check_don_btn.Location = new System.Drawing.Point(1320, 53);
+            this.check_don_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.check_don_btn.Name = "check_don_btn";
-            this.check_don_btn.Size = new System.Drawing.Size(219, 47);
+            this.check_don_btn.Size = new System.Drawing.Size(258, 58);
             this.check_don_btn.TabIndex = 3;
             this.check_don_btn.Text = "Kiểm tra đơn hàng";
             this.check_don_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -524,178 +672,15 @@ namespace QuanLyQuanTraSua
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.save;
             this.save_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_btn.Location = new System.Drawing.Point(819, 84);
-            this.save_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.save_btn.Location = new System.Drawing.Point(1320, 145);
+            this.save_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(219, 47);
+            this.save_btn.Size = new System.Drawing.Size(258, 58);
             this.save_btn.TabIndex = 5;
             this.save_btn.Text = "Lưu đơn hàng";
             this.save_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.save_btn.UseVisualStyleBackColor = false;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
-            // 
-            // order_his_panel
-            // 
-            this.order_his_panel.Controls.Add(this.maHD_txt);
-            this.order_his_panel.Controls.Add(this.label13);
-            this.order_his_panel.Controls.Add(this.detail_btn);
-            this.order_his_panel.Controls.Add(this.show_report_btn);
-            this.order_his_panel.Controls.Add(this.reportViewer_chung);
-            this.order_his_panel.Controls.Add(this.filter_rdb);
-            this.order_his_panel.Controls.Add(this.show_all_rdb);
-            this.order_his_panel.Controls.Add(this.filter_date);
-            this.order_his_panel.Controls.Add(this.pictureBox1);
-            this.order_his_panel.Controls.Add(this.label12);
-            this.order_his_panel.Controls.Add(this.label11);
-            this.order_his_panel.Controls.Add(this.reportViewer_detail);
-            this.order_his_panel.Location = new System.Drawing.Point(11, 43);
-            this.order_his_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.order_his_panel.Name = "order_his_panel";
-            this.order_his_panel.Size = new System.Drawing.Size(1068, 491);
-            this.order_his_panel.TabIndex = 7;
-            this.order_his_panel.Visible = false;
-            // 
-            // maHD_txt
-            // 
-            this.maHD_txt.Location = new System.Drawing.Point(686, 40);
-            this.maHD_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maHD_txt.Name = "maHD_txt";
-            this.maHD_txt.Size = new System.Drawing.Size(176, 26);
-            this.maHD_txt.TabIndex = 13;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(624, 45);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 19);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Mã HD:";
-            // 
-            // detail_btn
-            // 
-            this.detail_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.detail_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.detail_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.detail_btn.Location = new System.Drawing.Point(873, 41);
-            this.detail_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.detail_btn.Name = "detail_btn";
-            this.detail_btn.Size = new System.Drawing.Size(175, 26);
-            this.detail_btn.TabIndex = 11;
-            this.detail_btn.Text = "Hiển thị chi tiết";
-            this.detail_btn.UseVisualStyleBackColor = true;
-            this.detail_btn.Click += new System.EventHandler(this.detail_btn_Click);
-            // 
-            // show_report_btn
-            // 
-            this.show_report_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.show_report_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.show_report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_report_btn.Location = new System.Drawing.Point(380, 40);
-            this.show_report_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.show_report_btn.Name = "show_report_btn";
-            this.show_report_btn.Size = new System.Drawing.Size(121, 26);
-            this.show_report_btn.TabIndex = 10;
-            this.show_report_btn.Text = "Hiển thị";
-            this.show_report_btn.UseVisualStyleBackColor = true;
-            this.show_report_btn.Click += new System.EventHandler(this.show_report_btn_Click);
-            // 
-            // reportViewer_chung
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.HOADONBindingSource;
-            this.reportViewer_chung.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer_chung.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportAllOrder.rdlc";
-            this.reportViewer_chung.Location = new System.Drawing.Point(75, 73);
-            this.reportViewer_chung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reportViewer_chung.Name = "reportViewer_chung";
-            this.reportViewer_chung.ServerReport.BearerToken = null;
-            this.reportViewer_chung.Size = new System.Drawing.Size(919, 398);
-            this.reportViewer_chung.TabIndex = 9;
-            // 
-            // filter_rdb
-            // 
-            this.filter_rdb.AutoSize = true;
-            this.filter_rdb.Location = new System.Drawing.Point(217, 45);
-            this.filter_rdb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.filter_rdb.Name = "filter_rdb";
-            this.filter_rdb.Size = new System.Drawing.Size(14, 13);
-            this.filter_rdb.TabIndex = 8;
-            this.filter_rdb.UseVisualStyleBackColor = true;
-            // 
-            // show_all_rdb
-            // 
-            this.show_all_rdb.AutoSize = true;
-            this.show_all_rdb.Checked = true;
-            this.show_all_rdb.Location = new System.Drawing.Point(30, 45);
-            this.show_all_rdb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.show_all_rdb.Name = "show_all_rdb";
-            this.show_all_rdb.Size = new System.Drawing.Size(14, 13);
-            this.show_all_rdb.TabIndex = 7;
-            this.show_all_rdb.TabStop = true;
-            this.show_all_rdb.UseVisualStyleBackColor = true;
-            // 
-            // filter_date
-            // 
-            this.filter_date.CustomFormat = "MM/yyyy";
-            this.filter_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.filter_date.Location = new System.Drawing.Point(264, 40);
-            this.filter_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.filter_date.MaxDate = new System.DateTime(9998, 1, 1, 0, 0, 0, 0);
-            this.filter_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.filter_date.Name = "filter_date";
-            this.filter_date.ShowUpDown = true;
-            this.filter_date.Size = new System.Drawing.Size(112, 26);
-            this.filter_date.TabIndex = 6;
-            this.filter_date.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyQuanTraSua.Properties.Resources.loc;
-            this.pictureBox1.Location = new System.Drawing.Point(234, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(40, 43);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(144, 19);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Tất cả đơn hàng";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 18);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 19);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Lịch sử đơn hàng";
-            // 
-            // reportViewer_detail
-            // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.BangChiTietHoaDonBindingSource;
-            this.reportViewer_detail.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer_detail.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportDetailHoaDon.rdlc";
-            this.reportViewer_detail.Location = new System.Drawing.Point(75, 73);
-            this.reportViewer_detail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reportViewer_detail.Name = "reportViewer_detail";
-            this.reportViewer_detail.ServerReport.BearerToken = null;
-            this.reportViewer_detail.Size = new System.Drawing.Size(919, 398);
-            this.reportViewer_detail.TabIndex = 14;
-            this.reportViewer_detail.Visible = false;
             // 
             // HOADONTableAdapter
             // 
@@ -707,13 +692,13 @@ namespace QuanLyQuanTraSua
             // 
             // FormHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1142, 691);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormHoaDon";
             this.Text = "FormHoaDon";
             this.Load += new System.EventHandler(this.FormHoaDon_Load);
@@ -721,13 +706,13 @@ namespace QuanLyQuanTraSua
             ((System.ComponentModel.ISupportInitialize)(this.QuanLi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BangChiTietHoaDonBindingSource)).EndInit();
             this.windows.ResumeLayout(false);
+            this.order_his_panel.ResumeLayout(false);
+            this.order_his_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.add_panel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.item_dgv)).EndInit();
-            this.order_his_panel.ResumeLayout(false);
-            this.order_his_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -107,13 +108,16 @@ namespace QuanLyQuanTraSua
                     role.Text = "Nhân viên";
                     foreach (Control t in staff_task)
                         t.Visible = true;
-
+                    iconUser.Visible = true;
+                    iconAdmin.Visible = false;
                 }
                 else
                 {
                     role.Text = "Quản lý";
                     foreach (Control t in manager_task)
                         t.Visible = true;
+                    iconAdmin.Visible = true;
+                    iconUser.Visible = false;
                 }
                 ten.Text = userName;
                 role.Visible = true;
@@ -129,7 +133,9 @@ namespace QuanLyQuanTraSua
                 ten.Visible = false;
                 role.Visible = false;
                 // =====================================================================
-
+                // Ẩn nút đăng nhập – hiện nút đăng xuất
+                sign_in_btn.Visible = false;
+                sign_out_btn.Visible = true;
                 // ================== [ADD] Hiện nhãn 2 dòng thay thế nút =============
                 _loginInfoLabel.Location = sign_in_btn.Location; // đề phòng layout thay đổi
                 _loginInfoLabel.Size = sign_in_btn.Size;
@@ -137,7 +143,6 @@ namespace QuanLyQuanTraSua
                 _loginInfoLabel.Text = $"{userName}\r\n{role.Text}";
                 _loginInfoLabel.Visible = true;
                 // =====================================================================
-
                 clear_old();
                 signal = 0;
             }
@@ -157,11 +162,15 @@ namespace QuanLyQuanTraSua
             foreach (Control k in manager_task)
                 k.Visible = false;
 
-            // ================== [ADD] đảm bảo ẩn ảnh & nhãn lúc mở app =============
             if (_picAfterLogin != null) _picAfterLogin.Visible = false;
             if (_loginInfoLabel != null) _loginInfoLabel.Visible = false;
-            // =======================================================================
+            sign_out_btn.Visible = false;   // 🔴 Ẩn nút đăng xuất
+            sign_in_btn.Visible = true;     // 🟢 Hiện nút đăng nhập
+            iconAdmin.Visible = false;
+            iconUser.Visible = false;
+
         }
+
 
         private void task_timer_Tick(object sender, EventArgs e)
         {
@@ -295,6 +304,9 @@ namespace QuanLyQuanTraSua
 
                 // ================== [ADD] hiện lại nút & ẩn ảnh/nhãn =================
                 sign_in_btn.Visible = true;
+                sign_out_btn.Visible = false;
+                iconAdmin.Visible = false;
+                iconUser.Visible = false;
                 if (_picAfterLogin != null) _picAfterLogin.Visible = false;
                 if (_loginInfoLabel != null) _loginInfoLabel.Visible = false;
                 // ====================================================================
@@ -319,10 +331,27 @@ namespace QuanLyQuanTraSua
                 this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void guna2GroupBox1_Enter(object sender, EventArgs e)
         {
 
         }
+
+        private void iconAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void staff_mana_btn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         //private void pictureLoggedIn_Click(object sender, EventArgs e)
         //{
