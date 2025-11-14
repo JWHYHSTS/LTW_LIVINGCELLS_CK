@@ -112,7 +112,7 @@ namespace QuanLyQuanTraSua
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Controls.Add(this.date_label);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1430);
+            this.panel2.Location = new System.Drawing.Point(0, 1398);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2310, 48);
@@ -141,7 +141,7 @@ namespace QuanLyQuanTraSua
             this.task_panel.Location = new System.Drawing.Point(10, 262);
             this.task_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.task_panel.Name = "task_panel";
-            this.task_panel.Size = new System.Drawing.Size(402, 1148);
+            this.task_panel.Size = new System.Drawing.Size(402, 1142);
             this.task_panel.TabIndex = 6;
             // 
             // profit_mana_btn
@@ -270,7 +270,7 @@ namespace QuanLyQuanTraSua
             this.sign_out_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.sign_out_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_out_btn.ForeColor = System.Drawing.Color.Black;
-            this.sign_out_btn.Location = new System.Drawing.Point(7, 989);
+            this.sign_out_btn.Location = new System.Drawing.Point(4, 882);
             this.sign_out_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sign_out_btn.Name = "sign_out_btn";
             this.sign_out_btn.Size = new System.Drawing.Size(388, 73);
@@ -287,7 +287,7 @@ namespace QuanLyQuanTraSua
             this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit_btn.ForeColor = System.Drawing.Color.Black;
-            this.exit_btn.Location = new System.Drawing.Point(8, 1070);
+            this.exit_btn.Location = new System.Drawing.Point(4, 963);
             this.exit_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(388, 73);
@@ -378,7 +378,7 @@ namespace QuanLyQuanTraSua
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::QuanLyQuanTraSua.Properties.Resources.bk1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2310, 1478);
+            this.ClientSize = new System.Drawing.Size(2310, 1446);
             this.Controls.Add(this.task_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

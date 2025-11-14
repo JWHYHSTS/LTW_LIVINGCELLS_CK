@@ -1680,10 +1680,10 @@
               <Source>Embedded</Source>
               <Value>cropped_circle_image</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.09896in</Top>
-              <Left>0.18869in</Left>
-              <Height>0.71632in</Height>
-              <Width>0.68214in</Width>
+              <Top>0.19028in</Top>
+              <Left>0.33333in</Left>
+              <Height>0.5in</Height>
+              <Width>0.5in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
