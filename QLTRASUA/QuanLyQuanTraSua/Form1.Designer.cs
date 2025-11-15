@@ -140,7 +140,7 @@ namespace QuanLyQuanTraSua
             this.task_panel.Location = new System.Drawing.Point(0, 62);
             this.task_panel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.task_panel.Name = "task_panel";
-            this.task_panel.Size = new System.Drawing.Size(404, 980);
+            this.task_panel.Size = new System.Drawing.Size(404, 932);
             this.task_panel.TabIndex = 6;
             // 
             // iconUser
@@ -450,10 +450,10 @@ namespace QuanLyQuanTraSua
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1172, 47);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(824, 25);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(2088, 231);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3980, 344);
             this.guna2HtmlLabel1.TabIndex = 7;
             this.guna2HtmlLabel1.Text = "Have a nice day!! Friends";
             this.guna2HtmlLabel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
@@ -523,7 +523,7 @@ namespace QuanLyQuanTraSua
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trà sữa I.201";
+            this.Text = "Trà sữa I.102";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -53,6 +53,7 @@ namespace QuanLyQuanTraSua.BS_Layer
                     tsb.TienDien = (float)Double.Parse(tiendien);
                     tsb.TienNuoc = (float)Double.Parse(tiennuoc);
                     tsb.PhiVeSinh = (float)Double.Parse(pvs);
+                    tsb.Tong = (float)Double.Parse(tong);
                     // tsb.Tong có thể do DB trigger/tính khác; giữ nguyên nếu bạn không set ở đây.
 
                     qlbhEntity.SubmitChanges();
@@ -73,7 +74,8 @@ namespace QuanLyQuanTraSua.BS_Layer
                     PhiNguyenLieu = (float)Double.Parse(PNL),
                     TienDien = (float)Double.Parse(tiendien),
                     TienNuoc = (float)Double.Parse(tiennuoc),
-                    PhiVeSinh = (float)Double.Parse(pvs)
+                    PhiVeSinh = (float)Double.Parse(pvs),
+                    Tong = (float)Double.Parse(tong)
                     // c.Tong nếu cần thì set thêm
                 };
 

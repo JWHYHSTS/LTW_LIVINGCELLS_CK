@@ -79,9 +79,9 @@ namespace QuanLyQuanTraSua
             this.windows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.windows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.windows.Location = new System.Drawing.Point(0, 0);
-            this.windows.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.windows.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.windows.Name = "windows";
-            this.windows.Size = new System.Drawing.Size(1924, 1040);
+            this.windows.Size = new System.Drawing.Size(2564, 1559);
             this.windows.TabIndex = 0;
             // 
             // profit_panel
@@ -93,10 +93,10 @@ namespace QuanLyQuanTraSua
             this.profit_panel.Controls.Add(this.by_year);
             this.profit_panel.Controls.Add(this.num_year);
             this.profit_panel.Controls.Add(this.label3);
-            this.profit_panel.Location = new System.Drawing.Point(13, 53);
-            this.profit_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.profit_panel.Location = new System.Drawing.Point(20, 83);
+            this.profit_panel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.profit_panel.Name = "profit_panel";
-            this.profit_panel.Size = new System.Drawing.Size(2025, 640);
+            this.profit_panel.Size = new System.Drawing.Size(3038, 1000);
             this.profit_panel.TabIndex = 4;
             this.profit_panel.Visible = false;
             // 
@@ -113,11 +113,11 @@ namespace QuanLyQuanTraSua
             this.groupBox1.Controls.Add(this.this_day);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(145, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(218, 39);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1759, 101);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(2638, 158);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doanh thu tháng này";
@@ -127,9 +127,10 @@ namespace QuanLyQuanTraSua
             // 
             this.this_month.AutoSize = true;
             this.this_month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.this_month.Location = new System.Drawing.Point(143, 30);
+            this.this_month.Location = new System.Drawing.Point(214, 47);
+            this.this_month.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.this_month.Name = "this_month";
-            this.this_month.Size = new System.Drawing.Size(64, 25);
+            this.this_month.Size = new System.Drawing.Size(102, 37);
             this.this_month.TabIndex = 36;
             this.this_month.Text = "label2";
             // 
@@ -137,9 +138,10 @@ namespace QuanLyQuanTraSua
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(51, 30);
+            this.label6.Location = new System.Drawing.Point(76, 47);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 25);
+            this.label6.Size = new System.Drawing.Size(127, 37);
             this.label6.TabIndex = 35;
             this.label6.Text = "Tháng: ";
             // 
@@ -147,9 +149,10 @@ namespace QuanLyQuanTraSua
             // 
             this.now_income.AutoSize = true;
             this.now_income.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.now_income.Location = new System.Drawing.Point(661, 62);
+            this.now_income.Location = new System.Drawing.Point(992, 97);
+            this.now_income.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.now_income.Name = "now_income";
-            this.now_income.Size = new System.Drawing.Size(64, 25);
+            this.now_income.Size = new System.Drawing.Size(102, 37);
             this.now_income.TabIndex = 33;
             this.now_income.Text = "label2";
             // 
@@ -157,9 +160,10 @@ namespace QuanLyQuanTraSua
             // 
             this.now_order.AutoSize = true;
             this.now_order.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.now_order.Location = new System.Drawing.Point(661, 30);
+            this.now_order.Location = new System.Drawing.Point(992, 47);
+            this.now_order.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.now_order.Name = "now_order";
-            this.now_order.Size = new System.Drawing.Size(64, 25);
+            this.now_order.Size = new System.Drawing.Size(102, 37);
             this.now_order.TabIndex = 32;
             this.now_order.Text = "label2";
             // 
@@ -167,9 +171,10 @@ namespace QuanLyQuanTraSua
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(507, 62);
+            this.label2.Location = new System.Drawing.Point(760, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 25);
+            this.label2.Size = new System.Drawing.Size(175, 37);
             this.label2.TabIndex = 30;
             this.label2.Text = "Doanh thu:";
             // 
@@ -177,9 +182,10 @@ namespace QuanLyQuanTraSua
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(507, 30);
+            this.label1.Location = new System.Drawing.Point(760, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 25);
+            this.label1.Size = new System.Drawing.Size(210, 37);
             this.label1.TabIndex = 29;
             this.label1.Text = "Số đơn hàng:";
             // 
@@ -187,9 +193,10 @@ namespace QuanLyQuanTraSua
             // 
             this.this_day.AutoSize = true;
             this.this_day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.this_day.Location = new System.Drawing.Point(231, 62);
+            this.this_day.Location = new System.Drawing.Point(346, 97);
+            this.this_day.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.this_day.Name = "this_day";
-            this.this_day.Size = new System.Drawing.Size(64, 25);
+            this.this_day.Size = new System.Drawing.Size(102, 37);
             this.this_day.TabIndex = 28;
             this.this_day.Text = "label2";
             // 
@@ -197,9 +204,10 @@ namespace QuanLyQuanTraSua
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(51, 62);
+            this.label4.Location = new System.Drawing.Point(76, 97);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 25);
+            this.label4.Size = new System.Drawing.Size(239, 37);
             this.label4.TabIndex = 26;
             this.label4.Text = "Tính đến ngày: ";
             // 
@@ -209,21 +217,21 @@ namespace QuanLyQuanTraSua
             reportDataSource1.Value = this.DOANHTHUBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyQuanTraSua.ReportDoanhThuNam.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(145, 188);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportViewer1.Location = new System.Drawing.Point(541, 292);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1758, 416);
+            this.reportViewer1.Size = new System.Drawing.Size(1675, 649);
             this.reportViewer1.TabIndex = 22;
             // 
             // show_btn
             // 
             this.show_btn.BackColor = System.Drawing.Color.Orange;
             this.show_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.show_btn.Location = new System.Drawing.Point(1257, 130);
-            this.show_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.show_btn.Location = new System.Drawing.Point(1886, 203);
+            this.show_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.show_btn.Name = "show_btn";
-            this.show_btn.Size = new System.Drawing.Size(140, 53);
+            this.show_btn.Size = new System.Drawing.Size(210, 83);
             this.show_btn.TabIndex = 21;
             this.show_btn.Text = "Hiển thị";
             this.show_btn.UseVisualStyleBackColor = false;
@@ -233,10 +241,10 @@ namespace QuanLyQuanTraSua
             // 
             this.by_year.AutoSize = true;
             this.by_year.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.by_year.Location = new System.Drawing.Point(1043, 145);
-            this.by_year.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.by_year.Location = new System.Drawing.Point(1564, 227);
+            this.by_year.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.by_year.Name = "by_year";
-            this.by_year.Size = new System.Drawing.Size(64, 27);
+            this.by_year.Size = new System.Drawing.Size(102, 41);
             this.by_year.TabIndex = 19;
             this.by_year.TabStop = true;
             this.by_year.Text = "Năm";
@@ -244,8 +252,8 @@ namespace QuanLyQuanTraSua
             // 
             // num_year
             // 
-            this.num_year.Location = new System.Drawing.Point(1127, 143);
-            this.num_year.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.num_year.Location = new System.Drawing.Point(1690, 223);
+            this.num_year.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.num_year.Maximum = new decimal(new int[] {
             2022,
             0,
@@ -257,7 +265,7 @@ namespace QuanLyQuanTraSua
             0,
             0});
             this.num_year.Name = "num_year";
-            this.num_year.Size = new System.Drawing.Size(80, 31);
+            this.num_year.Size = new System.Drawing.Size(120, 45);
             this.num_year.TabIndex = 16;
             this.num_year.Value = new decimal(new int[] {
             2021,
@@ -269,9 +277,10 @@ namespace QuanLyQuanTraSua
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(743, 145);
+            this.label3.Location = new System.Drawing.Point(1114, 227);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 23);
+            this.label3.Size = new System.Drawing.Size(359, 37);
             this.label3.TabIndex = 14;
             this.label3.Text = "Thống kê doanh thu:";
             // 
@@ -284,10 +293,10 @@ namespace QuanLyQuanTraSua
             this.profit_view_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profit_view_btn.Image = global::QuanLyQuanTraSua.Properties.Resources.History_icon;
             this.profit_view_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.profit_view_btn.Location = new System.Drawing.Point(900, 4);
-            this.profit_view_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.profit_view_btn.Location = new System.Drawing.Point(1350, 6);
+            this.profit_view_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.profit_view_btn.Name = "profit_view_btn";
-            this.profit_view_btn.Size = new System.Drawing.Size(257, 44);
+            this.profit_view_btn.Size = new System.Drawing.Size(386, 69);
             this.profit_view_btn.TabIndex = 3;
             this.profit_view_btn.Text = "Xem doanh thu";
             this.profit_view_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -305,13 +314,13 @@ namespace QuanLyQuanTraSua
             // 
             // FormDoanhThu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(1924, 1040);
+            this.ClientSize = new System.Drawing.Size(2564, 1559);
             this.Controls.Add(this.windows);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormDoanhThu";
             this.Text = "FormDoanhThu";
             this.Load += new System.EventHandler(this.FormDoanhThu_Load);
