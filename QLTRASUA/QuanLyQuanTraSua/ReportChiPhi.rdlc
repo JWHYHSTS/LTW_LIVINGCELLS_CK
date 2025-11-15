@@ -1177,7 +1177,7 @@
                               <Top>1.26527in</Top>
                               <Left>0.18869in</Left>
                               <Height>3.02778in</Height>
-                              <Width>4.66592in</Width>
+                              <Width>4.32567in</Width>
                               <ZIndex>3</ZIndex>
                               <Style>
                                 <Border>
@@ -1534,7 +1534,7 @@
                               </ChartNoDataMessage>
                               <DataSetName>DataSet1</DataSetName>
                               <Top>1.56388in</Top>
-                              <Left>5.056in</Left>
+                              <Left>4.55603in</Left>
                               <Height>2in</Height>
                               <Width>3.7288in</Width>
                               <ZIndex>4</ZIndex>
@@ -1698,6 +1698,8 @@
             </Border>
           </Style>
         </PageHeader>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>
