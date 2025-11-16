@@ -1,274 +1,274 @@
-# \# 🍹 LTW – Living Cells
+\# 🍹 LTW – Living Cells
 
-# \## Hệ thống Quản lý Cửa hàng Trà Sữa – WinForms (.NET Framework 4.7.2)
+\## Hệ thống Quản lý Cửa hàng Trà Sữa – WinForms (.NET Framework 4.7.2)
 
-# 📌 Đồ án kết thúc học phần – Lập Trình Trên Windows  
+📌 Đồ án kết thúc học phần – Lập Trình Trên Windows  
 
-# 📌 Trường Đại học Sư phạm TP.HCM – Khoa CNTT  
+📌 Trường Đại học Sư phạm TP.HCM – Khoa CNTT  
 
-# 
 
-# ---
 
-# 
+---
 
-# \## 👥 Thành viên nhóm Living Cells
 
-# \- Dương Thị Thu Diểm – 49.01.103.011  
 
-# \- Dương Hải Đăng – 49.01.103.020  
+\## 👥 Thành viên nhóm Living Cells
 
-# \- Nguyễn Văn Luân – 49.01.103.048  
+\- Dương Thị Thu Diểm – 49.01.103.011  
 
-# \- Võ Quỳnh Như – 49.01.103.059  
+\- Dương Hải Đăng – 49.01.103.020  
 
-# \- Nguyễn Xuân Phát – 49.01.103.060  
+\- Nguyễn Văn Luân – 49.01.103.048  
 
-# 
+\- Võ Quỳnh Như – 49.01.103.059  
 
-# ---
+\- Nguyễn Xuân Phát – 49.01.103.060  
 
-# 
 
-# \## 📖 Giới thiệu dự án
 
-# Hệ thống quản lý cửa hàng trà sữa được xây dựng nhằm hỗ trợ:
+---
 
-# \- Quản lý đơn hàng – bán hàng tại quầy  
 
-# \- Quản lý khách hàng, tích điểm \& lịch sử mua hàng  
 
-# \- Quản lý ca làm, tính công – lương nhân viên  
+\## 📖 Giới thiệu dự án
 
-# \- Thống kê doanh thu, chi phí, lợi nhuận  
+Hệ thống quản lý cửa hàng trà sữa được xây dựng nhằm hỗ trợ:
 
-# \- Xuất báo cáo bằng RDLC  
+\- Quản lý đơn hàng – bán hàng tại quầy  
 
-# 
+\- Quản lý khách hàng, tích điểm \& lịch sử mua hàng  
 
-# Công nghệ sử dụng:
+\- Quản lý ca làm, tính công – lương nhân viên  
 
-# \- WinForms (.NET Framework 4.7.2)  
+\- Thống kê doanh thu, chi phí, lợi nhuận  
 
-# \- SQL Server + LINQ to SQL  
+\- Xuất báo cáo bằng RDLC  
 
-# \- Guna UI2  
 
-# \- RDLC Report  
 
-# 
+Công nghệ sử dụng:
 
-# ---
+\- WinForms (.NET Framework 4.7.2)  
 
-# 
+\- SQL Server + LINQ to SQL  
 
-# \## 🧩 Các chức năng chính
+\- Guna UI2  
 
-# 
+\- RDLC Report  
 
-# \### 🔐 Đăng nhập \& phân quyền
 
-# \- Nhân viên: quản lý đơn hàng, khách hàng, ca làm  
 
-# \- Quản lý: nhân viên, lương, doanh thu, khoản chi, lợi nhuận  
+---
 
-# 
 
-# ---
 
-# 
+\## 🧩 Các chức năng chính
 
-# \### 🛒 Chức năng Nhân viên
 
-# 
 
-# \#### ✔ Quản lý Đơn hàng
+\### 🔐 Đăng nhập \& phân quyền
 
-# \- Chọn món – tính giá tự động  
+\- Nhân viên: quản lý đơn hàng, khách hàng, ca làm  
 
-# \- Áp dụng coupon  
+\- Quản lý: nhân viên, lương, doanh thu, khoản chi, lợi nhuận  
 
-# \- Lưu / xem / lọc hóa đơn  
 
-# 
 
-# \#### ✔ Quản lý Khách hàng
+---
 
-# \- Danh sách – tìm kiếm – sửa thông tin  
 
-# \- Xem lịch sử mua hàng  
 
-# 
+\### 🛒 Chức năng Nhân viên
 
-# \#### ✔ Quản lý Ca làm
 
-# \- Đăng ký ca  
 
-# \- Chấm công \& xác nhận ca  
+\#### ✔ Quản lý Đơn hàng
 
-# \- Xem lịch sử ca  
+\- Chọn món – tính giá tự động  
 
-# 
+\- Áp dụng coupon  
 
-# ---
+\- Lưu / xem / lọc hóa đơn  
 
-# 
 
-# \### 🧑‍💼 Chức năng Quản lý
 
-# 
+\#### ✔ Quản lý Khách hàng
 
-# \#### ✔ Quản lý Nhân viên
+\- Danh sách – tìm kiếm – sửa thông tin  
 
-# \- Thêm – sửa – xóa – tìm kiếm  
+\- Xem lịch sử mua hàng  
 
-# \- Tính lương theo ca  
 
-# \- Xem báo cáo nhân viên  
 
-# 
+\#### ✔ Quản lý Ca làm
 
-# \#### ✔ Quản lý Doanh thu
+\- Đăng ký ca  
 
-# \- Doanh thu tháng  
+\- Chấm công \& xác nhận ca  
 
-# \- Doanh thu theo năm  
+\- Xem lịch sử ca  
 
-# \- Biểu đồ phân tích  
 
-# 
 
-# \#### ✔ Quản lý Khoản chi
+---
 
-# \- Cập nhật chi phí  
 
-# \- Lịch sử chi tiêu  
 
-# \- Tìm kiếm theo năm  
+\### 🧑‍💼 Chức năng Quản lý
 
-# 
 
-# \#### ✔ Quản lý Lợi nhuận
 
-# \- Bảng lợi nhuận theo năm  
+\#### ✔ Quản lý Nhân viên
 
-# \- Biểu đồ so sánh  
+\- Thêm – sửa – xóa – tìm kiếm  
 
-# 
+\- Tính lương theo ca  
 
-# ---
+\- Xem báo cáo nhân viên  
 
-# 
 
-# \## 🗄 Thiết kế cơ sở dữ liệu
 
-# Gồm các bảng:
+\#### ✔ Quản lý Doanh thu
 
-# \- NHANVIEN, KHACHHANG, MENU  
+\- Doanh thu tháng  
 
-# \- HOADON, CHITIETHOADON  
+\- Doanh thu theo năm  
 
-# \- CALAM, QUANLYLUONG, BANGLUONG  
+\- Biểu đồ phân tích  
 
-# \- DOANHTHU, CHI, LOINHUAN  
 
-# \- COUPON, DANGNHAP, DANGNHAP2  
 
-# 
+\#### ✔ Quản lý Khoản chi
 
-# ---
+\- Cập nhật chi phí  
 
-# 
+\- Lịch sử chi tiêu  
 
-# \## 🏗 Cấu trúc Project
+\- Tìm kiếm theo năm  
 
-# ```
 
-# /Presentation
 
-# /Business
+\#### ✔ Quản lý Lợi nhuận
 
-# /Data
+\- Bảng lợi nhuận theo năm  
 
-# /Reports
+\- Biểu đồ so sánh  
 
-# /Models
 
-# /Assets
 
-# ```
+---
 
-# 
 
-# ---
 
-# 
+\## 🗄 Thiết kế cơ sở dữ liệu
 
-# \## ⚙️ Cài đặt \& chạy thử
+Gồm các bảng:
 
-# 
+\- NHANVIEN, KHACHHANG, MENU  
 
-# \### Yêu cầu
+\- HOADON, CHITIETHOADON  
 
-# \- Visual Studio 2022  
+\- CALAM, QUANLYLUONG, BANGLUONG  
 
-# \- SQL Server  
+\- DOANHTHU, CHI, LOINHUAN  
 
-# \- .NET Framework 4.7.2  
+\- COUPON, DANGNHAP, DANGNHAP2  
 
-# 
 
-# \### Chạy chương trình
 
-# 1\. Clone project  
+---
 
-# 2\. Restore CSDL  
 
-# 3\. Cập nhật connection string  
 
-# 4\. Build \& Run  
+\## 🏗 Cấu trúc Project
 
-# 
+```
 
-# ---
+/Presentation
 
-# 
+/Business
 
-# \## 🧪 Kết quả đạt được
+/Data
 
-# \- Ứng dụng hoạt động ổn định  
+/Reports
 
-# \- Chức năng tính toán chính xác  
+/Models
 
-# \- Giao diện dễ dùng  
+/Assets
 
-# \- Báo cáo trực quan  
+```
 
-# 
 
-# ---
 
-# 
+---
 
-# \## 🚀 Hướng phát triển
 
-# \- Nâng cấp giao diện lên .NET mới  
 
-# \- Bổ sung quản lý sản phẩm  
+\## ⚙️ Cài đặt \& chạy thử
 
-# \- Hash mật khẩu \& tăng bảo mật  
 
-# \- Mở rộng hỗ trợ nhiều chi nhánh  
 
-# 
+\### Yêu cầu
 
-# ---
+\- Visual Studio 2022  
 
-# 
+\- SQL Server  
 
-# \## 🔗 Tài nguyên
+\- .NET Framework 4.7.2  
 
-# \- GitHub: https://github.com/JWHYHSTS/LTW\_LIVINGCELLS\_CK  
 
-# \- Video demo: https://youtu.be/yk-OIGoLL\_M  
+
+\### Chạy chương trình
+
+1\. Clone project  
+
+2\. Restore CSDL  
+
+3\. Cập nhật connection string  
+
+4\. Build \& Run  
+
+
+
+---
+
+
+
+\## 🧪 Kết quả đạt được
+
+\- Ứng dụng hoạt động ổn định  
+
+\- Chức năng tính toán chính xác  
+
+\- Giao diện dễ dùng  
+
+\- Báo cáo trực quan  
+
+
+
+---
+
+
+
+\## 🚀 Hướng phát triển
+
+\- Nâng cấp giao diện lên .NET mới  
+
+\- Bổ sung quản lý sản phẩm  
+
+\- Hash mật khẩu \& tăng bảo mật  
+
+\- Mở rộng hỗ trợ nhiều chi nhánh  
+
+
+
+---
+
+
+
+\## 🔗 Tài nguyên
+
+\- GitHub: https://github.com/JWHYHSTS/LTW\_LIVINGCELLS\_CK  
+
+\- Video demo: https://youtu.be/yk-OIGoLL\_M  
 
