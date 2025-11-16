@@ -89,18 +89,6 @@ Gồm các bảng:
 
 ---
 
-## 🏗 Cấu trúc Project
-```
-/Presentation
-/Business
-/Data
-/Reports
-/Models
-/Assets
-```
-
----
-
 ## ⚙️ Cài đặt & chạy thử
 
 ### Yêu cầu
