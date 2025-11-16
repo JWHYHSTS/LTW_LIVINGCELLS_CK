@@ -94,7 +94,7 @@ namespace QuanLyQuanTraSua
             this.nam.ShowUpDown = true;
             this.nam.Size = new System.Drawing.Size(187, 45);
             this.nam.TabIndex = 15;
-            this.nam.Value = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.nam.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             // 
             // reportViewer1
             // 
